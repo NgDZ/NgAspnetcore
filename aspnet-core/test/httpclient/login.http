@@ -1,0 +1,4 @@
+POST https://localhost:5001/connect/token HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+client_id=NgAspnetcore.HttpApi.Host&grant_type=password&username=admin&password=1q2w3E*&scope=profile&2F_CODE=0123456
