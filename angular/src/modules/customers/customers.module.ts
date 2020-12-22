@@ -10,9 +10,11 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { CustomersAbpComponent } from './customers-abp/customers-abp.component';
 
 @NgModule({
-  declarations: [CustomersComponent],
+  declarations: [CustomersComponent, CustomersAbpComponent],
   imports: [
     CommonModule,
     CustomersRoutingModule,
@@ -22,6 +24,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatTableModule,
     MatPaginatorModule,
     MatToolbarModule,
+    MatProgressSpinnerModule,
     MatSortModule,
   ],
 })

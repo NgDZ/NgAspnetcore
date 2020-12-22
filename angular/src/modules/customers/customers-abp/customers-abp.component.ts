@@ -10,12 +10,13 @@ import {
   executeLookupsQuery,
 } from '../../breeze-common/breeze-helpers';
 
+
 @Component({
-  selector: 'app-customers',
-  templateUrl: './customers.component.html',
-  styleUrls: ['./customers.component.scss'],
+  selector: 'app-customers-abp',
+  templateUrl: './customers-abp.component.html',
+  styleUrls: ['./customers-abp.component.scss']
 })
-export class CustomersComponent implements AfterViewInit, OnInit {
+export class CustomersAbpComponent implements AfterViewInit, OnInit {
   dataSource: BreezeServerDataSource<Customer>;
   showInput=false;
 

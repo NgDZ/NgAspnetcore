@@ -37,7 +37,7 @@ export class OrdersComponent implements AfterViewInit, OnInit {
         this.em = k;
 
         executeLookupsQuery(this.em, {}).subscribe((F) => {
-          this.dataSource.breeez.next({ em: k, collection: 'SalesOrders' });
+          this.dataSource.config.next({ em: k, collection: 'SalesOrders' });
         });
       });
   }
