@@ -234,3 +234,4 @@ _Pvt_Extensions
 # FAKE - F# Make
 .fake/
 angular/src/abp
+Northwind.sql

@@ -19,6 +19,7 @@ namespace Northwind.Controllers
     [ApiController]
     [Route("/api/[controller]")]
     [ApiExplorerSettings(GroupName = "Northwind")]
+    [Produces("breeze/json")]
     public class NorthwindController : ControllerBase
     {
         private readonly ILogger<NorthwindController> _logger;

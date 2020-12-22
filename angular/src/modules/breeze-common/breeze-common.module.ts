@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpClientModule,
+  HTTP_INTERCEPTORS,
+} from '@angular/common/http';
 
 import { NamingConvention } from 'breeze-client';
 import { AjaxHttpClientAdapter } from 'breeze-client/adapter-ajax-httpclient';
@@ -8,12 +12,14 @@ import { DataServiceWebApiAdapter } from 'breeze-client/adapter-data-service-web
 import { ModelLibraryBackingStoreAdapter } from 'breeze-client/adapter-model-library-backing-store';
 import { UriBuilderJsonAdapter } from 'breeze-client/adapter-uri-builder-json';
 import { MiniProfilerInterceptor } from 'src/app/shared/mini-profiler.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { DataServiceODataAdapter } from 'breeze-client/adapter-data-service-odata';
 // import { UriBuilderODataAdapter } from 'breeze-client/adapter-uri-builder-odata';
 
 @NgModule({
   declarations: [],
   imports: [CommonModule, HttpClientModule],
+  exports: [FormsModule, ReactiveFormsModule],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,

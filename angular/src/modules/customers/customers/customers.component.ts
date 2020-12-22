@@ -17,9 +17,16 @@ import {
 })
 export class CustomersComponent implements AfterViewInit, OnInit {
   dataSource: BreezeServerDataSource<Customer>;
+  showInput = false;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['entityId', 'contactTitle', 'contactName', 'companyName'];
+  displayedColumns = [
+    'Actions',
+    'entityId',
+    'contactTitle',
+    'contactName',
+    'companyName',
+  ];
   em: EntityManager;
   constructor(private provider: EntityManagerProvider) {}
   ngOnInit() {
@@ -34,4 +41,7 @@ export class CustomersComponent implements AfterViewInit, OnInit {
   }
 
   ngAfterViewInit() {}
+  save() {
+    this.em.saveChanges().then((k) => console.log('end'));
+  }
 }

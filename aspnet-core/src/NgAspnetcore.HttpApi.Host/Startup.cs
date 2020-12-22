@@ -8,7 +8,7 @@ using NgAspnetcore.Models;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
-using Microsoft.AspNetCore.OData;
+//using Microsoft.AspNetCore.OData;
 using Microsoft.OData.Edm;
 using Microsoft.OData.ModelBuilder;
 
@@ -30,7 +30,7 @@ namespace NgAspnetcore
                 options.UseSqlite(
                     Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddDbContext<Northwind.NothwindDbContext>(options =>
+            services.AddDbContext<Northwind.NorthwindDbContext>(options =>
                 options.UseSqlite(
                     Configuration.GetConnectionString("NorthwindConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
@@ -52,14 +52,15 @@ namespace NgAspnetcore
                 // options.Filters.Add(new CorsAuthorizationFilterFactory(_defaultCorsPolicyName));
                 options.OutputFormatters.Add(new BreezeJsonProfileFormatter(options));
             })
-                .AddNewtonsoftJson(options =>
-                {
-                    // options.SerializerSettings.ContractResolver =
-                    //     new AbpMvcJsonContractResolver(context.Services);
+                // .AddNewtonsoftJson(options =>
+                // {
+                //     // options.SerializerSettings.ContractResolver =
+                //     //     new AbpMvcJsonContractResolver(context.Services);
 
-                    options.SerializerSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
-                    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
-                });
+                //     options.SerializerSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
+                //     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+                // })
+                ;
 
 #if DEBUG
             services.ConfigureDevCode();

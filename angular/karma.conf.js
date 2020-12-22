@@ -15,16 +15,13 @@ module.exports = function (config) {
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
-    jasmineHtmlReporter: {
-      suppressAll: true // removes the duplicated traces
-    },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/NgAspnetcore'),
+      dir: require('path').join(__dirname, './coverage/s2i'),
       subdir: '.',
       reporters: [
         { type: 'html' },
         { type: 'text-summary' }
-      ]
+      ],
     },
     reporters: ['progress', 'kjhtml'],
     port: 9876,

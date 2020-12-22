@@ -27,6 +27,18 @@ namespace NgAspnetcore.HttpApi.Host.Controllers
         {
             _logger = logger;
         }
+        [HttpGet("GeRandomResults")]
+        public IEnumerable<object> GeRandomResults()
+        {
+            var rng = new Random();
+            return Enumerable.Range(1, 5).Select(index => new
+            {
+                Date = DateTime.Now.AddDays(index),
+                TemperatureC = rng.Next(-20, 55),
+                Summary = Summaries[rng.Next(Summaries.Length)]
+            })
+            .ToArray();
+        }
 
         [HttpGet]
         public IEnumerable<object> Get()

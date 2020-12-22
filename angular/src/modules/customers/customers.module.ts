@@ -8,12 +8,16 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [CustomersComponent],
   imports: [
     CommonModule,
     CustomersRoutingModule,
+    MatMenuModule,
+    MatButtonModule,
     BreezeCommonModule,
     MatTableModule,
     MatPaginatorModule,

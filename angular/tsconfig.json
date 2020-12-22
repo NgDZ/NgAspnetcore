@@ -14,8 +14,33 @@
     "module": "es2020",
     "lib": ["es2018", "dom"],
     "paths": {
-      "@abp/ng.*": ["src/abp/*"],
-      "@module/*": ["src/modules/*"]
+      "@abpdz/ng.core": ["src/abp/core/public-api.ts"],
+      "@ngx-translate/core": ["src/abp/core/@ngx-translate"],
+      "@abpdz/ng.account": ["src/abp/account/public-api.ts"],
+      "@abpdz/ng.account/config": ["src/abp/account-config/public-api.ts"],
+      "@abpdz/ng.identity/config": ["src/abp/identity-config/public-api.ts"],
+      "@abpdz/ng.identity": ["src/abp/identity/public-api.ts"],
+      "@abpdz/ng.theme.basic": ["src/abp/theme.basic/public-api.ts"],
+      "@abpdz/ng.theme.shared": ["src/abp/theme.shared/public-api.ts"],
+      "@abpdz/ng.theme.shared/*": ["src/abp/theme.shared/*"],
+      "@abpdz/ng.permission-management/config": [
+        "src/abp/permission-management-config/public-api.ts"
+      ],
+      "@abpdz/ng.permission-management": [
+        "src/abp/permission-management/public-api.ts"
+      ],
+      "@abpdz/compat": ["src/abp/compat"],
+      "@abpdz/ng.setting-management": [
+        "src/abp/setting-management/public-api.ts"
+      ],
+      "@abpdz/ng.setting-management/config": [
+        "src/abp/setting-management-config/public-api.ts"
+      ],
+      "@abpdz/ng.*": ["src/abp/*"],
+      "@module/*": ["src/modules/*"],
+      "@api-proxy/*": ["src/api/*"],
+      "@fuse": ["src/@fuse/"],
+      "@fuse/*": ["src/@fuse/*"]
     }
   },
   "angularCompilerOptions": {
