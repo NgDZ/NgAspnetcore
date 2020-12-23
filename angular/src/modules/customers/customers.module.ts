@@ -12,6 +12,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { CustomersAbpComponent } from './customers-abp/customers-abp.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [CustomersComponent, CustomersAbpComponent],
@@ -20,6 +21,7 @@ import { CustomersAbpComponent } from './customers-abp/customers-abp.component';
     CustomersRoutingModule,
     MatMenuModule,
     MatButtonModule,
+    MatIconModule,
     BreezeCommonModule,
     MatTableModule,
     MatPaginatorModule,

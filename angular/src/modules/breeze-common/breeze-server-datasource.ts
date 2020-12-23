@@ -16,54 +16,6 @@ export class BreezeServerDataSource<
     super();
   }
 
-  /**
-   * Connect this data source to the table. The table will only update when
-   * the returned stream emits new items.
-   * @returns A stream of the items to be rendered.
-   */
-  connect(): Observable<NgEntity[]> {
-    // Combine everything that affects the rendered data into one update
-    // stream for the data-table to consume.
-    const dataMutations = [
-      this.page,
-      this.sort,
-      this.filter.pipe(tap(() => (this.requestCount = true))),
-      this.config.pipe(tap(() => (this.requestCount = true))),
-    ];
-
-    return combineLatest(dataMutations).pipe(
-      // map(() => {
-      //   return this.getPagedData(this.getSortedData([...this.data]));
-      // }),
-      switchMap((g) => {
-        if (this.config.value.em == null) {
-          return observableOf([]);
-        } else {
-          const conf = this.config.value;
-          return executeObservableQuery<NgEntity[]>(
-            conf.em,
-            conf.collection,
-            null,
-            (query: EntityQuery) => this.buidBreezeQuery(query)
-          ).pipe(
-            map((e) => {
-              if (e.inlineCount !== null) {
-                this.requestCount = false;
-                this.count.next(e.inlineCount);
-              }
-              return e.results;
-            })
-          );
-        }
-      }),
-      switchMap((k) => {
-        this.data.next(k);
-        return this.data;
-        // this.count.next(k.length);
-      })
-    ) as any;
-  }
-
   buidBreezeQuery(query: EntityQuery) {
     const startIndex = this.page.value.pageIndex * this.page.value.pageSize;
     if (startIndex) {
@@ -82,8 +34,8 @@ export class BreezeServerDataSource<
     return query;
   }
 
-  deleteAsync(item: any) {
-    const bem = this.config.value.em as EntityManager;
+  deleteServer(item: any) {
+    const bem = this.getEntityManager();
     if (bem) {
       item.entityAspect.setDeleted();
       return from(bem.saveChanges([item]));
@@ -92,7 +44,11 @@ export class BreezeServerDataSource<
     }
   }
 
-  protected GetNextPage() {
+  private getEntityManager() {
+    return this.config.value.em as EntityManager;
+  }
+
+  protected nextPage() {
     const conf = this.config.value;
     return executeObservableQuery<NgEntity[]>(
       conf.em,

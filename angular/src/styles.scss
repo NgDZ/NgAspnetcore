@@ -1,7 +1,9 @@
+@import "~typeface-roboto/index.css";
 
+@import "~material-design-icons-iconfont/dist/material-design-icons.css";
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@import '~@angular/material/theming';
+@import "~@angular/material/theming";
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -20,13 +22,15 @@ $NgAspnetcore-warn: mat-palette($mat-red);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$NgAspnetcore-theme: mat-light-theme((
-  color: (
-    primary: $NgAspnetcore-primary,
-    accent: $NgAspnetcore-accent,
-    warn: $NgAspnetcore-warn,
+$NgAspnetcore-theme: mat-light-theme(
+  (
+    color: (
+      primary: $NgAspnetcore-primary,
+      accent: $NgAspnetcore-accent,
+      warn: $NgAspnetcore-warn,
+    ),
   )
-));
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -35,5 +39,24 @@ $NgAspnetcore-theme: mat-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.ngdz-loading-shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}

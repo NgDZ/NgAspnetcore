@@ -1,3 +1,6 @@
 .full-width-table {
   width: 100%;
 }
+::ng-host{
+  position: relative;
+}
