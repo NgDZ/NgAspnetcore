@@ -6,7 +6,7 @@ import {
   HTTP_INTERCEPTORS,
 } from '@angular/common/http';
 
-import { NamingConvention } from 'breeze-client';
+import { NamingConvention, config } from 'breeze-client';
 import { AjaxHttpClientAdapter } from 'breeze-client/adapter-ajax-httpclient';
 import { DataServiceWebApiAdapter } from 'breeze-client/adapter-data-service-webapi';
 import { ModelLibraryBackingStoreAdapter } from 'breeze-client/adapter-model-library-backing-store';
@@ -43,5 +43,12 @@ export class BreezeCommonModule {
     //   'webApiOData4',
     //   true
     // );
+
+    const adapter = config.getInterfaceDef('ajax');
+
+    (<any>adapter.defaultInstance).defaultSettings.headers = {
+      Accept: 'breeze/json',
+      'Content-Type': 'breeze/json',
+    };
   }
 }

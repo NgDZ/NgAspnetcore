@@ -119,6 +119,9 @@ export class AsyncDataSource<NgEntity> extends DataSource<NgEntity> {
   deleteServer(item: any): Observable<any> {
     return of(item);
   }
+  confirmDelete(item) {
+    return of(true);
+  }
   delete$(item: any): Observable<any> {
     this.loading++;
     return this.deleteServer(item).pipe(

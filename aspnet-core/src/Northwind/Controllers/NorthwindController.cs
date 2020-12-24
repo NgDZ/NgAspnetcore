@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
 using Breeze.AspNetCore;
 using Breeze.Persistence;
 using Breeze.Persistence.EFCore;
@@ -46,9 +45,17 @@ namespace Northwind.Controllers
 
         [HttpPost]
         [Route("SaveChanges")]
-        public SaveResult SaveChanges([FromBody] JObject saveBundle)
+        public SaveResult SaveChanges()
         {
-            return PersistenceManager.SaveChanges(saveBundle);
+            using (var reader = new StreamReader(Request.Body))
+            {
+                var text = reader.ReadToEnd();
+                var body = JObject.Parse(text);
+
+                return PersistenceManager.SaveChanges(body);
+                // Do something
+            }
+
         }
         public class LookupsOptions
         {
