@@ -21,9 +21,15 @@ namespace Northwind.Controllers
 
         }
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Customer>>> Get([FromQuery] AbpBaseFilter filter)
+        public async Task<ActionResult<object>> Get([FromQuery] AbpBaseFilter filter)
         {
-            return await _context.Customers.Skip(filter.SkipCount).Take(filter.MaxResultCount).AsNoTracking().ToArrayAsync();
+            // IEnumerable<Customer>
+            var query = _context.Customers.AsQueryable();
+            return new
+            {
+                totalCount = (filter.RequestCount != false) ? ((int?)await query.CountAsync()) : null,
+                items = await _context.Customers.Skip(filter.SkipCount).Take(filter.MaxResultCount).AsNoTracking().ToArrayAsync()
+            };
         }
         [HttpGet("{id}")]
         public async Task<ActionResult<Customer>> Get([FromRoute] int id)
@@ -42,7 +48,7 @@ namespace Northwind.Controllers
         {
             _context.Customers.Add(item);
             await _context.SaveChangesAsync();
-            return item; 
+            return item;
         }
         [HttpDelete("{id}")]
         public async Task<ActionResult<Customer>> Delete([FromRoute] int id)

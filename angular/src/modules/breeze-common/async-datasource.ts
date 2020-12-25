@@ -86,10 +86,7 @@ export class AsyncDataSource<NgEntity> extends DataSource<NgEntity> {
       this.connect$ = combineLatest(dataMutations).pipe(
         switchMap(() => {
           this.loading++;
-          return (this.config.value.em == null
-            ? observableOf([])
-            : this.nextPage()
-          ).pipe(take(1));
+          return this.nextPage().pipe(take(1));
         }),
         switchMap((k) => {
           this.data.next(k as any);

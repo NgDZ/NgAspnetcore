@@ -54,9 +54,7 @@
     <ng-container matColumnDef="contactTitle">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Title</th>
       <td mat-cell *matCellDef="let row">
-        <mat-form-field *ngIf="showInput">
-          <input [(ngModel)]="row.contactTitle" />
-        </mat-form-field>
+         
         {{ row.contactTitle }}
       </td>
     </ng-container>

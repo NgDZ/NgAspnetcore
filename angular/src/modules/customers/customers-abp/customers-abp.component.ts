@@ -9,16 +9,19 @@ import {
   EntityManagerProvider,
   executeLookupsQuery,
 } from '../../breeze-common/breeze-helpers';
-
+import { HttpClient } from '@angular/common/http';
+import { AbpIOHttpService, RestDataSource } from '@module/breeze-common';
+import { AsyncDataSource } from '@module/breeze-common/async-datasource';
 
 @Component({
   selector: 'app-customers-abp',
   templateUrl: './customers-abp.component.html',
-  styleUrls: ['./customers-abp.component.scss']
+  styleUrls: ['./customers-abp.component.scss'],
 })
 export class CustomersAbpComponent implements AfterViewInit, OnInit {
-  dataSource: BreezeServerDataSource<Customer>;
-  showInput=false;
+  dataSource: AsyncDataSource<Customer>;
+
+  showInput = false;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = [
@@ -29,21 +32,22 @@ export class CustomersAbpComponent implements AfterViewInit, OnInit {
     'companyName',
   ];
   em: EntityManager;
-  constructor(private provider: EntityManagerProvider) {}
+  constructor(private http: HttpClient) {}
   ngOnInit() {
-    this.dataSource = new BreezeServerDataSource();
-    this.provider
-      .registerManager({}, true, () => {}, '/api/northwind')
-      .subscribe((k) => {
-        this.em = k;
-        this.dataSource.config.next({ em: k, collection: 'Customers' });
-        executeLookupsQuery(this.em, {}).subscribe((k) => {});
-      });
+    this.dataSource = new RestDataSource(
+      new AbpIOHttpService(this.http, '/api/customers', 'entityId')
+    );
+    // this.provider
+    //   .registerManager({}, true, () => {}, '/api/northwind')
+    //   .subscribe((k) => {
+    //     this.em = k;
+    //     this.dataSource.config.next({ em: k, collection: 'Customers' });
+    //     executeLookupsQuery(this.em, {}).subscribe((k) => {});
+    //   });
   }
 
   ngAfterViewInit() {}
   save() {
     this.em.saveChanges().then((k) => console.log('end'));
   }
-
 }

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using Breeze.AspNetCore;
 using Breeze.Persistence;
 using Breeze.Persistence.EFCore;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -45,16 +47,21 @@ namespace Northwind.Controllers
 
         [HttpPost]
         [Route("SaveChanges")]
-        public SaveResult SaveChanges()
+        public async Task<SaveResult> SaveChanges()
         {
-            using (var reader = new StreamReader(Request.Body))
+            var bodyStr = "";
+            var req = HttpContext.Request;
+            req.EnableBuffering();
+           
+            using (var stream = new StreamReader(req.Body))
             {
-                var text = reader.ReadToEnd();
-                var body = JObject.Parse(text);
+                bodyStr = await stream.ReadToEndAsync();
+                var body = JObject.Parse(bodyStr);
 
                 return PersistenceManager.SaveChanges(body);
-                // Do something
             }
+
+
 
         }
         public class LookupsOptions

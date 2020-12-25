@@ -48,7 +48,7 @@ export class BreezeCommonModule {
 
     (<any>adapter.defaultInstance).defaultSettings.headers = {
       Accept: 'breeze/json',
-      'Content-Type': 'breeze/json',
+      // 'Content-Type': 'breeze/json',
     };
   }
 }

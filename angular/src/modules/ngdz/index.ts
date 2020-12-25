@@ -9,4 +9,4 @@ export * from './base-async-component';
 export * from './ngdz-observable-table-data-source';
 export * from './columns-selection';
 export * from './utils';
-export * from './reactive-group';
+export * from '../breeze-common/reactive-group';

@@ -49,6 +49,9 @@ export class BreezeServerDataSource<
   }
 
   protected nextPage() {
+    if (this.config.value.em == null) {
+      return of([]);
+    }
     const conf = this.config.value;
     return executeObservableQuery<NgEntity[]>(
       conf.em,
