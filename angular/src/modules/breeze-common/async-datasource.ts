@@ -8,6 +8,7 @@ import {
   BehaviorSubject,
   combineLatest,
   of,
+  Subject,
 } from 'rxjs';
 export enum CrudOperation {
   Read = 1,
@@ -44,6 +45,13 @@ export class AsyncDataSource<NgEntity> extends DataSource<NgEntity> {
 
   data: BehaviorSubject<NgEntity[]> = new BehaviorSubject<NgEntity[]>([]);
   current: BehaviorSubject<NgEntity> = new BehaviorSubject<NgEntity>(null);
+  events: Subject<{
+    operation: CrudOperation;
+    item: NgEntity;
+  }> = new Subject<{
+    operation: CrudOperation;
+    item: NgEntity;
+  }>();
   page: BehaviorSubject<PageEvent> = new BehaviorSubject<PageEvent>({
     pageIndex: 0,
 
@@ -143,15 +151,19 @@ export class AsyncDataSource<NgEntity> extends DataSource<NgEntity> {
 
   protected deleteLocal(item) {
     this.data.value.splice(this.data.value.indexOf(item), 1);
+
+    this.events.next({ operation: CrudOperation.Delete, item: item });
     this.count.next(this.count.value - 1);
     this.operation = null;
     this.data.next(this.data.value);
   }
 
-  initServer(item: any): Observable<any> {
+  initCreate$(item: any): Observable<any> {
     return of(item);
   }
-
+  initEdit$(item: any): Observable<any> {
+    return of(item);
+  }
   createServer(item: any): Observable<any> {
     return of(item);
   }
@@ -180,6 +192,7 @@ export class AsyncDataSource<NgEntity> extends DataSource<NgEntity> {
   protected createLocal(item) {
     this.count.next(this.count.value + 1);
     this.operation = null;
+    this.events.next({ operation: CrudOperation.Create, item: item });
     this.data.next([...this.data.value, item]);
   }
 
@@ -211,6 +224,7 @@ export class AsyncDataSource<NgEntity> extends DataSource<NgEntity> {
   protected updateLocal(item, newItem) {
     this.operation = null;
     const index = this.data.value.indexOf(item);
+    this.events.next({ operation: CrudOperation.Update, item: item });
 
     this.data.next([
       // part of the array before the specified index

@@ -1287,6 +1287,13 @@
     enhanced-resolve "5.4.0"
     webpack-sources "2.2.0"
 
+"@ngx-translate/core@^13.0.0":
+  version "13.0.0"
+  resolved "http://localhost:4444/@ngx-translate%2fcore/-/core-13.0.0.tgz#60547cb8a0845a2a0abfde6b0bf5ec6516a63fd6"
+  integrity sha512-+tzEp8wlqEnw0Gc7jtVRAJ6RteUjXw6JJR4O65KlnxOmJrCGPI0xjV/lKRnQeU0w4i96PQs/jtpL921Wrb7PWg==
+  dependencies:
+    tslib "^2.0.0"
+
 "@ngx-validate/core@^0.0.13":
   version "0.0.13"
   resolved "http://localhost:4444/@ngx-validate%2fcore/-/core-0.0.13.tgz#954c6d247df8107668f23a39db24ca45c274f3d9"

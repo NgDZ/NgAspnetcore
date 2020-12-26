@@ -4,6 +4,7 @@ import {
   OnDestroy,
   Component,
 } from '@angular/core';
+import { LoggerService } from '@module/breeze-common/logger.service';
 import { BehaviorSubject, Subject } from 'rxjs';
 // import { TranslateService } from '@ngx-translate/core';
 
@@ -63,4 +64,6 @@ export class BaseAsyncComponent implements OnDestroy {
   log(k) {
     console.log(k);
   }
+
+  
 }
