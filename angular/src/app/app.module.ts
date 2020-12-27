@@ -16,9 +16,18 @@ import { MatMenuModule } from '@angular/material/menu';
 import { AppComponent } from './app/app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MiniProfilerInterceptor } from './shared/mini-profiler.service';
+import { TranslateModule } from '@ngx-translate/core';
+import { ToastrModule } from 'ngx-toastr';
+
 @NgModule({
   declarations: [AppComponent, HomeComponent],
   imports: [
+    TranslateModule.forRoot(),
+    ToastrModule.forRoot(),
+
+    TranslateModule.forRoot(),
+    ToastrModule.forRoot(),
+
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

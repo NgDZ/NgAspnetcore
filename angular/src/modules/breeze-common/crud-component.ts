@@ -10,9 +10,7 @@ import {
 } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { MatDialogRef, MatDialog } from '@angular/material/dialog';
-import { HTTP_CLIENT_TOKEN } from '@module/ngdz';
 import { Subject, BehaviorSubject } from 'rxjs';
-import { IHttpService } from '.';
 import { AsyncDataSource, CrudOperation } from './async-datasource';
 import { LoggerService } from './logger.service';
 @Directive({})
@@ -77,7 +75,6 @@ export class BaseCrudComponent<datatype> extends BaseAsyncComponent {
   // protected cd: ChangeDetectorRef = this.injector.get(ChangeDetectorRef);
   constructor(
     @Optional()
-    @Inject(HTTP_CLIENT_TOKEN)
     injector: Injector
   ) {
     super(injector);

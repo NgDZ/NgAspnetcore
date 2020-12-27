@@ -37,6 +37,9 @@ $NgAspnetcore-theme: mat-light-theme(
 // that you are using.
 @include angular-material-theme($NgAspnetcore-theme);
 
+
+@import '~ngx-toastr/toastr';
+
 /* You can add global styles to this file, and also import other style files */
 
 html,
