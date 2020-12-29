@@ -63,3 +63,12 @@ body {
   justify-content: center;
   z-index: 2;
 }
+
+.p-0 {
+  .mat-dialog-container {
+    padding: 0 !important;
+  }
+  .mat-expansion-panel-body {
+    padding: 0 !important;
+  }
+}

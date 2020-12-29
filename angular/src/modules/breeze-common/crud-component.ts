@@ -10,7 +10,7 @@ import {
 } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { MatDialogRef, MatDialog } from '@angular/material/dialog';
-import { Subject, BehaviorSubject } from 'rxjs';
+import { Subject, BehaviorSubject, Observable } from 'rxjs';
 import { AsyncDataSource, CrudOperation } from './async-datasource';
 import { LoggerService } from './logger.service';
 @Directive({})
@@ -80,12 +80,6 @@ export class BaseCrudComponent<datatype> extends BaseAsyncComponent {
     super(injector);
   }
 
-  edit(item) {
-    this.dataSource.initEdit$(item).subscribe((k) => {
-      this.dataSource.operation = CrudOperation.Create;
-      this.dialogEdit(k);
-    });
-  }
   dialogEdit(entity: Partial<datatype>) {
     this.dataSource.current.next(entity as any);
     if (this.editForm != null) {
@@ -101,6 +95,13 @@ export class BaseCrudComponent<datatype> extends BaseAsyncComponent {
 
   startEdit(entity: Partial<datatype>) {
     this.dataSource.initEdit$(entity).subscribe((k) => {
+      this.dataSource.operation = CrudOperation.Update;
+      this.dialogEdit(k);
+    });
+  }
+
+  createEdit(entity?: Partial<datatype>) {
+    this.dataSource.initCreate$(entity).subscribe((k) => {
       this.dataSource.operation = CrudOperation.Create;
       this.dialogEdit(k);
     });
@@ -122,16 +123,30 @@ export class BaseCrudComponent<datatype> extends BaseAsyncComponent {
     if (this.dataSource.operation == null) {
       return true;
     }
+    if (item == null) {
+      item = this.dataSource.current.value || {};
+    }
+
+    item = { ...item, ...(this.editForm ? this.editForm.value : {}) };
+    let result: Observable<any>;
     switch (this.dataSource.operation) {
       case CrudOperation.Create:
-        this.dataSource.create(item);
+        result = this.dataSource.create$(item);
         break;
       case CrudOperation.Update:
-        this.dataSource.update(item);
+        result = this.dataSource.update$(item);
         break;
       case CrudOperation.Delete:
-        this.dataSource.delete(item);
+        result = this.dataSource.delete$(item);
         break;
+    }
+    if (result) {
+      result.subscribe((k) => {
+        if (this.dialogRef) {
+          this.dialogRef.close(item);
+        }
+        this.dialogRef = null;
+      });
     }
   }
 }

@@ -29,7 +29,6 @@ export class AsyncDataSource<NgEntity> extends DataSource<NgEntity> {
   }
   // tslint:disable-next-line: adjacent-overload-signatures
   public set loading(v: number) {
-    console.log('loading:' + v);
     if (v < 0) {
       v = 0;
     }
@@ -183,7 +182,7 @@ export class AsyncDataSource<NgEntity> extends DataSource<NgEntity> {
     );
   }
   create(item) {
-    this.delete$(item).subscribe(
+    this.create$(item).subscribe(
       () => {},
       () => {}
     );
@@ -223,16 +222,19 @@ export class AsyncDataSource<NgEntity> extends DataSource<NgEntity> {
 
   protected updateLocal(item, newItem) {
     this.operation = null;
-    const index = this.data.value.indexOf(item);
+    let index = this.data.value.indexOf(item);
+    if (index < 0) {
+      index = this.data.value.indexOf(this.current.value);
+    }
     this.events.next({ operation: CrudOperation.Update, item: item });
-
+    console.log(index);
     this.data.next([
       // part of the array before the specified index
       ...this.data.value.slice(0, index),
       // inserted item
       newItem,
       // part of the array after the specified index
-      ...this.data.value.slice(index),
+      ...this.data.value.slice(index+1),
     ]);
   }
 }
