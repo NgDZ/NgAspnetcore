@@ -149,7 +149,11 @@ export class AsyncDataSource<NgEntity> extends DataSource<NgEntity> {
   }
 
   protected deleteLocal(item) {
-    this.data.value.splice(this.data.value.indexOf(item), 1);
+    let index = this.data.value.indexOf(item);
+    if (index < 0) {
+      index = this.data.value.indexOf(this.current.value);
+    }
+    this.data.value.splice(index, 1);
 
     this.events.next({ operation: CrudOperation.Delete, item: item });
     this.count.next(this.count.value - 1);
@@ -227,14 +231,14 @@ export class AsyncDataSource<NgEntity> extends DataSource<NgEntity> {
       index = this.data.value.indexOf(this.current.value);
     }
     this.events.next({ operation: CrudOperation.Update, item: item });
-    console.log(index);
+
     this.data.next([
       // part of the array before the specified index
       ...this.data.value.slice(0, index),
       // inserted item
       newItem,
       // part of the array after the specified index
-      ...this.data.value.slice(index+1),
+      ...this.data.value.slice(index + 1),
     ]);
   }
 }
