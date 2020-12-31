@@ -27,6 +27,11 @@ export class RestDataSource<NgEntity> extends AsyncDataSource<NgEntity> {
     if (this.filter.value) {
       param = { ...this.filter.value, ...param };
     }
+    if (this.sort.value && this.sort.value.direction) {
+      param.sort =
+        this.sort.value.active +
+        (this.sort.value.direction == 'desc' ? ' desc' : '');
+    }
     console.log('start: param', param);
     return this.api.getAll(param).pipe(
       map((e) => {
