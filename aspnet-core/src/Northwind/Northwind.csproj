@@ -11,19 +11,21 @@
     <ProjectReference Include="..\NgAspnetcore.EntityFrameworkCore\NgAspnetcore.EntityFrameworkCore.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <!-- <PackageReference Include="Breeze.AspNetCore.NetCore" Version="3.0.1" /> -->
-    <!-- <PackageReference Include="Breeze.Core" Version="3.0.1" /> -->
-    <!-- <PackageReference Include="Breeze.Persistence.EFCore" Version="3.0.3" /> -->
-    <!-- <PackageReference Include="Breeze.Persistence" Version="3.0.1" /> -->
-    <PackageReference Include="Microsoft.EntityFrameworkCore.DynamicLinq" Version="5.2.7" />
-    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.7" />
-    <ProjectReference Include="../../../../../code-github/breeze.server.net/AspNetCore-v5/Breeze.AspNetCore.NetCore/Breeze.AspNetCore.NetCore.csproj" />
+    <PackageReference Include="Breeze.AspNetCore.NetCore" Version="5.0.0" />
+    <PackageReference Include="Breeze.Core" Version="5.0.0" />
+    <PackageReference Include="Breeze.Persistence.EFCore" Version="5.0.0" />
+    <PackageReference Include="Breeze.Persistence" Version="5.0.0" />
+
+     <!-- <ProjectReference Include="../../../../../code-github/breeze.server.net/AspNetCore-v5/Breeze.AspNetCore.NetCore/Breeze.AspNetCore.NetCore.csproj" />
    
     <ProjectReference Include="../../../../../code-github/breeze.server.net/AspNetCore-v5/Breeze.Core/Breeze.Core.csproj" />
    
     <ProjectReference Include="../../../../../code-github/breeze.server.net/AspNetCore-v5/Breeze.Persistence/Breeze.Persistence.csproj" />
    
     <ProjectReference Include="../../../../../code-github/breeze.server.net/AspNetCore-v5/Breeze.Persistence.EFCore/Breeze.Persistence.EFCore.csproj" />
+    -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.DynamicLinq" Version="5.2.7" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.7" />
    
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson" Version="5.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.1" />
