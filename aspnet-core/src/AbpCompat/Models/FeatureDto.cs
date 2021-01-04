@@ -4,46 +4,23 @@ namespace AbpCompat
 {
 	public class FeatureDto
 	{
-		public string Name
-		{
-			get;
-		}
+		public string Name { get; set; }
 
-		public string DisplayName
-		{
-			get;
-		}
+		public string DisplayName { get; set; }
 
-		public string Value
-		{
-			get;
-		}
+		public string Value { get; set; }
 
-		public FeatureProviderDto Provider
-		{
-			get;
-		}
+		public FeatureProviderDto Provider { get; set; }
 
-		public string Description
-		{
-			get;
-		}
+		public string Description { get; set; }
 
-		public IStringValueType ValueType
-		{
-			get;
-		}
+		public IStringValueType ValueType { get; set; }
 
-		public int Depth
-		{
-			get;
-		}
+		public int Depth { get; set; }
 
-		public string ParentName
-		{
-			get;
-		}
+		public string ParentName { get; set; }
 
+		public FeatureDto() { }
 		[JsonConstructor]
 		public FeatureDto(int depth, string description, string displayName, string name, string parentName, FeatureProviderDto provider, string value, IStringValueType valueType)
 		{

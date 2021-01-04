@@ -5,11 +5,9 @@ namespace AbpCompat
 {
 	public class UpdateFeaturesDto
 	{
-		public List<UpdateFeatureDto> Features
-		{
-			get;
-		}
+		public List<UpdateFeatureDto> Features { get; set; }
 
+		public UpdateFeaturesDto() { }
 		[JsonConstructor]
 		public UpdateFeaturesDto(List<UpdateFeatureDto> features)
 		{

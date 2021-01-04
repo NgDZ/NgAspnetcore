@@ -4,16 +4,11 @@ namespace AbpCompat
 {
 	public class LocalizableStringDto
 	{
-		public string Name
-		{
-			get;
-		}
+		public string Name { get; set; }
 
-		public string Resource
-		{
-			get;
-		}
+		public string Resource { get; set; }
 
+		public LocalizableStringDto() { }
 		[JsonConstructor]
 		public LocalizableStringDto(string name, string resource)
 		{

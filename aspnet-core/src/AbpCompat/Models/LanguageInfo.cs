@@ -4,26 +4,15 @@ namespace AbpCompat
 {
 	public class LanguageInfo
 	{
-		public string CultureName
-		{
-			get;
-		}
+		public string CultureName { get; set; }
 
-		public string UiCultureName
-		{
-			get;
-		}
+		public string UiCultureName { get; set; }
 
-		public string DisplayName
-		{
-			get;
-		}
+		public string DisplayName { get; set; }
 
-		public string FlagIcon
-		{
-			get;
-		}
+		public string FlagIcon { get; set; }
 
+		public LanguageInfo() { }
 		[JsonConstructor]
 		public LanguageInfo(string cultureName, string displayName, string flagIcon, string uiCultureName)
 		{

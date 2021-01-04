@@ -5,21 +5,13 @@ namespace AbpCompat
 {
 	public class FeatureGroupDto
 	{
-		public string Name
-		{
-			get;
-		}
+		public string Name { get; set; }
 
-		public string DisplayName
-		{
-			get;
-		}
+		public string DisplayName { get; set; }
 
-		public List<FeatureDto> Features
-		{
-			get;
-		}
+		public List<FeatureDto> Features { get; set; }
 
+		public FeatureGroupDto() { }
 		[JsonConstructor]
 		public FeatureGroupDto(string displayName, List<FeatureDto> features, string name)
 		{

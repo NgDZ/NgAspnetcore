@@ -4,16 +4,11 @@ namespace AbpCompat
 {
 	public class NameValue
 	{
-		public string Name
-		{
-			get;
-		}
+		public string Name { get; set; }
 
-		public string Value
-		{
-			get;
-		}
+		public string Value { get; set; }
 
+		public NameValue() { }
 		[JsonConstructor]
 		public NameValue(string name, string value)
 		{

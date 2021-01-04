@@ -4,16 +4,11 @@ namespace AbpCompat
 {
 	public class UpdatePermissionDto
 	{
-		public string Name
-		{
-			get;
-		}
+		public string Name { get; set; }
 
-		public bool IsGranted
-		{
-			get;
-		}
+		public bool IsGranted { get; set; }
 
+		public UpdatePermissionDto() { }
 		[JsonConstructor]
 		public UpdatePermissionDto(bool isGranted, string name)
 		{

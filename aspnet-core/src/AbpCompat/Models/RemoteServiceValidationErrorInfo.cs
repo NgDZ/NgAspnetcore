@@ -5,16 +5,11 @@ namespace AbpCompat
 {
 	public class RemoteServiceValidationErrorInfo
 	{
-		public string Message
-		{
-			get;
-		}
+		public string Message { get; set; }
 
-		public List<string> Members
-		{
-			get;
-		}
+		public List<string> Members { get; set; }
 
+		public RemoteServiceValidationErrorInfo() { }
 		[JsonConstructor]
 		public RemoteServiceValidationErrorInfo(List<string> members, string message)
 		{

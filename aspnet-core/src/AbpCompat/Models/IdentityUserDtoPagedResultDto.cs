@@ -5,16 +5,11 @@ namespace AbpCompat
 {
 	public class IdentityUserDtoPagedResultDto
 	{
-		public List<IdentityUserDto> Items
-		{
-			get;
-		}
+		public List<IdentityUserDto> Items { get; set; }
 
-		public long TotalCount
-		{
-			get;
-		}
+		public long TotalCount { get; set; }
 
+		public IdentityUserDtoPagedResultDto() { }
 		[JsonConstructor]
 		public IdentityUserDtoPagedResultDto(List<IdentityUserDto> items, long totalCount)
 		{

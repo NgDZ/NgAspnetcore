@@ -4,11 +4,9 @@ namespace AbpCompat
 {
 	public class RemoteServiceErrorResponse
 	{
-		public RemoteServiceErrorInfo Error
-		{
-			get;
-		}
+		public RemoteServiceErrorInfo Error { get; set; }
 
+		public RemoteServiceErrorResponse() { }
 		[JsonConstructor]
 		public RemoteServiceErrorResponse(RemoteServiceErrorInfo error)
 		{

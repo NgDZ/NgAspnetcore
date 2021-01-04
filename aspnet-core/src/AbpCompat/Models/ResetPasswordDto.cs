@@ -5,21 +5,13 @@ namespace AbpCompat
 {
 	public class ResetPasswordDto
 	{
-		public Guid UserId
-		{
-			get;
-		}
+		public Guid UserId { get; set; }
 
-		public string ResetToken
-		{
-			get;
-		}
+		public string ResetToken { get; set; }
 
-		public string Password
-		{
-			get;
-		}
+		public string Password { get; set; }
 
+		public ResetPasswordDto() { }
 		[JsonConstructor]
 		public ResetPasswordDto(string password, string resetToken, Guid userId)
 		{

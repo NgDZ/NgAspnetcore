@@ -5,31 +5,17 @@ namespace AbpCompat
 {
 	public class IdentityRoleUpdateDto
 	{
-		public IDictionary<string, object> ExtraProperties
-		{
-			get;
-		}
+		public IDictionary<string, object> ExtraProperties { get; set; }
 
-		public string Name
-		{
-			get;
-		}
+		public string Name { get; set; }
 
-		public bool IsDefault
-		{
-			get;
-		}
+		public bool IsDefault { get; set; }
 
-		public bool IsPublic
-		{
-			get;
-		}
+		public bool IsPublic { get; set; }
 
-		public string ConcurrencyStamp
-		{
-			get;
-		}
+		public string ConcurrencyStamp { get; set; }
 
+		public IdentityRoleUpdateDto() { }
 		[JsonConstructor]
 		public IdentityRoleUpdateDto(string concurrencyStamp, IDictionary<string, object> extraProperties, bool isDefault, bool isPublic, string name)
 		{

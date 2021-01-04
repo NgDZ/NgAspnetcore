@@ -4,11 +4,9 @@ namespace AbpCompat
 {
 	public class ExtensionPropertyUiTableDto
 	{
-		public bool IsVisible
-		{
-			get;
-		}
+		public bool IsVisible { get; set; }
 
+		public ExtensionPropertyUiTableDto() { }
 		[JsonConstructor]
 		public ExtensionPropertyUiTableDto(bool isVisible)
 		{

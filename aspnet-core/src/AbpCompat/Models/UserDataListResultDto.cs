@@ -5,11 +5,9 @@ namespace AbpCompat
 {
 	public class UserDataListResultDto
 	{
-		public List<UserData> Items
-		{
-			get;
-		}
+		public List<UserData> Items { get; set; }
 
+		public UserDataListResultDto() { }
 		[JsonConstructor]
 		public UserDataListResultDto(List<UserData> items)
 		{

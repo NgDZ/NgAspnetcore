@@ -5,21 +5,13 @@ namespace AbpCompat
 {
 	public class CurrentTenantDto
 	{
-		public Guid? Id
-		{
-			get;
-		}
+		public Guid? Id { get; set; }
 
-		public string Name
-		{
-			get;
-		}
+		public string Name { get; set; }
 
-		public bool IsAvailable
-		{
-			get;
-		}
+		public bool IsAvailable { get; set; }
 
+		public CurrentTenantDto() { }
 		[JsonConstructor]
 		public CurrentTenantDto(Guid? id, bool isAvailable, string name)
 		{

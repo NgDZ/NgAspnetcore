@@ -5,51 +5,25 @@ namespace AbpCompat
 {
 	public class UserData
 	{
-		public Guid Id
-		{
-			get;
-		}
+		public Guid Id { get; set; }
 
-		public Guid? TenantId
-		{
-			get;
-		}
+		public Guid? TenantId { get; set; }
 
-		public string UserName
-		{
-			get;
-		}
+		public string UserName { get; set; }
 
-		public string Name
-		{
-			get;
-		}
+		public string Name { get; set; }
 
-		public string Surname
-		{
-			get;
-		}
+		public string Surname { get; set; }
 
-		public string Email
-		{
-			get;
-		}
+		public string Email { get; set; }
 
-		public bool EmailConfirmed
-		{
-			get;
-		}
+		public bool EmailConfirmed { get; set; }
 
-		public string PhoneNumber
-		{
-			get;
-		}
+		public string PhoneNumber { get; set; }
 
-		public bool PhoneNumberConfirmed
-		{
-			get;
-		}
+		public bool PhoneNumberConfirmed { get; set; }
 
+		public UserData() { }
 		[JsonConstructor]
 		public UserData(string email, bool emailConfirmed, Guid id, string name, string phoneNumber, bool phoneNumberConfirmed, string surname, Guid? tenantId, string userName)
 		{

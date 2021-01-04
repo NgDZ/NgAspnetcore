@@ -4,11 +4,9 @@ namespace AbpCompat
 {
 	public class ExtensionPropertyApiCreateDto
 	{
-		public bool IsAvailable
-		{
-			get;
-		}
+		public bool IsAvailable { get; set; }
 
+		public ExtensionPropertyApiCreateDto() { }
 		[JsonConstructor]
 		public ExtensionPropertyApiCreateDto(bool isAvailable)
 		{

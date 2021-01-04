@@ -4,41 +4,21 @@ namespace AbpCompat
 {
 	public class DateTimeFormatDto
 	{
-		public string CalendarAlgorithmType
-		{
-			get;
-		}
+		public string CalendarAlgorithmType { get; set; }
 
-		public string DateTimeFormatLong
-		{
-			get;
-		}
+		public string DateTimeFormatLong { get; set; }
 
-		public string ShortDatePattern
-		{
-			get;
-		}
+		public string ShortDatePattern { get; set; }
 
-		public string FullDateTimePattern
-		{
-			get;
-		}
+		public string FullDateTimePattern { get; set; }
 
-		public string DateSeparator
-		{
-			get;
-		}
+		public string DateSeparator { get; set; }
 
-		public string ShortTimePattern
-		{
-			get;
-		}
+		public string ShortTimePattern { get; set; }
 
-		public string LongTimePattern
-		{
-			get;
-		}
+		public string LongTimePattern { get; set; }
 
+		public DateTimeFormatDto() { }
 		[JsonConstructor]
 		public DateTimeFormatDto(string calendarAlgorithmType, string dateSeparator, string dateTimeFormatLong, string fullDateTimePattern, string longTimePattern, string shortDatePattern, string shortTimePattern)
 		{

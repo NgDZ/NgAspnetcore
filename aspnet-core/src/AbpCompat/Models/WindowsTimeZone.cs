@@ -4,11 +4,9 @@ namespace AbpCompat
 {
 	public class WindowsTimeZone
 	{
-		public string TimeZoneId
-		{
-			get;
-		}
+		public string TimeZoneId { get; set; }
 
+		public WindowsTimeZone() { }
 		[JsonConstructor]
 		public WindowsTimeZone(string timeZoneId)
 		{

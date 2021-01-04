@@ -4,16 +4,11 @@ namespace AbpCompat
 {
 	public class ExtensionEnumFieldDto
 	{
-		public string Name
-		{
-			get;
-		}
+		public string Name { get; set; }
 
-		public object Value
-		{
-			get;
-		}
+		public object Value { get; set; }
 
+		public ExtensionEnumFieldDto() { }
 		[JsonConstructor]
 		public ExtensionEnumFieldDto(string name, object value)
 		{

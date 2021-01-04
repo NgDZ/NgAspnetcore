@@ -5,31 +5,17 @@ namespace AbpCompat
 {
 	public class RemoteServiceErrorInfo
 	{
-		public string Code
-		{
-			get;
-		}
+		public string Code { get; set; }
 
-		public string Message
-		{
-			get;
-		}
+		public string Message { get; set; }
 
-		public string Details
-		{
-			get;
-		}
+		public string Details { get; set; }
 
-		public IDictionary<string, object> Data
-		{
-			get;
-		}
+		public IDictionary<string, object> Data { get; set; }
 
-		public List<RemoteServiceValidationErrorInfo> ValidationErrors
-		{
-			get;
-		}
+		public List<RemoteServiceValidationErrorInfo> ValidationErrors { get; set; }
 
+		public RemoteServiceErrorInfo() { }
 		[JsonConstructor]
 		public RemoteServiceErrorInfo(string code, IDictionary<string, object> data, string details, string message, List<RemoteServiceValidationErrorInfo> validationErrors)
 		{

@@ -5,16 +5,11 @@ namespace AbpCompat
 {
 	public class ExtensionEnumDto
 	{
-		public List<ExtensionEnumFieldDto> Fields
-		{
-			get;
-		}
+		public List<ExtensionEnumFieldDto> Fields { get; set; }
 
-		public string LocalizationResource
-		{
-			get;
-		}
+		public string LocalizationResource { get; set; }
 
+		public ExtensionEnumDto() { }
 		[JsonConstructor]
 		public ExtensionEnumDto(List<ExtensionEnumFieldDto> fields, string localizationResource)
 		{

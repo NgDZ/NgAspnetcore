@@ -4,11 +4,9 @@ namespace AbpCompat
 {
 	public class ClockDto
 	{
-		public string Kind
-		{
-			get;
-		}
+		public string Kind { get; set; }
 
+		public ClockDto() { }
 		[JsonConstructor]
 		public ClockDto(string kind)
 		{

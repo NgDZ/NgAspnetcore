@@ -5,16 +5,11 @@ namespace AbpCompat
 {
 	public class ModuleExtensionDto
 	{
-		public IDictionary<string, EntityExtensionDto> Entities
-		{
-			get;
-		}
+		public IDictionary<string, EntityExtensionDto> Entities { get; set; }
 
-		public IDictionary<string, object> Configuration
-		{
-			get;
-		}
+		public IDictionary<string, object> Configuration { get; set; }
 
+		public ModuleExtensionDto() { }
 		[JsonConstructor]
 		public ModuleExtensionDto(IDictionary<string, object> configuration, IDictionary<string, EntityExtensionDto> entities)
 		{

@@ -4,11 +4,9 @@ namespace AbpCompat
 {
 	public class TimingDto
 	{
-		public TimeZone TimeZone
-		{
-			get;
-		}
+		public TimeZone TimeZone { get; set; }
 
+		public TimingDto() { }
 		[JsonConstructor]
 		public TimingDto(TimeZone timeZone)
 		{

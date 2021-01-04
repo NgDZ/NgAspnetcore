@@ -3,17 +3,15 @@ using System.Text.Json.Serialization;
 
 namespace AbpCompat
 {
-	public class ApplicationFeatureConfigurationDto
-	{
-		public IDictionary<string, string> Values
-		{
-			get;
-		}
+    public class ApplicationFeatureConfigurationDto
+    {
+        public IDictionary<string, string> Values { get; set; }
 
-		[JsonConstructor]
-		public ApplicationFeatureConfigurationDto(IDictionary<string, string> values)
-		{
-			Values = values;
-		}
-	}
+        public ApplicationFeatureConfigurationDto() { }
+
+        public ApplicationFeatureConfigurationDto(IDictionary<string, string> values)
+        {
+            Values = values;
+        }
+    }
 }

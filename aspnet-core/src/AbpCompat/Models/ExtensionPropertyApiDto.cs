@@ -4,21 +4,13 @@ namespace AbpCompat
 {
 	public class ExtensionPropertyApiDto
 	{
-		public ExtensionPropertyApiGetDto OnGet
-		{
-			get;
-		}
+		public ExtensionPropertyApiGetDto OnGet { get; set; }
 
-		public ExtensionPropertyApiCreateDto OnCreate
-		{
-			get;
-		}
+		public ExtensionPropertyApiCreateDto OnCreate { get; set; }
 
-		public ExtensionPropertyApiUpdateDto OnUpdate
-		{
-			get;
-		}
+		public ExtensionPropertyApiUpdateDto OnUpdate { get; set; }
 
+		public ExtensionPropertyApiDto() { }
 		[JsonConstructor]
 		public ExtensionPropertyApiDto(ExtensionPropertyApiCreateDto onCreate, ExtensionPropertyApiGetDto onGet, ExtensionPropertyApiUpdateDto onUpdate)
 		{

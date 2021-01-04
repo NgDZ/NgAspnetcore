@@ -5,21 +5,13 @@ namespace AbpCompat
 {
 	public class PermissionGroupDto
 	{
-		public string Name
-		{
-			get;
-		}
+		public string Name { get; set; }
 
-		public string DisplayName
-		{
-			get;
-		}
+		public string DisplayName { get; set; }
 
-		public List<PermissionGrantInfoDto> Permissions
-		{
-			get;
-		}
+		public List<PermissionGrantInfoDto> Permissions { get; set; }
 
+		public PermissionGroupDto() { }
 		[JsonConstructor]
 		public PermissionGroupDto(string displayName, string name, List<PermissionGrantInfoDto> permissions)
 		{

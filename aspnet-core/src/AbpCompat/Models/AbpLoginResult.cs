@@ -2,23 +2,19 @@ using System.Text.Json.Serialization;
 
 namespace AbpCompat
 {
-	public class AbpLoginResult
-	{
-		public LoginResultType Result
-		{
-			get;
-		}
+    public class AbpLoginResult
+    {
+        public LoginResultType Result { get; set; }
 
-		public string Description
-		{
-			get;
-		}
+        public string Description { get; set; }
 
-		[JsonConstructor]
-		public AbpLoginResult(string description, LoginResultType result)
-		{
-			Result = result;
-			Description = description;
-		}
-	}
+
+        public AbpLoginResult() { }
+        [JsonConstructor]
+        public AbpLoginResult(string description, LoginResultType result)
+        {
+            Result = result;
+            Description = description;
+        }
+    }
 }

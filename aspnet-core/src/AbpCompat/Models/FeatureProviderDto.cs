@@ -4,16 +4,11 @@ namespace AbpCompat
 {
 	public class FeatureProviderDto
 	{
-		public string Name
-		{
-			get;
-		}
+		public string Name { get; set; }
 
-		public string Key
-		{
-			get;
-		}
+		public string Key { get; set; }
 
+		public FeatureProviderDto() { }
 		[JsonConstructor]
 		public FeatureProviderDto(string key, string name)
 		{

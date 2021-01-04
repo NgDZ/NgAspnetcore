@@ -5,16 +5,11 @@ namespace AbpCompat
 {
 	public class EntityExtensionDto
 	{
-		public IDictionary<string, ExtensionPropertyDto> Properties
-		{
-			get;
-		}
+		public IDictionary<string, ExtensionPropertyDto> Properties { get; set; }
 
-		public IDictionary<string, object> Configuration
-		{
-			get;
-		}
+		public IDictionary<string, object> Configuration { get; set; }
 
+		public EntityExtensionDto() { }
 		[JsonConstructor]
 		public EntityExtensionDto(IDictionary<string, object> configuration, IDictionary<string, ExtensionPropertyDto> properties)
 		{

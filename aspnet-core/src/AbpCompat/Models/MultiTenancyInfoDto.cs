@@ -4,11 +4,9 @@ namespace AbpCompat
 {
 	public class MultiTenancyInfoDto
 	{
-		public bool IsEnabled
-		{
-			get;
-		}
+		public bool IsEnabled { get; set; }
 
+		public MultiTenancyInfoDto() { }
 		[JsonConstructor]
 		public MultiTenancyInfoDto(bool isEnabled)
 		{

@@ -5,56 +5,27 @@ namespace AbpCompat
 {
 	public class IdentityUserUpdateDto
 	{
-		public IDictionary<string, object> ExtraProperties
-		{
-			get;
-		}
+		public IDictionary<string, object> ExtraProperties { get; set; }
 
-		public string UserName
-		{
-			get;
-		}
+		public string UserName { get; set; }
 
-		public string Name
-		{
-			get;
-		}
+		public string Name { get; set; }
 
-		public string Surname
-		{
-			get;
-		}
+		public string Surname { get; set; }
 
-		public string Email
-		{
-			get;
-		}
+		public string Email { get; set; }
 
-		public string PhoneNumber
-		{
-			get;
-		}
+		public string PhoneNumber { get; set; }
 
-		public bool LockoutEnabled
-		{
-			get;
-		}
+		public bool LockoutEnabled { get; set; }
 
-		public List<string> RoleNames
-		{
-			get;
-		}
+		public List<string> RoleNames { get; set; }
 
-		public string Password
-		{
-			get;
-		}
+		public string Password { get; set; }
 
-		public string ConcurrencyStamp
-		{
-			get;
-		}
+		public string ConcurrencyStamp { get; set; }
 
+		public IdentityUserUpdateDto() { }
 		[JsonConstructor]
 		public IdentityUserUpdateDto(string concurrencyStamp, string email, IDictionary<string, object> extraProperties, bool lockoutEnabled, string name, string password, string phoneNumber, List<string> roleNames, string surname, string userName)
 		{

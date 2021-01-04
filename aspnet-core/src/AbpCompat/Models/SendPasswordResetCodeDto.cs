@@ -4,26 +4,15 @@ namespace AbpCompat
 {
 	public class SendPasswordResetCodeDto
 	{
-		public string Email
-		{
-			get;
-		}
+		public string Email { get; set; }
 
-		public string AppName
-		{
-			get;
-		}
+		public string AppName { get; set; }
 
-		public string ReturnUrl
-		{
-			get;
-		}
+		public string ReturnUrl { get; set; }
 
-		public string ReturnUrlHash
-		{
-			get;
-		}
+		public string ReturnUrlHash { get; set; }
 
+		public SendPasswordResetCodeDto() { }
 		[JsonConstructor]
 		public SendPasswordResetCodeDto(string appName, string email, string returnUrl, string returnUrlHash)
 		{

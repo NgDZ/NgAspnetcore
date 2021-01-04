@@ -4,26 +4,15 @@ namespace AbpCompat
 {
 	public class RegisterDto
 	{
-		public string UserName
-		{
-			get;
-		}
+		public string UserName { get; set; }
 
-		public string EmailAddress
-		{
-			get;
-		}
+		public string EmailAddress { get; set; }
 
-		public string Password
-		{
-			get;
-		}
+		public string Password { get; set; }
 
-		public string AppName
-		{
-			get;
-		}
+		public string AppName { get; set; }
 
+		public RegisterDto() { }
 		[JsonConstructor]
 		public RegisterDto(string appName, string emailAddress, string password, string userName)
 		{
