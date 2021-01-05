@@ -29,6 +29,7 @@ namespace NgAspnetcore
             "All",
             "v1",
             "docs",
+            "Config",
             "Profile",
             "Northwind"
         };

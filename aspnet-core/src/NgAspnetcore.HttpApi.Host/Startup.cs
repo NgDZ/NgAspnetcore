@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 //using Microsoft.AspNetCore.OData;
 using Microsoft.OData.Edm;
 using Microsoft.OData.ModelBuilder;
+using Microsoft.IdentityModel.Tokens;
 
 namespace NgAspnetcore
 {
@@ -35,17 +36,27 @@ namespace NgAspnetcore
                     Configuration.GetConnectionString("NorthwindConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
-            services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<ApplicationUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddIdentityServer()
                 .AddApiAuthorization<ApplicationUser, ApplicationDbContext>()
                 .AddInMemoryApiResources(IdentityServerConfig2.GetApiResources())
                 .AddInMemoryClients(IdentityServerConfig2.GetClients())
-                .AddPasswordValidator<LocalIdentityServerPasswordValidator<ApplicationUser>>();
-
+                .AddResourceOwnerValidator<ResourceOwnerPasswordValidator>();
+            services.AddTransient<ResourceOwnerPasswordValidator, ResourceOwnerPasswordValidator>();
             services.AddAuthentication()
                 .AddIdentityServerJwt();
+            services.AddAuthentication("Bearer")
+                .AddJwtBearer("Bearer", options =>
+                {
+                    options.Authority = "https://localhost:5001";
+
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateAudience = false
+                    };
+                });
             services.AddRouting();
 
             // services.AddOData(opt => opt.AddModel("Northwind", Northwind.NothwindDbContext.GetEdmModel()));
