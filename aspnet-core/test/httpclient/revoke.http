@@ -1,4 +1,4 @@
 POST https://localhost:5001/connect/revocation HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
 
-client_id=ngaspnetcore_App&client_secret=1q2w3e*&token_type_hint=refresh_token&token=2FE590F716B716A8200016BA8934E6E1ABCBC685C720F5F7BEA1F3E5AF488C07
+client_id=AngularSPA_App&client_secret=1q2w3e*&token_type_hint=refresh_token&token=2FE590F716B716A8200016BA8934E6E1ABCBC685C720F5F7BEA1F3E5AF488C07

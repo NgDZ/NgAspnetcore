@@ -11,9 +11,9 @@ using NgAspnetcore.Models;
 
 namespace NgAspnetcore.HttpApi.Host.Controllers
 {
-    [Authorize]
+    // [Authorize]
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class SetupController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -53,10 +53,11 @@ namespace NgAspnetcore.HttpApi.Host.Controllers
             .ToArray();
         }
 
-        [HttpGet("/api/sutup")]
-        public async void Setup([FromServices] ApplicationDbContext context, [FromServices] UserManager<ApplicationUser> userManager)
+        [HttpGet()]
+        public async Task<object> Setup([FromServices] ApplicationDbContext context, [FromServices] UserManager<ApplicationUser> userManager)
         {
-            context.Database.Migrate();
+            await context.Database.MigrateAsync();
+
             try
             {
                 await userManager.CreateAsync(new ApplicationUser()
@@ -72,6 +73,8 @@ namespace NgAspnetcore.HttpApi.Host.Controllers
 
                 _logger.LogError(ex, nameof(Setup));
             }
+            context.SaveChanges();
+            return await context.Users.ToListAsync();
         }
     }
 }

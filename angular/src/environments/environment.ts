@@ -18,7 +18,7 @@ export const environment = {
     skipIssuerCheck: true,
     issuer: window.location.origin,
     redirectUri: window.location.origin,
-    clientId: 'ngaspnetcore_App',
+    clientId: 'AngularSPA_App',
     clientSecret: '1q2w3e*',
     scope: 'offline_access ngaspnetcore',
     tokenUrl: '/connect/token',

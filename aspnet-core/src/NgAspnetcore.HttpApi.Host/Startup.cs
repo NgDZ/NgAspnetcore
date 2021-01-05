@@ -39,7 +39,10 @@ namespace NgAspnetcore
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddIdentityServer()
-                .AddApiAuthorization<ApplicationUser, ApplicationDbContext>();
+                .AddApiAuthorization<ApplicationUser, ApplicationDbContext>()
+                .AddInMemoryApiResources(IdentityServerConfig2.GetApiResources())
+                .AddInMemoryClients(IdentityServerConfig2.GetClients())
+                .AddPasswordValidator<LocalIdentityServerPasswordValidator<ApplicationUser>>();
 
             services.AddAuthentication()
                 .AddIdentityServerJwt();
