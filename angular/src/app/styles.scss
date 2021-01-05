@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~typeface-roboto/index.css";
+
+@import "~material-design-icons-iconfont/dist/material-design-icons.css";
+
+// @import "~tailwindcss/dist/utilities.min.css";
+@import "~ngx-toastr/toastr";
+
+@import "./styles/themes.scss";
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+abp-validation-error.mat-error {
+  font-size: 75%;
+  overflow: visible;
+  max-height: 0;
+  position: relative;
+  // top: 16px;
+}
+
+.mat-dialog-container .center {
+  padding: 0;
+}

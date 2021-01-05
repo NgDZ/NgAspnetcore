@@ -1,0 +1,57 @@
+@mixin app-cards-theme($theme) {
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  $is-dark: map-get($theme, is-dark);
+}
+
+// Message boxes
+.message-box {
+  padding: 16px;
+  background: #607d8b;
+  border-left: 6px solid #37474f;
+  color: rgba(255, 255, 255, 1);
+
+  &.error {
+    background: #ef5350;
+    border-left-color: #b71c1c;
+  }
+
+  &.warning {
+    background: #ffecb3;
+    border-left-color: #ffc107;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  &.success {
+    background: #4caf50;
+    border-left-color: #2e7d32;
+  }
+
+  &.info {
+    background: #b3e5fc;
+    border-left-color: #03a9f4;
+    color: rgba(0, 0, 0, 0.87);
+  }
+}
+[dir="rtl"] {
+  .message-box {
+    border-left: 0 hidden;
+
+    border-right: 6px solid #37474f;
+    &.error {
+      border-right-color: #b71c1c;
+    }
+
+    &.warning {
+      border-right-color: #ffc107;
+    }
+
+    &.success {
+      border-right-color: #2e7d32;
+    }
+
+    &.info {
+      border-right-color: #03a9f4;
+    }
+  }
+}

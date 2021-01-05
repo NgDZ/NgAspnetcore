@@ -1,0 +1,213 @@
+// -----------------------------------------------------------------------------------------------------
+// @ Theming
+// -----------------------------------------------------------------------------------------------------
+@mixin app-page-layouts-theme($theme) {
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  $config: mat-get-color-config($theme);
+  $primary: map-get($config, primary);
+  .page-layout {
+    // Carded layout
+    &.carded {
+      // Fullwidth
+
+      > .content-card {
+        background: map-get($background, card);
+        border-radius: 8px 8px 0 0;
+      }
+
+      > .toolbar {
+        border-bottom-color: map-get($foreground, divider);
+        background: mat-color($primary);
+        color: mat-color($primary, default-contrast);
+      }
+    }
+
+    // Simple layout
+    &.simple {
+      // Left / Right sidebar
+      > .content-card {
+        background: map-get($background, card);
+      }
+
+      > .toolbar {
+        border-bottom-color: map-get($foreground, divider);
+        background: mat-color($primary);
+        color: mat-color($primary, default-contrast);
+      }
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------------------------------
+// @ Page Layouts
+// -----------------------------------------------------------------------------------------------------
+
+$header-height: 64px !default;
+
+.page-layout {
+  position: relative;
+  overflow: hidden;
+  .toolbar {
+    h1,
+    h2,
+    h3,
+    h4 {
+      padding: 0;
+      margin: 0;
+    }
+  }
+  // Inner scroll
+  &.inner-scroll {
+    flex: 1 1 auto;
+
+    > .content-card {
+      flex: 1 1 auto;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+  .content-card {
+    .mat-drawer-container {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  // Carded layout
+  &.carded {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    width: 100%;
+    min-width: 100%;
+
+    // Fullwidth
+
+    > .toolbar {
+      min-height: $header-height;
+
+      margin-bottom: -$header-height;
+      padding-bottom: $header-height;
+    }
+
+    > .content-card {
+      display: flex;
+      flex-direction: column;
+      flex: 1 0 auto;
+      overflow: hidden;
+      @include media-breakpoint("gt-sm") {
+        margin: 0 24px;
+      }
+      @include mat-elevation(1);
+    }
+    // Tabbed
+    &.tabbed {
+      > .center {
+        width: 100%;
+        min-width: 0;
+
+        > .header {
+          flex: 1 1 auto;
+        }
+
+        > .content-card {
+          > .content {
+            display: flex;
+
+            > .mat-tab-group {
+              overflow: hidden;
+              width: 100%;
+
+              .mat-tab-header {
+                .mat-tab-label {
+                  height: 64px;
+                }
+              }
+
+              .mat-tab-body {
+                overflow: hidden;
+
+                .mat-tab-body-content {
+                  overflow: hidden;
+
+                  .tab-content {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Inner scroll
+    &.inner-scroll {
+      flex: 1 1 auto;
+
+      // Tabbed
+      &.tabbed {
+        > .center {
+          > .content-card {
+            > .content {
+              > .mat-tab-group {
+                .mat-tab-body {
+                  .mat-tab-body-content {
+                    .tab-content {
+                      overflow: auto;
+                      -webkit-overflow-scrolling: touch;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Simple layout
+  &.simple {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    width: 100%;
+    min-width: 100%;
+
+    // Fullwidth
+    &.fullwidth {
+      > .content {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+    }
+
+    // Tabbed
+    &.tabbed {
+      min-height: 100%;
+
+      > .header {
+        height: $header-height;
+        min-height: $header-height;
+        max-height: $header-height;
+      }
+
+      > .content {
+        > .mat-tab-group {
+          .mat-tab-labels {
+            padding: 0 24px;
+          }
+        }
+      }
+    }
+  }
+
+  // Blank layout
+  &.blank {
+    width: 100%;
+    min-height: 100%;
+  }
+}

@@ -1,0 +1,5 @@
+@mixin app-utils-theme($theme) {
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  $is-dark: map-get($theme, is-dark);
+}

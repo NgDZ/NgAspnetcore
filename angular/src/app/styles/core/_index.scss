@@ -1,0 +1,18 @@
+@import "./cards.scss";
+@import "./colors.scss";
+@import "./custom-material.scss";
+@import "./html.scss";
+@import "./layout.scss";
+@import "./nav.scss";
+@import "./page-layouts.scss";
+@import "./scroll.scss";
+@import "./search-wrapper.scss";
+@import "./table.scss";
+@import "./utils.scss";
+@mixin app-components-theme($theme) {
+  @include app-search-wrapper-theme($theme);
+  @include app-page-layouts-theme($theme);
+  @include app-nav-theme($theme);
+  @include app-cards-theme($theme);
+  @include app-custom-material-theme($theme);
+}

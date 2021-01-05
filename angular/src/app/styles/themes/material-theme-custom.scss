@@ -1,0 +1,157 @@
+// -----------------------------------------------------------------------------------------------------
+// @ Theming
+// -----------------------------------------------------------------------------------------------------
+@mixin material-theme($theme) {
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  $config: mat-get-color-config($theme);
+  // Extract the palettes you need from the theme definition.
+  $primary: map-get($config, primary);
+  $accent: map-get($config, accent);
+  $warn: map-get($config, warn);
+
+  .mat-actions {
+    background-color: mat-color($background, background) !important;
+    color: mat-color($foreground, text);
+    box-shadow: 0px 0px 0px 1px  mat-color($foreground, divider) !important;
+  }
+
+  .mat-bg-primary {
+    background: mat-color($primary);
+    color: mat-color($primary, default-contrast);
+  }
+  .mat-color-primary {
+    color: mat-color($primary) !important;
+  }
+  .mat-bg-accent {
+    background: mat-color($accent);
+    color: mat-color($accent, default-contrast);
+  }
+  .mat-color-accent {
+    color: mat-color($accent) !important;
+  }
+  .mat-bg-warn {
+    background: mat-color($warn);
+    color: mat-color($warn, default-contrast);
+  }
+  .mat-color-warn {
+    color: mat-color($warn) !important;
+  }
+
+  // -----------------------------------------------------------------------------------------------------
+  // @ Avatar
+  // -----------------------------------------------------------------------------------------------------
+  .avatar {
+    color: map-get($foreground, text);
+  }
+
+  // -----------------------------------------------------------------------------------------------------
+  // @ Forms
+  // -----------------------------------------------------------------------------------------------------
+  .form-wrapper {
+    background-color: map-get($background, card);
+  }
+}
+
+// -----------------------------------------------------------------------------------------------------
+// @ Avatar
+// -----------------------------------------------------------------------------------------------------
+.avatar {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 8px 0 0;
+  border-radius: 50%;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+
+  &.square {
+    border-radius: 0;
+  }
+
+  &.small {
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    line-height: 20px;
+  }
+
+  &.big {
+    width: 72px;
+    min-width: 72px;
+    height: 72px;
+    line-height: 72px;
+  }
+
+  &.huge {
+    width: 96px;
+    min-width: 96px;
+    height: 96px;
+    line-height: 96px;
+  }
+}
+
+.avatar-wrapper {
+  position: relative;
+
+  .avatar {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  mat-icon.status {
+    position: absolute;
+    top: 28px;
+    left: 28px;
+  }
+}
+
+mat-icon.status {
+  border-radius: 50%;
+
+  &.online {
+    color: #4caf50;
+
+    &:before {
+      content: "check_circle";
+    }
+  }
+
+  &.do-not-disturb {
+    color: #f44336;
+
+    &:before {
+      content: "remove_circle_outline";
+    }
+  }
+
+  &.away {
+    color: #ffc107;
+
+    &:before {
+      content: "access_time";
+    }
+  }
+
+  &.offline {
+    color: #646464;
+
+    &:before {
+      content: "not_interested";
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------------------------------
+// @ Forms
+// -----------------------------------------------------------------------------------------------------
+.form-wrapper {
+  padding: 16px;
+
+  .form-title {
+    font-size: 21px;
+    padding: 8px 0;
+  }
+}

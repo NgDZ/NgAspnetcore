@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "s2i": {
+    "ngaspnetcore": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/s2i",
+            "outputPath": "dist/ngaspnetcore",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "s2i:build"
+            "browserTarget": "ngaspnetcore:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "s2i:build:production"
+              "browserTarget": "ngaspnetcore:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "s2i:build"
+            "browserTarget": "ngaspnetcore:build"
           }
         },
         "test": {
@@ -113,18 +113,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "s2i:serve"
+            "devServerTarget": "ngaspnetcore:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "s2i:serve:production"
+              "devServerTarget": "ngaspnetcore:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "s2i",
+  "defaultProject": "ngaspnetcore",
   "cli": {
     "analytics": false
   }

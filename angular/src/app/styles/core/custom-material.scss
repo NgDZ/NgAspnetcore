@@ -1,0 +1,55 @@
+@mixin app-custom-material-theme($theme) {
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  $config: mat-get-color-config($theme);
+  // Extract the palettes you need from the theme definition.
+  $primary: map-get($config, primary);
+  $accent: map-get($config, accent);
+  $warn: map-get($config, warn);
+
+  .mat-actions {
+    background-color: mat-color($background, background) !important;
+    color: mat-color($foreground, text);
+    box-shadow: 0px 0px 0px 1px mat-color($foreground, divider) !important;
+  }
+
+  .mat-bg-primary,
+  .nav .primary {
+    background: mat-color($primary);
+    color: mat-color($primary, default-contrast);
+  }
+  .mat-color-primary {
+    color: mat-color($primary) !important;
+  }
+  .mat-bg-accent,
+  .nav .accent {
+    background: mat-color($accent)!important;
+    color: mat-color($accent, default-contrast)!important;
+  }
+  .mat-color-accent {
+    color: mat-color($accent) !important;
+  }
+  .mat-bg-warn,
+  .nav .warn {
+    background: mat-color($warn);
+    color: mat-color($warn, default-contrast);
+  }
+  .mat-color-warn {
+    color: mat-color($warn) !important;
+  }
+
+  // -----------------------------------------------------------------------------------------------------
+  // @ Avatar
+  // -----------------------------------------------------------------------------------------------------
+  .avatar {
+    color: map-get($foreground, text);
+  }
+
+  // -----------------------------------------------------------------------------------------------------
+  // @ Forms
+  // -----------------------------------------------------------------------------------------------------
+  .form-wrapper {
+    background-color: map-get($background, card);
+  }
+}

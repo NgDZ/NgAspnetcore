@@ -1,0 +1,50 @@
+@import "./mixs/breakpoints";
+@import "./themes/core";
+
+@import "./core/index";
+@import "./plugins/index";
+
+// Import Fuse core library
+@import "./themes/material-theme.scss";
+//@import "./themes/fuse-theme.scss";
+
+// Import app.theme.scss
+//
+
+// @import "./ngx-datatable.scss";
+$mat-divider-width: 1px;
+
+hr {
+  display: block;
+  margin: 0;
+  border-top-width: $mat-divider-width;
+  border-top-style: solid;
+  border-top: 0;
+  border-right-width: $mat-divider-width;
+  border-right-style: solid;
+  //   border-top-color: mat-color($foreground, divider);
+  //   border-top-color: mat-color($foreground, divider);
+
+  //   margin-left: $mat-divider-inset-margin;
+  [dir="rtl"] & {
+    margin-left: auto;
+    // margin-right: $mat-divider-inset-margin;
+  }
+}
+
+.ngdz-loading-shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5555;
+}
+.hidden {
+  display: none !important;
+}

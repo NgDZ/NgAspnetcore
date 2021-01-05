@@ -1,20 +1,20 @@
-import { Component } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
+import { Directionality } from '@angular/cdk/bidi';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+} from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  template: ' <router-outlet></router-outlet> ',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  isHandset$: Observable<boolean> = this.breakpointObserver
-    .observe([Breakpoints.XSmall, Breakpoints.Small])
-    .pipe(
-      map((result) => result.matches),
-      shareReplay()
-    );
-
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  title = 'ngaspnetcore';
+  constructor(private dir: Directionality, private cd: ChangeDetectorRef) {
+    this.dir.change.subscribe((k:any) => {
+      this.cd.markForCheck();
+    });
+  }
 }
