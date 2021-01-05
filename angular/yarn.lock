@@ -1932,13 +1932,6 @@ alphanum-sort@^1.0.0:
   resolved "http://127.0.0.1:4444/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
   integrity sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=
 
-angular-oauth2-oidc@10.0.3:
-  version "10.0.3"
-  resolved "http://127.0.0.1:4444/angular-oauth2-oidc/-/angular-oauth2-oidc-10.0.3.tgz#612ef75c2e07b56592d2506f9618ee6a61857ad9"
-  integrity sha512-9wC8I3e3cN6rMBOlo5JB2y3Fd2erp8pJ67t4vEVzyPbnRG6BJ4rreSOznSL9zw/2SjhC9kRV2OfFie29CUCzEg==
-  dependencies:
-    tslib "^2.0.0"
-
 ansi-colors@4.1.1:
   version "4.1.1"
   resolved "http://127.0.0.1:4444/ansi-colors/-/ansi-colors-4.1.1.tgz#cbb9ae256bf750af1eab344f229aa27fe94ba348"
@@ -2413,6 +2406,11 @@ braces@^3.0.1, braces@^3.0.2, braces@~3.0.2:
   integrity sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==
   dependencies:
     fill-range "^7.0.1"
+
+breeze-client@^2.0.7:
+  version "2.0.7"
+  resolved "http://localhost:4444/breeze-client/-/breeze-client-2.0.7.tgz#8791e0e0d51cf461bfbcf1bc006b4bc962d90fea"
+  integrity sha512-lju5q+k+i5pWvcPOrXjx+1f8anU9DcmvSUamnVlMIuNo5meAibrfkvgMWn84lWQuzoI+F+UX+bk59GOo0IKUGw==
 
 brorand@^1.0.1:
   version "1.1.0"

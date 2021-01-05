@@ -2,13 +2,14 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
+
+import { SalesOrder } from '@module/northwind';
 import {
+  BreezeServerDataSource,
   EntityManagerProvider,
   executeLookupsQuery,
-} from '@module/breeze-common';
-import { SalesOrder } from '@module/northwind';
+} from '@abpdz/ng.breeze';
 import { EntityManager } from 'breeze-client';
-import { BreezeServerDataSource } from '../../breeze-common/breeze-server-datasource';
 
 @Component({
   selector: 'app-orders',

@@ -1,4 +1,4 @@
- import { MaterialApplicationLayoutComponent } from '@abpdz/ng.theme.material';
+import { MaterialApplicationLayoutComponent } from '@abpdz/ng.theme.material';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
@@ -28,6 +28,17 @@ const routes: Routes = [
         path: 'identity',
         loadChildren: () =>
           import('@abpdz/ng.identity').then((m) => m.IdentityModule.forLazy()),
+      },
+
+      {
+        path: 'customers',
+        loadChildren: () =>
+          import('@module/customers').then((m) => m.CustomersModule),
+      },
+      {
+        path: 'orders',
+        loadChildren: () =>
+          import('@module/orders').then((m) => m.OrdersModule),
       },
     ],
   },

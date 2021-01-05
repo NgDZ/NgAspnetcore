@@ -43,7 +43,7 @@
     "@ngrx/store": "10.1.2",
     "@ngrx/store-devtools": "10.1.2",
     "@ngx-validate/core": "^0.0.13",
-    "angular-oauth2-oidc": "10.0.3",
+    "breeze-client": "^2.0.7",
     "fuse.js": "^6.4.5",
     "lodash-es": "^4.17.20",
     "material-design-icons-iconfont": "^6.1.0",

@@ -229,43 +229,43 @@
     // when closing the last tab it keep trak the timeof the last one
     // when opening the first tap it chekc if time escaped since the lastapt is closed
     // if the time more than 3 minite it will clean the auth token
-    let openTabCount = 0;
+    // let openTabCount = 0;
 
-    if (localStorage.getItem("openTabCount") === null) {
-      openTabCount = 0;
-    } else {
-      openTabCount = parseInt(localStorage.getItem("openTabCount"));
-    }
-    if (openTabCount == 0) {
-      var lastOpenTabTime = 0;
-      if (localStorage.getItem("lastOpenTabTime") === null) {
-        lastOpenTabTime = 0;
-      } else {
-        lastOpenTabTime = parseInt(localStorage.getItem("lastOpenTabTime"));
-      }
-      if (new Date().getTime() > lastOpenTabTime + 5000) {
-        localStorage.removeItem("auth-tokens");
-        localStorage.removeItem("lastOpenTabTime");
-        localStorage.removeItem("openTabCount");
-      }
-    }
-    openTabCount++;
-    localStorage.setItem("openTabCount", "" + openTabCount);
+    // if (localStorage.getItem("openTabCount") === null) {
+    //   openTabCount = 0;
+    // } else {
+    //   openTabCount = parseInt(localStorage.getItem("openTabCount"));
+    // }
+    // if (openTabCount == 0) {
+    //   var lastOpenTabTime = 0;
+    //   if (localStorage.getItem("lastOpenTabTime") === null) {
+    //     lastOpenTabTime = 0;
+    //   } else {
+    //     lastOpenTabTime = parseInt(localStorage.getItem("lastOpenTabTime"));
+    //   }
+    //   if (new Date().getTime() > lastOpenTabTime + 5000) {
+    //     localStorage.removeItem("auth-tokens");
+    //     localStorage.removeItem("lastOpenTabTime");
+    //     localStorage.removeItem("openTabCount");
+    //   }
+    // }
+    // openTabCount++;
+    // localStorage.setItem("openTabCount", "" + openTabCount);
 
-    window.addEventListener("beforeunload", function () {
-      if (localStorage.getItem("openTabCount") === null) {
-        openTabCount = 1;
-      } else {
-        openTabCount = parseInt(localStorage.getItem("openTabCount"));
-      }
-      openTabCount--;
-      if (openTabCount < 1) {
-        localStorage.removeItem("openTabCount");
-        localStorage.setItem("lastOpenTabTime", new Date().getTime());
-        // localStorage.removeItem("auth-tokens");
-      } else {
-        localStorage.setItem("openTabCount", "" + openTabCount);
-      }
-    });
+    // window.addEventListener("beforeunload", function () {
+    //   if (localStorage.getItem("openTabCount") === null) {
+    //     openTabCount = 1;
+    //   } else {
+    //     openTabCount = parseInt(localStorage.getItem("openTabCount"));
+    //   }
+    //   openTabCount--;
+    //   if (openTabCount < 1) {
+    //     localStorage.removeItem("openTabCount");
+    //     localStorage.setItem("lastOpenTabTime", new Date().getTime());
+    //     // localStorage.removeItem("auth-tokens");
+    //   } else {
+    //     localStorage.setItem("openTabCount", "" + openTabCount);
+    //   }
+    // });
   </script>
 </html>

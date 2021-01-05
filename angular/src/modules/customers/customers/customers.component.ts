@@ -3,12 +3,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { Customer } from '@module/northwind';
-import { BreezeServerDataSource } from '@module/breeze-common/breeze-server-datasource';
+import { BreezeServerDataSource, EntityManagerProvider, executeLookupsQuery } from '@abpdz/ng.breeze';
 import { EntityManager } from 'breeze-client';
-import {
-  EntityManagerProvider,
-  executeLookupsQuery,
-} from '../../breeze-common/breeze-helpers';
 
 @Component({
   selector: 'app-customers',
@@ -17,7 +13,7 @@ import {
 })
 export class CustomersComponent implements AfterViewInit, OnInit {
   dataSource: BreezeServerDataSource<Customer>;
-  showInput=false;
+  showInput = false;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = [
@@ -44,5 +40,4 @@ export class CustomersComponent implements AfterViewInit, OnInit {
   save() {
     this.em.saveChanges().then((k) => console.log('end'));
   }
-
 }

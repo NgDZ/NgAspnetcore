@@ -6,7 +6,7 @@ import {
   AbpIOHttpService,
   RestDataSource,
   BaseCrudComponent,
-} from '@module/breeze-common';
+} from '@abpdz/ng.theme.shared';
 import { FormBuilder } from '@angular/forms';
 
 @Component({

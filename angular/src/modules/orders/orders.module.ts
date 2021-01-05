@@ -6,7 +6,8 @@ import { OrdersComponent } from './orders/orders.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { BreezeCommonModule } from '@module/breeze-common';
+
+import { BreezeCommonModule } from '@abpdz/ng.breeze';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
