@@ -19,7 +19,7 @@ import { ThemeBasicModule } from '@abpdz/ng.theme.basic';
 import { ThemeSharedModule } from '@abpdz/ng.theme.shared';
 import { ThemeMaterialModule } from '@abpdz/ng.theme.material';
 import { HomeComponent } from './home.component';
-import { IdentityConfigModule } from '@abpdz/ng.identity';
+import { IdentityConfigModule } from '@abpdz/ng.identity/config';
 @NgModule({
   declarations: [AppComponent, HomeComponent],
   imports: [
