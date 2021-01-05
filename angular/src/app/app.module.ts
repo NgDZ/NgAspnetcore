@@ -102,7 +102,7 @@ export function configureRoutes(routes: RoutesService) {
       {
         path: '/customers',
         name: 'Customers',
-        iconClass: 'local_grocery_store',
+        iconClass: 'person_pin',
         parentName: eThemeSharedRouteNames.Administration,
         layout: eLayoutType.application,
         // requiredPolicy: eIdentityPolicyNames.Users,
@@ -112,7 +112,7 @@ export function configureRoutes(routes: RoutesService) {
       {
         path: '/customers/abp',
         name: 'Customers abp',
-        iconClass: 'local_grocery_store',
+        iconClass: 'person_pin',
         parentName: eThemeSharedRouteNames.Administration,
         layout: eLayoutType.application,
         // requiredPolicy: eIdentityPolicyNames.Users,
