@@ -41,22 +41,16 @@ namespace NgAspnetcore
 
             services.AddIdentityServer()
                 .AddApiAuthorization<ApplicationUser, ApplicationDbContext>()
-                .AddInMemoryApiResources(IdentityServerConfig2.GetApiResources())
-                .AddInMemoryClients(IdentityServerConfig2.GetClients())
-                .AddResourceOwnerValidator<ResourceOwnerPasswordValidator>();
-            services.AddTransient<ResourceOwnerPasswordValidator, ResourceOwnerPasswordValidator>();
+               .AddInMemoryApiResources(IdentityServerConfig2.GetApiResources())
+               .AddInMemoryApiScopes(IdentityServerConfig2.GetApiScopes())
+            //    .AddInMemoryIdentityResources(IdentityServerConfig2.GetIdentityResources())
+               .AddInMemoryClients(IdentityServerConfig2.GetClients())
+                // .AddResourceOwnerValidator<ResourceOwnerPasswordValidator>()
+                ;
+            // services.AddTransient<ResourceOwnerPasswordValidator, ResourceOwnerPasswordValidator>();
             services.AddAuthentication()
                 .AddIdentityServerJwt();
-            services.AddAuthentication("Bearer")
-                .AddJwtBearer("Bearer", options =>
-                {
-                    options.Authority = "https://localhost:5001";
 
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateAudience = false
-                    };
-                });
             services.AddRouting();
 
             // services.AddOData(opt => opt.AddModel("Northwind", Northwind.NothwindDbContext.GetEdmModel()));
@@ -65,17 +59,20 @@ namespace NgAspnetcore
             {
                 // options.Filters.Add(new CorsAuthorizationFilterFactory(_defaultCorsPolicyName));
                 options.OutputFormatters.Add(new BreezeJsonProfileFormatter(options));
-            })
-                // .AddNewtonsoftJson(options =>
-                // {
-                //     // options.SerializerSettings.ContractResolver =
-                //     //     new AbpMvcJsonContractResolver(context.Services);
+            });
+            services.AddAuthentication("Bearer")
+                        .AddJwtBearer("Bearer", options =>
+                        {
 
-                //     options.SerializerSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
-                //     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
-                // })
-                ;
-
+                            options.Authority = "";
+                            options.RequireHttpsMetadata = false;
+                            options.Audience = "NgAspnetcore.HttpApi.HostAPI";
+                            options.TokenValidationParameters = new TokenValidationParameters
+                            {
+                                NameClaimType = "name",
+                                RoleClaimType = "role",
+                            };
+                        });
 #if DEBUG
             services.ConfigureDevCode();
 #endif

@@ -4,7 +4,8 @@ using System.Threading.Tasks;
 
 namespace AbpCompat
 {
-    public class AbpApplicationConfigurationController : ApiController
+    [ApiController]
+    public class AbpApplicationConfigurationController : ControllerBase
     {
         [HttpGet]
         [Route("api/abp/application-configuration", Name = "application-configuration")]

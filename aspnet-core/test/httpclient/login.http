@@ -1,4 +1,4 @@
 POST https://localhost:5001/connect/token HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
 
-client_id=AngularSPA_App&client_secret=1q2w3e*&grant_type=password&username=admin&password=1q2w3E*&scope=profile+offline_access&2F_CODE=0123456
+client_id=AngularSPA_App&client_secret=1q2w3e*&grant_type=password&username=admin&password=1q2w3E*&scope=openid profile NgAspnetcore.HttpApi.HostAPI&2F_CODE=0123456

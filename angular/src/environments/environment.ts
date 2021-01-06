@@ -20,7 +20,7 @@ export const environment = {
     redirectUri: window.location.origin,
     clientId: 'AngularSPA_App',
     clientSecret: '1q2w3e*',
-    scope: 'offline_access profile',
+    scope: 'openid profile NgAspnetcore.HttpApi.HostAPI',
     tokenUrl: '/connect/token',
     loginUrl: '/auth/login',
   },

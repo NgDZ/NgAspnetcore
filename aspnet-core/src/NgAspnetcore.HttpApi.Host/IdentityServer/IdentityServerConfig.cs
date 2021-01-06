@@ -82,7 +82,7 @@ namespace NgAspnetcore
                     }
                     // _logger.LogInformation("Credentials validated for username: {username}", context.UserName);
 
-                    context.Result = new GrantValidationResult(sub, AuthenticationMethods.FacialRecognition);
+                    context.Result = new GrantValidationResult(sub, AuthenticationMethods.Password);
                     return;
 
                 }
@@ -114,11 +114,15 @@ namespace NgAspnetcore
         {
             return new List<ApiResource>
             {
-                   new ApiResource("client", "Default (all) API"){
-                        Scopes= new List< string>(){
-                          "client"
-                        },
+                   new ApiResource("NgAspnetcore.HttpApi.HostAPI", "Default (all) API"){
+
                         UserClaims = {
+                            ClaimTypes.Role,
+                            ClaimTypes.Name,
+                            ClaimTypes.Authentication,
+                            ClaimTypes.GivenName,
+                            ClaimTypes.Email,
+                            ClaimTypes.Gender,
                             "nbf",
                             "exp",
                             "iss",
@@ -129,12 +133,6 @@ namespace NgAspnetcore
                             "auth_time",
                             "idp",
                             "AspNet.Identity.SecurityStamp",
-                            ClaimTypes.Role,
-                            ClaimTypes.Name,
-                            ClaimTypes.Authentication,
-                            ClaimTypes.GivenName,
-                            ClaimTypes.Email,
-                            ClaimTypes.Gender,
                             "name",
                             "email",
                             "email_verified",
@@ -144,12 +142,18 @@ namespace NgAspnetcore
             };
         }
 
+        public static List<ApiScope> GetApiScopes()
+        {
+            return new List<ApiScope>
+            {                   new ApiScope("NgAspnetcore.HttpApi.HostAPI", "Default (all) API")};
+        }
         public static IEnumerable<IdentityResource> GetIdentityResources()
         {
             return new List<IdentityResource>
             {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
+                new IdentityResources.Address(),
                 new IdentityResources.Email(),
                 new IdentityResources.Phone()
             };
@@ -176,8 +180,14 @@ namespace NgAspnetcore
                         IdentityServerConstants.StandardScopes.Email,
                         IdentityServerConstants.StandardScopes.Phone,
                         IdentityServerConstants.StandardScopes.OfflineAccess,
+                            ClaimTypes.Role,
+                            ClaimTypes.Name,
+                            ClaimTypes.Authentication,
+                            ClaimTypes.GivenName,
+                            ClaimTypes.Email,
+                            ClaimTypes.Gender,
                         "roles",
-                        "client"
+                        "NgAspnetcore.HttpApi.HostAPI"
                     },
                     AllowOfflineAccess = true, // For refresh token.
                     RefreshTokenUsage = TokenUsage.OneTimeOnly,
@@ -187,5 +197,6 @@ namespace NgAspnetcore
                }
             };
         }
+
     }
 }
