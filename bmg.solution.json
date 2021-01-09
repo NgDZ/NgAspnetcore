@@ -1,0 +1,5 @@
+{
+  "abp": {
+    "url": "https://localhost:5001/api/abp/application-configuration"
+  }
+}
