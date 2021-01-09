@@ -1,0 +1,2 @@
+GET https://localhost:5001/_configuration/IDS_CLIENT_App HTTP/1.1 
+
