@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using IdentityModel;
 using IdentityServer4;
 using IdentityServer4.Models;
 using IdentityServer4.Validation;
@@ -123,33 +124,13 @@ namespace NgAspnetcore
             return new List<ApiResource>
             {
                    new ApiResource("IDS_CLIENT", "IDS_CLIENT"){
-                        Scopes= new List< string>(){
-                          "IDS_CLIENT",   
-                          IdentityServerConstants.StandardScopes.OpenId, // For UserInfo endpoint.
-                        IdentityServerConstants.StandardScopes.Profile,
-                        },
-                        UserClaims = {
-                            ClaimTypes.Role,
-                            ClaimTypes.Name,
-                            ClaimTypes.Authentication,
-                            ClaimTypes.GivenName,
-                            ClaimTypes.Email,
-                            ClaimTypes.Gender
-                            }
+
+                                 UserClaims =  { JwtClaimTypes.Name, JwtClaimTypes.Email }
+
                    },new ApiResource("NgAspnetcore.HttpApi.HostAPI", "NgAspnetcore.HttpApi.HostAPI"){
-                        Scopes= new List< string>(){
-                          "NgAspnetcore.HttpApi.HostAPI",  
-                          IdentityServerConstants.StandardScopes.OpenId, // For UserInfo endpoint.
-                        IdentityServerConstants.StandardScopes.Profile,
-                        },
-                        UserClaims = {
-                            ClaimTypes.Role,
-                            ClaimTypes.Name,
-                            ClaimTypes.Authentication,
-                            ClaimTypes.GivenName,
-                            ClaimTypes.Email,
-                            ClaimTypes.Gender
-                            }
+
+                                  UserClaims =  { JwtClaimTypes.Name, JwtClaimTypes.Email }
+
                    }
             };
         }
