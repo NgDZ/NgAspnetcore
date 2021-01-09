@@ -12,13 +12,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.OData.Edm;
 using Microsoft.OData.ModelBuilder;
 using Microsoft.IdentityModel.Tokens;
-using System.Net.Http;
-using System;
+using IdentityServer4.Configuration;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace NgAspnetcore
 {
-
-
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -42,45 +40,20 @@ namespace NgAspnetcore
 
             services.AddDefaultIdentity<ApplicationUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddDefaultTokenProviders();
-            services.AddIdentityServer()
-                 .AddDeveloperSigningCredential()
-                 .AddInMemoryIdentityResources(IdentityServerConfig2.GetIdentityResources())
-                 .AddInMemoryApiResources(IdentityServerConfig2.GetApiResources())
-                 .AddInMemoryClients(IdentityServerConfig2.GetClients())
-                 .AddAspNetIdentity<ApplicationUser>();
-            // services.AddIdentityServer(options =>
-            //     {
-            //         options.Events.RaiseErrorEvents = true;
+                ;
 
-            //     })
-            //     .AddApiAuthorization<ApplicationUser, ApplicationDbContext>()
+            services.AddIdentityServer()
+               //   .AddAspNetIdentity<ApplicationUser>()
+               .AddApiAuthorization<ApplicationUser, ApplicationDbContext>()
             //    .AddInMemoryApiResources(IdentityServerConfig2.GetApiResources())
             //    .AddInMemoryApiScopes(IdentityServerConfig2.GetApiScopes())
             //    .AddInMemoryIdentityResources(IdentityServerConfig2.GetIdentityResources())
-            //    .AddInMemoryClients(IdentityServerConfig2.GetClients())
-
-            // .AddResourceOwnerValidator<ResourceOwnerPasswordValidator>()
-
-            ;
+           .AddInMemoryClients(IdentityServerConfig2.GetClients())
+                // .AddResourceOwnerValidator<ResourceOwnerPasswordValidator>()
+                ;
             // services.AddTransient<ResourceOwnerPasswordValidator, ResourceOwnerPasswordValidator>();
             services.AddAuthentication()
-                  .AddIdentityServerJwt()
-                 .AddJwtBearer(options =>
-                {
-                    // options.Authority = configuration["AuthServer:Authority"];
-                    options.Authority = "https://localhost:5001/";
-                    options.Audience = "IDS_CLIENT";
-                    options.RequireHttpsMetadata = false;
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateIssuerSigningKey = true,
-                        ValidateIssuer = false,
-                        ValidateAudience = false,
-                        ValidateLifetime = true,
-                        ClockSkew = TimeSpan.Zero,
-                    };
-                })
+                .AddIdentityServerJwt()
                 ;
 
             services.AddRouting();
@@ -122,10 +95,10 @@ namespace NgAspnetcore
             {
                 app.UseSpaStaticFiles();
             }
+
             app.UseRouting();
 
             app.UseAuthentication();
-
             app.UseIdentityServer();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>

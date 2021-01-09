@@ -18,16 +18,6 @@ using static IdentityModel.OidcConstants;
 
 namespace NgAspnetcore
 {
-    public static class CustomIdentityServerBuilderExtensions
-    {
-        public static IIdentityServerBuilder AddCustomUserStore(this IIdentityServerBuilder builder)
-        {
-
-            // builder.AddResourceOwnerValidator<ResourceOwnerPasswordValidator<>();
-
-            return builder;
-        }
-    }
     public class ResourceOwnerPasswordValidator : IResourceOwnerPasswordValidator
 
     {
@@ -124,7 +114,8 @@ namespace NgAspnetcore
         {
             return new List<ApiScope>
                 {
-                    new ApiScope("IDS_CLIENT", "IDS_CLIENT")
+                    new ApiScope("IDS_CLIENT", "IDS_CLIENT"),
+                    new ApiScope("NgAspnetcore.HttpApi.HostAPI", "NgAspnetcore.HttpApi.HostAPI")
                 };
         }
         public static IEnumerable<ApiResource> GetApiResources()
@@ -133,7 +124,23 @@ namespace NgAspnetcore
             {
                    new ApiResource("IDS_CLIENT", "IDS_CLIENT"){
                         Scopes= new List< string>(){
-                          "IDS_CLIENT"
+                          "IDS_CLIENT",   
+                          IdentityServerConstants.StandardScopes.OpenId, // For UserInfo endpoint.
+                        IdentityServerConstants.StandardScopes.Profile,
+                        },
+                        UserClaims = {
+                            ClaimTypes.Role,
+                            ClaimTypes.Name,
+                            ClaimTypes.Authentication,
+                            ClaimTypes.GivenName,
+                            ClaimTypes.Email,
+                            ClaimTypes.Gender
+                            }
+                   },new ApiResource("NgAspnetcore.HttpApi.HostAPI", "NgAspnetcore.HttpApi.HostAPI"){
+                        Scopes= new List< string>(){
+                          "NgAspnetcore.HttpApi.HostAPI",  
+                          IdentityServerConstants.StandardScopes.OpenId, // For UserInfo endpoint.
+                        IdentityServerConstants.StandardScopes.Profile,
                         },
                         UserClaims = {
                             ClaimTypes.Role,
@@ -176,7 +183,8 @@ namespace NgAspnetcore
                             ClaimTypes.Email,
                             ClaimTypes.Gender,
 
-                        "IDS_CLIENT"
+                        "IDS_CLIENT",
+                        "NgAspnetcore.HttpApi.HostAPI"
                     },
                     AllowOfflineAccess = true, // For refresh token.
                     RefreshTokenUsage = TokenUsage.OneTimeOnly,

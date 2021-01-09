@@ -1,4 +1,4 @@
 POST https://localhost:5001/connect/token HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
 
-client_id=NgAspnetcore.HttpApi.HostAPI&client_secret=1q2w3e*&grant_type=password&username=admin&password=1q2w3E*&scope=NgAspnetcore.HttpApi.HostAPI openid profile&2F_CODE=0123456
+client_id=IDS_CLIENT_App&client_secret=1q2w3e*&grant_type=password&username=admin&password=1q2w3E*&scope=NgAspnetcore.HttpApi.HostAPI openid profile&2F_CODE=0123456
