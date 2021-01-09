@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace AbpCompat
@@ -16,6 +17,8 @@ namespace AbpCompat
             {
                 IsAuthenticated = false
             };
+            var v = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            Console.WriteLine($"{v}-{User.Identity.Name}");
             if (this.User != null)
             {
                 ret.CurrentUser.UserName = this.User.Identity.Name;

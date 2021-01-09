@@ -14,7 +14,7 @@ export const environment = {
     skipIssuerCheck: true,
     issuer: window.location.origin,
     redirectUri: window.location.origin,
-    clientId: 'AngularSPA_App',
+    clientId: 'IDS_CLIENT_App',
     clientSecret: '1q2w3e*',
     scope: 'offline_access profile',
     tokenUrl: '/connect/token',

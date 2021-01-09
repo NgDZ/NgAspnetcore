@@ -109,45 +109,7 @@ namespace NgAspnetcore
     }
     public static class IdentityServerConfig2
     {
-
-        public static IEnumerable<ApiResource> GetApiResources()
-        {
-            return new List<ApiResource>
-            {
-                   new ApiResource("NgAspnetcore.HttpApi.HostAPI", "Default (all) API"){
-
-                        UserClaims = {
-                            ClaimTypes.Role,
-                            ClaimTypes.Name,
-                            ClaimTypes.Authentication,
-                            ClaimTypes.GivenName,
-                            ClaimTypes.Email,
-                            ClaimTypes.Gender,
-                            "nbf",
-                            "exp",
-                            "iss",
-                            "aud",
-                            "aud",
-                            "client_id",
-                            "sub",
-                            "auth_time",
-                            "idp",
-                            "AspNet.Identity.SecurityStamp",
-                            "name",
-                            "email",
-                            "email_verified",
-                            "scope"
-                            }
-                   }
-            };
-        }
-
-        public static List<ApiScope> GetApiScopes()
-        {
-            return new List<ApiScope>
-            {                   new ApiScope("NgAspnetcore.HttpApi.HostAPI", "Default (all) API")};
-        }
-        public static IEnumerable<IdentityResource> GetIdentityResources()
+        public static List<IdentityResource> GetIdentityResources()
         {
             return new List<IdentityResource>
             {
@@ -158,6 +120,33 @@ namespace NgAspnetcore
                 new IdentityResources.Phone()
             };
         }
+        public static IEnumerable<ApiScope> GetApiScopes()
+        {
+            return new List<ApiScope>
+                {
+                    new ApiScope("IDS_CLIENT", "IDS_CLIENT")
+                };
+        }
+        public static IEnumerable<ApiResource> GetApiResources()
+        {
+            return new List<ApiResource>
+            {
+                   new ApiResource("IDS_CLIENT", "IDS_CLIENT"){
+                        Scopes= new List< string>(){
+                          "IDS_CLIENT"
+                        },
+                        UserClaims = {
+                            ClaimTypes.Role,
+                            ClaimTypes.Name,
+                            ClaimTypes.Authentication,
+                            ClaimTypes.GivenName,
+                            ClaimTypes.Email,
+                            ClaimTypes.Gender
+                            }
+                   }
+            };
+        }
+
 
         public static IEnumerable<Client> GetClients(object O = null)
         {
@@ -166,7 +155,7 @@ namespace NgAspnetcore
                 new Client
                {
 
-                    ClientId = "AngularSPA_App",
+                    ClientId = "IDS_CLIENT_App",
                     AllowedGrantTypes =IdentityServer4.Models. GrantTypes.ResourceOwnerPassword, // Resource Owner Password Credential grant.
                     AllowAccessTokensViaBrowser = true,
                     RequireClientSecret = true, // This client does not need a secret to request tokens from the token endpoint.
@@ -186,8 +175,8 @@ namespace NgAspnetcore
                             ClaimTypes.GivenName,
                             ClaimTypes.Email,
                             ClaimTypes.Gender,
-                        "roles",
-                        "NgAspnetcore.HttpApi.HostAPI"
+
+                        "IDS_CLIENT"
                     },
                     AllowOfflineAccess = true, // For refresh token.
                     RefreshTokenUsage = TokenUsage.OneTimeOnly,
@@ -197,6 +186,5 @@ namespace NgAspnetcore
                }
             };
         }
-
     }
 }
