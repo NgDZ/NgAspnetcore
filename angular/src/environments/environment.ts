@@ -11,7 +11,9 @@ export const environment = {
   hmr: true,
   application: {
     baseUrl,
-    name: 'ngaspnetcore',
+    name: 'IDS_CLIENT',
+    display: 'FREE TIME ',
+    abrivation: 'FT',
     logoUrl: '',
   },
   oAuthConfig: {
@@ -20,21 +22,24 @@ export const environment = {
     redirectUri: window.location.origin,
     clientId: 'IDS_CLIENT_App',
     clientSecret: '1q2w3e*',
-    scope: "IDS_CLIENT openid profile",
+    scope: 'offline_access profile openid IDS_CLIENT',
     tokenUrl: '/connect/token',
     loginUrl: '/auth/login',
+  },
+  notifications: {
+    useSignalr: true,
   },
   apis: {
     default: {
       url: '',
-      rootNamespace: 'ngaspnetcore',
+      rootNamespace: 'IDS_CLIENT',
     },
   },
 } as Config.Environment;
 
 (window as any).ngEx = {
-  invalidControls: (form: any) => {
-    const ret: any = {};
+  invalidControls: (form) => {
+    const ret = {};
     let retn = false;
     Object.keys(form.controls).forEach((k) => {
       if (form?.controls && form.controls[k]?.invalid) {
@@ -44,7 +49,7 @@ export const environment = {
     });
     return retn ? ret : null;
   },
-  query: (com: any) => (window as any).ng.getComponent(document.querySelector(com)),
+  query: (com) => (window as any).ng.getComponent(document.querySelector(com)),
 };
 
 /*
