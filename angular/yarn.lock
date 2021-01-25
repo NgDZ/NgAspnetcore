@@ -9,6 +9,13 @@
   dependencies:
     tslib "^2.0.0"
 
+"@abpdz/ng.audit@0.0.4":
+  version "0.0.4"
+  resolved "http://127.0.0.1:4444/@abpdz%2fng.audit/-/ng.audit-0.0.4.tgz#014f08af361a7f749d1bbed92904128d0f8d496c"
+  integrity sha512-LpzCD/KJY/im94XZMSAVQoVdrPhMlBeS6SIfp0vJyJUvfKN+8r1qqWjUYBZo/UT5Np8HqzmvRG7JF1cwKYLjUw==
+  dependencies:
+    tslib "^2.0.0"
+
 "@abpdz/ng.breeze@0.0.4":
   version "0.0.4"
   resolved "http://127.0.0.1:4444/@abpdz%2fng.breeze/-/ng.breeze-0.0.4.tgz#df4f31f885f4944e841f9f50e616dcea8f4da901"
@@ -20,6 +27,13 @@
   version "0.0.4"
   resolved "http://127.0.0.1:4444/@abpdz%2fng.core/-/ng.core-0.0.4.tgz#2207cc001f8dfff0ce5c29cad001dc13cc80dc37"
   integrity sha512-dtAieB68xPxZIlMmYUQyeltZt3TFG4U398Er44xiW2P/9oOdFtEPuLh3rtgPlhuCtAHG6T3KsHOenRHPDzZblQ==
+  dependencies:
+    tslib "^2.0.0"
+
+"@abpdz/ng.demos@0.0.4":
+  version "0.0.4"
+  resolved "http://127.0.0.1:4444/@abpdz%2fng.demos/-/ng.demos-0.0.4.tgz#04df1463aef6b2f2a2e9e027008c8f48f4ca22ac"
+  integrity sha512-c3Yvt0niLjLKFoceuUAu7uy6duxrQOGYPrVPBgSRJG2HlcNhIL1u+E1aG23pfK2gTlgmlHMclBWEfxDwEP9hHA==
   dependencies:
     tslib "^2.0.0"
 
@@ -1202,38 +1216,38 @@
     node-fetch "^2.6.0"
     ws "^6.0.0"
 
-"@ngrx/component-store@10.1.2":
-  version "10.1.2"
-  resolved "http://127.0.0.1:4444/@ngrx%2fcomponent-store/-/component-store-10.1.2.tgz#49c6e3d721a483fc97ae12e6a3e45b83245f2f9f"
-  integrity sha512-UuI55Ut1mAzGMX/SLHByOeJfC3hD5Z8+qv7aQTV/iHyMdpSdBpj3O92kPbDCSl+jXWGpjFNi45iY7bfOLZNFaQ==
+"@ngrx/component-store@11.0.0-beta.1":
+  version "11.0.0-beta.1"
+  resolved "http://127.0.0.1:4444/@ngrx%2fcomponent-store/-/component-store-11.0.0-beta.1.tgz#f902ea23d21f33fe7fefabffb13a29c048d8b7e0"
+  integrity sha512-S2MJMPWIws3FpCvk97rOXr5VYfy0DviZjZgyPx0wPBitkLGD6ZEiWi/dCc6r8H8+Cu+JCY50ngpuZar96Eqxfw==
   dependencies:
     tslib "^2.0.0"
 
-"@ngrx/data@10.1.2":
-  version "10.1.2"
-  resolved "http://127.0.0.1:4444/@ngrx%2fdata/-/data-10.1.2.tgz#ee37338563dca69f7586a9df3ffbc0af17a6d2b4"
-  integrity sha512-0ZZtfY24zEZ/2Xjo35QgXhpkXQEQva/fM/i7zl937cvYuqoPYmIxwygyO4g8Hw/zLpfCAoGJ5KjIGGk5i0pvPQ==
+"@ngrx/data@11.0.0-beta.1":
+  version "11.0.0-beta.1"
+  resolved "http://127.0.0.1:4444/@ngrx%2fdata/-/data-11.0.0-beta.1.tgz#a634f42a1901108f74d6b52ff866efce1ab97ad1"
+  integrity sha512-S3Zh3t+mmgOmIjCcs1iDV60kJ63wCHVGHbTCKrla5nhK5LIjq0oE2wbJu9owmsOB2H9OWOIw6NlSJRzlIPUjCw==
   dependencies:
     tslib "^2.0.0"
 
-"@ngrx/effects@10.1.2":
-  version "10.1.2"
-  resolved "http://127.0.0.1:4444/@ngrx%2feffects/-/effects-10.1.2.tgz#f1c9daa2e3e13aeb6af272cb52f6dff73d364d68"
-  integrity sha512-6pX6FEzLlqdbtFVMbCvscsaL6QC/L95e72JKj76Xz+8V77UTlpVsxWyMo7YU9pM4EXNpBGmOpMs2xKjfBfK05Q==
+"@ngrx/effects@11.0.0-beta.1":
+  version "11.0.0-beta.1"
+  resolved "http://127.0.0.1:4444/@ngrx%2feffects/-/effects-11.0.0-beta.1.tgz#00311288553e9ca3ebe8206a35ac7b50186bc8b6"
+  integrity sha512-Em0Vl6FXldbtHItiXxxMLUVEBUivXg65TDE1s7c6z1MzhsXL5sJvpHxLUdDwoVAWeWKr8XRuqI+J+Ui5m0OX9Q==
   dependencies:
     tslib "^2.0.0"
 
-"@ngrx/entity@10.1.2":
-  version "10.1.2"
-  resolved "http://127.0.0.1:4444/@ngrx%2fentity/-/entity-10.1.2.tgz#17c93af662de3083a6914af7400182f75924d61f"
-  integrity sha512-peit/zjLUxl8zQgNuPlPXDf4FmNZYMMNGsKQHiFpShIpWjLFTnR1wCeeLw8LMrqSy9vxLO3JpXwkDFZb8a+FDg==
+"@ngrx/entity@11.0.0-beta.1":
+  version "11.0.0-beta.1"
+  resolved "http://127.0.0.1:4444/@ngrx%2fentity/-/entity-11.0.0-beta.1.tgz#b433bea4352dfa17f88f4b7157136556bbacfcb1"
+  integrity sha512-7hQCaiBe0sL/4uF4NN+oVyls8/rZ1iVykkl0b678BToq5HXG4sTocaCcrRUqFf7sjMSDUEOP4ATpQngoO+e3Kw==
   dependencies:
     tslib "^2.0.0"
 
-"@ngrx/router-store@10.1.2":
-  version "10.1.2"
-  resolved "http://127.0.0.1:4444/@ngrx%2frouter-store/-/router-store-10.1.2.tgz#f8083121611ba72450998eb37dffc26dd17f8ab0"
-  integrity sha512-IBsZee5ZUmLbXkY/O4OjhJP1Q6mdu4lcLcQ9jeXsdCMH/Vvc0EGK+MlhsZrxv5+v2ZXb1bhtKsLBUsTovanLWA==
+"@ngrx/router-store@11.0.0-beta.1":
+  version "11.0.0-beta.1"
+  resolved "http://127.0.0.1:4444/@ngrx%2frouter-store/-/router-store-11.0.0-beta.1.tgz#82fa85ab66813469443eb30cda0bb3cb209a2701"
+  integrity sha512-Fs/J98u232ldlB3KG9y8NCDXfkC5mM7cE1vjP1OJOegNEKw8U4ts5utX9/i0ZNEEiicxM6IvPGtGiHcpzrwKWg==
   dependencies:
     tslib "^2.0.0"
 
@@ -1244,17 +1258,17 @@
   dependencies:
     "@angular/core" "^10.0.0"
 
-"@ngrx/store-devtools@10.1.2":
-  version "10.1.2"
-  resolved "http://127.0.0.1:4444/@ngrx%2fstore-devtools/-/store-devtools-10.1.2.tgz#1dba8c84df4b56a2b15d6abc01c3c378d1518830"
-  integrity sha512-HE681GuZ+lRgSXpgt7y7LKzsfu/+Tgy9yPZpaitvkhg+eCIjnN5Uvs1rWqETHYWnsKliW25yoqFUAVw+xb7hug==
+"@ngrx/store-devtools@11.0.0-beta.1":
+  version "11.0.0-beta.1"
+  resolved "http://127.0.0.1:4444/@ngrx%2fstore-devtools/-/store-devtools-11.0.0-beta.1.tgz#3e924defe2f2dab23d97a9a5bb672014a6256d22"
+  integrity sha512-Dy5DkxHrJrfAgdzYW8i5XzhaHvD/jPj+Ih5UCazY/yod9jriU+ZpRFRzyBIf6QoM8dnNuhqOpgjasSGub/INyw==
   dependencies:
     tslib "^2.0.0"
 
-"@ngrx/store@10.1.2":
-  version "10.1.2"
-  resolved "http://127.0.0.1:4444/@ngrx%2fstore/-/store-10.1.2.tgz#a41aee81ea7b7e4a9f927be560e6024830211efb"
-  integrity sha512-FUjN786ch4Qt9WgJ78ef7Yquq3mPCekgcWgZrs4ycZw1f+KdfTHLTk1bGDtO8A8CzOya5yTT7KhxbdVjbOS5ng==
+"@ngrx/store@11.0.0-beta.1":
+  version "11.0.0-beta.1"
+  resolved "http://127.0.0.1:4444/@ngrx%2fstore/-/store-11.0.0-beta.1.tgz#1a0535bdf184b9512a2a7dd762069f86fcf5ea33"
+  integrity sha512-bxHLSAc2sFIwg482MFoKewpOk65iGWPJyX+wnceWyhVy3mGDYkAZ+gVKAOI6te+bIdd9qjK6ISoeYM8+RDCgPA==
   dependencies:
     tslib "^2.0.0"
 

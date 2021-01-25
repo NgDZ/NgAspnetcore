@@ -29,6 +29,8 @@ import { ThemeMaterialModule } from '@abpdz/ng.theme.material';
 import { HomeComponent } from './home.component';
 import { IdentityConfigModule } from '@abpdz/ng.identity/config';
 import { AccountConfigModule } from '@abpdz/ng.account/config';
+import { AbpDzDemoConfigModule } from '@abpdz/ng.demos/config';
+import { AbpDzAuditConfigModule } from '@abpdz/ng.audit/config';
 @NgModule({
   declarations: [AppComponent, HomeComponent],
   imports: [
@@ -70,6 +72,9 @@ import { AccountConfigModule } from '@abpdz/ng.account/config';
 
     IdentityConfigModule.forRoot(),
     AccountConfigModule.forRoot(),
+    
+    AbpDzDemoConfigModule.forRoot(),
+    AbpDzAuditConfigModule.forRoot(),
   ],
   providers: [
     {

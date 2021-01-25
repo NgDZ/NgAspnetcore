@@ -40,6 +40,16 @@ const routes: Routes = [
         loadChildren: () =>
           import('@module/orders').then((m) => m.OrdersModule),
       },
+      {
+        path: 'audit',
+        loadChildren: () =>
+          import('@abpdz/ng.audit').then((m) => m.AbpDzAuditModule.forLazy()),
+      },
+      {
+        path: 'demos',
+        loadChildren: () =>
+          import('@abpdz/ng.demos').then((m) => m.AbpDzDemosModule.forLazy()),
+      },
     ],
   },
 ];
