@@ -27,15 +27,14 @@ jobs:
       - name: Push image
         run: |           
           echo  "**************************************************  Buildin Dotnet Application  **************************************************"
-          rm -rf deploy
+          #rm -rf deploy
           #npm i -g yarn
           mkdir deploy
           mkdir deploy/APP_DATA
           mkdir deploy/wwwroot
-          cd  aspnet-core/src/NgAspnetcore.HttpApi.Host
-          rm -f yarn.lock
-          yarn
-          npm run copy
+          cd  aspnet-core/
+          dotnet restore
+          cd  src/NgAspnetcore.HttpApi.Host
           dotnet publish -c Release  
           cd ../../../
           echo  "******************************************************  Buildin angular Application  ******************************************************"
