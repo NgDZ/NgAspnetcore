@@ -52,7 +52,15 @@ namespace NgAspnetcore
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+
+                    var port = Environment.GetEnvironmentVariable("PORT");
+                    if (!string.IsNullOrWhiteSpace(port))
+                    {
+
+                        webBuilder.UseStartup<Startup>().UseUrls("http://*:" + port);
+                    }
+                    else
+                        webBuilder.UseStartup<Startup>();
                 })
                 .UseAutofac()
                 .UseSerilog();

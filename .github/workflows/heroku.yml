@@ -24,7 +24,8 @@ jobs:
         with:
           cmd: install # will run `yarn install` command
       - name: Push image
-        run: |           
+        run: |      
+          echo $HEROKU_APP_NAME     
           echo  "**************************************************  Buildin Dotnet Application  **************************************************"
           #rm -rf deploy
           #npm i -g yarn
