@@ -8,7 +8,14 @@
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NgAspnetcore.EntityFrameworkCore\NgAspnetcore.EntityFrameworkCore.csproj" />
+    <PackageReference Include="Volo.Abp.Core" Version="4.1.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="4.1.0" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="4.1.0" />
+    <PackageReference Include="Volo.Abp.Account.Application" Version="4.1.0" />
+    <PackageReference Include="Volo.Abp.Identity.Application" Version="4.1.0" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="4.1.0" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Application" Version="4.1.0" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="4.1.0" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Breeze.AspNetCore.NetCore" Version="5.0.0" />
@@ -16,7 +23,7 @@
     <PackageReference Include="Breeze.Persistence.EFCore" Version="5.0.0" />
     <PackageReference Include="Breeze.Persistence" Version="5.0.0" />
 
-     <!-- <ProjectReference Include="../../../../../code-github/breeze.server.net/AspNetCore-v5/Breeze.AspNetCore.NetCore/Breeze.AspNetCore.NetCore.csproj" />
+    <!-- <ProjectReference Include="../../../../../code-github/breeze.server.net/AspNetCore-v5/Breeze.AspNetCore.NetCore/Breeze.AspNetCore.NetCore.csproj" />
    
     <ProjectReference Include="../../../../../code-github/breeze.server.net/AspNetCore-v5/Breeze.Core/Breeze.Core.csproj" />
    
@@ -26,7 +33,7 @@
     -->
     <PackageReference Include="Microsoft.EntityFrameworkCore.DynamicLinq" Version="5.2.7" />
     <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.7" />
-   
+
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson" Version="5.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.1" />
 

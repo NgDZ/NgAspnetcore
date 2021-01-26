@@ -13,28 +13,42 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NgAspnetcore.Application\NgAspnetcore.Application.csproj" />
-    <ProjectReference Include="..\NgAspnetcore.EntityFrameworkCore\NgAspnetcore.EntityFrameworkCore.csproj" />
     <ProjectReference Include="..\Northwind\Northwind.csproj" />
-    <ProjectReference Include="..\AbpCompat\AbpCompat.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <!-- <PackageReference Include="Microsoft.AspNetCore.OData" Version="8.0.0-preview2" /> -->
-    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="5.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" Version="5.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.1" />
     <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
     <PackageReference Include="Serilog.Sinks.Async" Version="1.4.0" />
-    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
-    <PackageReference Include="Microsoft.OData.ModelBuilder" Version="1.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.*" />
+    <PackageReference Include="Volo.Abp.AspNetCore.MultiTenancy" Version="4.1.0" />
+    <PackageReference Include="Volo.Abp.Autofac" Version="4.1.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic" Version="4.1.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Authentication.JwtBearer" Version="4.1.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="4.1.0" />
+    <PackageReference Include="Volo.Abp.Account.Web.IdentityServer" Version="4.1.0" />
+
   </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FREETIME.Application.Contracts" Version="4.1.101" />
+    <PackageReference Include="FREETIME.Domain.Shared" Version="4.1.101" />
+    <PackageReference Include="FREETIME.Domain" Version="4.1.101" />
+    <PackageReference Include="FREETIME.Application" Version="4.1.101" />
+    <PackageReference Include="FREETIME.HttpApi" Version="4.1.101" />
+    <PackageReference Include="FREETIME.EntityFrameworkCore" Version="4.1.101" />
+    <PackageReference Include="FREETIME.EntityFrameworkCore.DbMigrations" Version="4.1.101" />
+    <PackageReference Include="AbpDz.IdentityServer" Version="4.1.101"/>
+    <PackageReference Include="AbpDz.Notifications" Version="4.1.101"/>
+    <PackageReference Include="AbpDz.Breeze" Version="4.1.101" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson" Version="5.0.1" />
+  </ItemGroup>
+
   <ItemGroup Condition="'$(Configuration)' == 'Debug'">
+    <PackageReference Include="Volo.Abp.Swashbuckle" Version="4.1.0" />
     <PackageReference Include="MiniProfiler.AspNetCore" Version="4.2.22" />
     <PackageReference Include="MiniProfiler.AspNetCore.Mvc" Version="4.2.22" />
     <PackageReference Include="MiniProfiler.EntityFrameworkCore" Version="4.2.22" />
@@ -43,24 +57,11 @@
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="5.0.1" />
 
   </ItemGroup>
-
   <ItemGroup>
-    <PackageReference Include="Breeze.AspNetCore.NetCore" Version="5.0.0" />
-    <PackageReference Include="Breeze.Core" Version="5.0.0" />
-    <PackageReference Include="Breeze.Persistence.EFCore" Version="5.0.0" />
-    <PackageReference Include="Breeze.Persistence" Version="5.0.0" />
-
-    <!-- <ProjectReference Include="../../../../../code-github/breeze.server.net/AspNetCore-v5/Breeze.AspNetCore.NetCore/Breeze.AspNetCore.NetCore.csproj" />
-   
-    <ProjectReference Include="../../../../../code-github/breeze.server.net/AspNetCore-v5/Breeze.Core/Breeze.Core.csproj" />
-   
-    <ProjectReference Include="../../../../../code-github/breeze.server.net/AspNetCore-v5/Breeze.Persistence/Breeze.Persistence.csproj" />
-   
-    <ProjectReference Include="../../../../../code-github/breeze.server.net/AspNetCore-v5/Breeze.Persistence.EFCore/Breeze.Persistence.EFCore.csproj" />
-    -->
-    <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson" Version="5.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.1" />
-
+    <Compile Remove="Logs\**" />
+    <Content Remove="Logs\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="Logs\**" />
   </ItemGroup>
   <ItemGroup>
     <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
