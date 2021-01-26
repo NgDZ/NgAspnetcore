@@ -146,7 +146,14 @@ namespace NgAspnetcore
             context.Services.AddAuthentication()
                 .AddJwtBearer(options =>
                 {
-                    options.Authority = configuration["AuthServer:Authority"];
+                    var auth = configuration["AuthServer:Authority"];
+
+                    var port = Environment.GetEnvironmentVariable("PORT");
+                    if (!string.IsNullOrEmpty(port))
+                    {
+                        auth = "http://localhost:" + port;
+                    }
+                    options.Authority = auth;
                     options.RequireHttpsMetadata = Convert.ToBoolean(configuration["AuthServer:RequireHttpsMetadata"]);
                     options.Audience = "IDS_CLIENT";
                     options.BackchannelHttpHandler = new HttpClientHandler
