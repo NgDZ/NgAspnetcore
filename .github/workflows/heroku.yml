@@ -34,6 +34,7 @@ jobs:
           cd deploy
           wget https://github.com/NgDZ/assets/raw/main/Northwind.db
           wget https://github.com/NgDZ/assets/raw/main/app-abpdz.db 
+          cd ..
           cd  aspnet-core/
           dotnet restore
           cd  src/NgAspnetcore.HttpApi.Host
