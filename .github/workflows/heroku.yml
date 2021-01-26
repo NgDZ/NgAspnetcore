@@ -8,6 +8,7 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       - name: Set up Docker Buildx
@@ -30,6 +31,9 @@ jobs:
           mkdir deploy
           mkdir deploy/APP_DATA
           mkdir deploy/wwwroot
+          cd deploy
+          wget https://github.com/NgDZ/assets/raw/main/Northwind.db
+          wget https://github.com/NgDZ/assets/raw/main/app-abpdz.db 
           cd  aspnet-core/
           dotnet restore
           cd  src/NgAspnetcore.HttpApi.Host
