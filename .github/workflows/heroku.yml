@@ -3,11 +3,11 @@ name: ci
 on:
   push:
     branches: master
-
 jobs:
   main:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       - name: Set up Docker Buildx
@@ -19,20 +19,25 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.4
       
-      - name: git checkout  code source
-        uses: actions/checkout@v2
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install # will run `yarn install` command
       - name: Push image
-        run: |           
-          echo  "**************************************************  Buildin Dotnet Application  **************************************************"
-          rm -rf deploy
-          npm i -g yarn
+        run: |      
+          echo ${{ secrets.HEROKU_APP_NAME }}     
+          echo  "**************************************************  Buildin Dotnet Application ${{ secrets.HEROKU_APP_NAME }}  **************************************************"
+          #rm -rf deploy
+          #npm i -g yarn
           mkdir deploy
           mkdir deploy/APP_DATA
           mkdir deploy/wwwroot
-          cd  aspnet-core/src/NgAspnetcore.HttpApi.Host
-          rm -f yarn.lock
-          yarn
-          npm run copy
+          cd deploy
+          wget https://github.com/NgDZ/assets/raw/main/Northwind.db
+          wget https://github.com/NgDZ/assets/raw/main/app-abpdz.db 
+          cd ..
+          cd  aspnet-core/
+          dotnet restore
+          cd  src/NgAspnetcore.HttpApi.Host
           dotnet publish -c Release  
           cd ../../../
           echo  "******************************************************  Buildin angular Application  ******************************************************"
@@ -50,20 +55,20 @@ jobs:
           ls -lR deploy/
           echo  "***************************************************** End Build ****************************************************"
           echo '***************************************************** build docker image***************************************************** '
-          docker build -t $HEROKU_APP_NAME -f Dockerfile .
-          echo '***************************************************** docker login $(HEROKU_USERNAME) ***************************************************** '
-          docker login --username=$(HEROKU_USERNAME) --password=$(HEROKU_API_KEY) registry.heroku.com
+          docker build -t  ${{ secrets.HEROKU_APP_NAME }}  -f Dockerfile .
+          echo '***************************************************** docker login ${{ secrets.HEROKU_USERNAME }} ***************************************************** '
+          docker login --username=${{ secrets.HEROKU_USERNAME }} --password=${{ secrets.HEROKU_API_KEY }}  registry.heroku.com
           
           echo '***************************************************** docker tag ***************************************************** '
-          docker tag $HEROKU_APP_NAME registry.heroku.com/$HEROKU_APP_NAME/web
+          docker tag ${{ secrets.HEROKU_APP_NAME }} registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}/web
            echo '***************************************************** docker push***************************************************** '
-          docker push registry.heroku.com/$HEROKU_APP_NAME/web
+          docker push registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}/web
           echo '***************************************************** heroku start***************************************************** '
-          imageId=$(docker inspect registry.heroku.com/$HEROKU_APP_NAME/web --format={{.Id}})
+          imageId=$(docker inspect registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}/web --format={{.Id}})
           payload='{"updates":[{"type":"web","docker_image":"'"$imageId"'"}]}'
-          curl -n -X PATCH https://api.heroku.com/apps/$HEROKU_APP_NAME/formation \
+          curl -n -X PATCH https://api.heroku.com/apps/${{ secrets.HEROKU_APP_NAME }}/formation \
           -d "$payload" \
           -H "Content-Type: application/json" \
           -H "Accept: application/vnd.heroku+json; version=3.docker-releases" \
-          -H "Authorization: Bearer $(HEROKU_API_KEY)"
+          -H "Authorization: Bearer ${{ secrets.HEROKU_API_KEY }}"
         
