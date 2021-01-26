@@ -108,7 +108,7 @@
     (ngSubmit)="save()"
   >
     <mat-tab-group dynamicHeight>
-      <mat-tab [label]="'AbpIdentity::UserInformations'">
+      <mat-tab [label]="'AbpIdentity::UserInformations' | abpLocalization">
         <div fxLayout="row wrap" class="px-4" fxLayoutGap="5px">
           <mat-form-field fxFlex="48">
             <mat-label> contactName </mat-label>
@@ -131,7 +131,7 @@
     fxLayoutGap="5px"
   >
     <button mat-raised-button color="warn" type="button" (click)="cancel()">
-      {{ "AbpUi::Cancel" }}
+      {{ "AbpUi::Cancel" | abpLocalization }}
     </button>
     <button
       mat-raised-button
@@ -141,7 +141,7 @@
       [disabled]="!canSave()"
     >
       <mat-icon>save</mat-icon>
-      {{ "AbpUi::Save" }}
+      {{ "AbpUi::Save" | abpLocalization }}
     </button>
   </div>
 </ng-template>
