@@ -16,15 +16,28 @@ using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
+using Volo.Abp;
+using Volo.Abp.Account.Web;
+using Volo.Abp.AspNetCore.Authentication.JwtBearer;
+using Volo.Abp.AspNetCore.MultiTenancy;
+using Volo.Abp.AspNetCore.Mvc;
+using Volo.Abp.AspNetCore.Mvc.Json;
+using Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic;
+using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared;
+using Volo.Abp.AspNetCore.Serilog;
+using Volo.Abp.Autofac;
+using Volo.Abp.Localization;
+using Volo.Abp.Modularity;
+using Volo.Abp.UI.Navigation.Urls;
+using Volo.Abp.VirtualFileSystem;
 
-namespace NgAspnetcore
+namespace FREETIME
 {
     public static class DevCodeExtension
     {
-        public static HashSet<string> hsIgnoredDocs = new HashSet<string>()
-        {
-            // "AbpApplicationConfiguration","Account","Profile" ,"Login","IdentityUser","Tenant","IdentityRole"
-        };
+        public static HashSet<string> hsIgnoredDocs = new HashSet<string>(){
+                                "AbpApplicationConfiguration","Account","Profile" ,"Login","IdentityUser","Tenant","IdentityRole"
+                                };
         public static HashSet<string> ApiExplorerGroupes = new HashSet<string>(){
             "All",
             "v1",
@@ -70,7 +83,7 @@ namespace NgAspnetcore
 
             app.UseSwagger();
 
-            app.UseSwaggerUI(options =>
+            app.UseAbpSwaggerUI(options =>
             {
                 foreach (var item in ApiExplorerGroupes)
                 {
@@ -93,7 +106,7 @@ namespace NgAspnetcore
 
                     options.OperationFilter<HttpHeaderOperationFilter>();
 
-                    foreach (var item in ApiExplorerGroupes)
+                    foreach (var item in ApiExplorerGroupes.OrderBy(k => k.ToLower()))
                     {
 
                         options.SwaggerDoc(item, new OpenApiInfo
