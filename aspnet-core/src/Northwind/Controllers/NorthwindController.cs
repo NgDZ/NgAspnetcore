@@ -12,8 +12,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Linq;
-using NgAspnetcore.Models;
-
 namespace Northwind.Controllers
 {
     // [Authorize]
@@ -52,7 +50,7 @@ namespace Northwind.Controllers
             var bodyStr = "";
             var req = HttpContext.Request;
             req.EnableBuffering();
-           
+
             using (var stream = new StreamReader(req.Body))
             {
                 bodyStr = await stream.ReadToEndAsync();
