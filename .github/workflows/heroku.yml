@@ -1,0 +1,69 @@
+name: ci
+
+on:
+  push:
+    branches: master
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+        
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v1.7.2
+        
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.4
+      
+      - name: git checkout  code source
+        uses: actions/checkout@v2
+      - name: Push image
+        run: |           
+          echo  "**************************************************  Buildin Dotnet Application  **************************************************"
+          rm -rf deploy
+          npm i -g yarn
+          mkdir deploy
+          mkdir deploy/APP_DATA
+          mkdir deploy/wwwroot
+          cd  aspnet-core/src/NgAspnetcore.HttpApi.Host
+          rm -f yarn.lock
+          yarn
+          npm run copy
+          dotnet publish -c Release  
+          cd ../../../
+          echo  "******************************************************  Buildin angular Application  ******************************************************"
+          cd angular
+          echo  "Angular: Restore npm packages " 
+          rm -f yarn.lock
+          yarn
+          echo  "Angular: Build angular project"
+          npm run build-prod 
+          cd ..
+          echo  "***************************************************** Copy assets to target directory  **************************************************"
+          rm -rf angular/dist/ngaspnetcore/*.map
+          cp -rf aspnet-core/src/NgAspnetcore.HttpApi.Host/bin/Release/net5.0/publish/* deploy/
+          cp -rf angular/dist/ngaspnetcore/*  deploy/wwwroot/
+          ls -lR deploy/
+          echo  "***************************************************** End Build ****************************************************"
+          echo '***************************************************** build docker image***************************************************** '
+          docker build -t $HEROKU_APP_NAME -f Dockerfile .
+          echo '***************************************************** docker login $(HEROKU_USERNAME) ***************************************************** '
+          docker login --username=$(HEROKU_USERNAME) --password=$(HEROKU_API_KEY) registry.heroku.com
+          
+          echo '***************************************************** docker tag ***************************************************** '
+          docker tag $HEROKU_APP_NAME registry.heroku.com/$HEROKU_APP_NAME/web
+           echo '***************************************************** docker push***************************************************** '
+          docker push registry.heroku.com/$HEROKU_APP_NAME/web
+          echo '***************************************************** heroku start***************************************************** '
+          imageId=$(docker inspect registry.heroku.com/$HEROKU_APP_NAME/web --format={{.Id}})
+          payload='{"updates":[{"type":"web","docker_image":"'"$imageId"'"}]}'
+          curl -n -X PATCH https://api.heroku.com/apps/$HEROKU_APP_NAME/formation \
+          -d "$payload" \
+          -H "Content-Type: application/json" \
+          -H "Accept: application/vnd.heroku+json; version=3.docker-releases" \
+          -H "Authorization: Bearer $(HEROKU_API_KEY)"
+        
