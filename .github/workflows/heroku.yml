@@ -3,7 +3,7 @@ name: ci
 on:
   push:
     branches: master
-
+evirment:
 jobs:
   main:
     runs-on: ubuntu-latest
@@ -25,7 +25,7 @@ jobs:
           cmd: install # will run `yarn install` command
       - name: Push image
         run: |      
-          echo $HEROKU_APP_NAME     
+          echo ${{ secrets.HEROKU_APP_NAME }}     
           echo  "**************************************************  Buildin Dotnet Application  **************************************************"
           #rm -rf deploy
           #npm i -g yarn
@@ -56,20 +56,20 @@ jobs:
           ls -lR deploy/
           echo  "***************************************************** End Build ****************************************************"
           echo '***************************************************** build docker image***************************************************** '
-          docker build -t $HEROKU_APP_NAME -f Dockerfile .
-          echo '***************************************************** docker login $(HEROKU_USERNAME) ***************************************************** '
-          docker login --username=$(HEROKU_USERNAME) --password=$(HEROKU_API_KEY) registry.heroku.com
+          docker build -t  ${{ secrets.HEROKU_APP_NAME }}  -f Dockerfile .
+          echo '***************************************************** docker login ${{ secrets.HEROKU_USERNAME }} ***************************************************** '
+          docker login --username=${{ secrets.HEROKU_USERNAME }} --password=${{ secrets.HEROKU_API_KEY }}  registry.heroku.com
           
           echo '***************************************************** docker tag ***************************************************** '
-          docker tag $HEROKU_APP_NAME registry.heroku.com/$HEROKU_APP_NAME/web
+          docker tag ${{ secrets.HEROKU_APP_NAME }} registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}/web
            echo '***************************************************** docker push***************************************************** '
-          docker push registry.heroku.com/$HEROKU_APP_NAME/web
+          docker push registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}/web
           echo '***************************************************** heroku start***************************************************** '
-          imageId=$(docker inspect registry.heroku.com/$HEROKU_APP_NAME/web --format={{.Id}})
+          imageId=$(docker inspect registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}/web --format={{.Id}})
           payload='{"updates":[{"type":"web","docker_image":"'"$imageId"'"}]}'
-          curl -n -X PATCH https://api.heroku.com/apps/$HEROKU_APP_NAME/formation \
+          curl -n -X PATCH https://api.heroku.com/apps/${{ secrets.HEROKU_APP_NAME }}/formation \
           -d "$payload" \
           -H "Content-Type: application/json" \
           -H "Accept: application/vnd.heroku+json; version=3.docker-releases" \
-          -H "Authorization: Bearer $(HEROKU_API_KEY)"
+          -H "Authorization: Bearer ${{ secrets.HEROKU_API_KEY }}"
         
