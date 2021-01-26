@@ -7,18 +7,19 @@ import { CustomersAbpComponent } from './customers-abp/customers-abp.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AllMaterialModule } from '@module/all-material';
 import { BreezeCommonModule } from '@abpdz/ng.breeze';
+import { ThemeSharedModule } from '@abpdz/ng.theme.shared';
+import { CoreModule } from '@abpdz/ng.core';
 
 @NgModule({
   declarations: [CustomersComponent, CustomersAbpComponent],
   imports: [
     CommonModule,
     CustomersRoutingModule,
-
     BreezeCommonModule,
-
     ReactiveFormsModule,
+    ThemeSharedModule,
     FormsModule,
-
+    CoreModule.forLazy(),
     AllMaterialModule,
   ],
 })
