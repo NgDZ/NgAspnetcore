@@ -25,7 +25,7 @@ jobs:
       - name: Push image
         run: |      
           echo ${{ secrets.HEROKU_APP_NAME }}     
-          echo  "**************************************************  Buildin Dotnet Application  **************************************************"
+          echo  "**************************************************  Buildin Dotnet Application ${{ secrets.HEROKU_APP_NAME }}  **************************************************"
           #rm -rf deploy
           #npm i -g yarn
           mkdir deploy
