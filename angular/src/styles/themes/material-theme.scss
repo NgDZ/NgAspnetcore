@@ -40,7 +40,6 @@ $app-accent: mat-palette($app-navy);
 
 // The warn palette is optional (defaults to red).
 $app-warn: mat-palette($mat-red);
-
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as `color` or `typography`.
 $app-theme: mat-light-theme(

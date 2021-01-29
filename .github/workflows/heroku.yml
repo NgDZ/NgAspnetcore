@@ -56,6 +56,21 @@ jobs:
           cp -rf aspnet-core/src/NgAspnetcore.HttpApi.Host/bin/Release/net5.0/publish/* deploy/
           cp -rf angular/dist/ngaspnetcore/*  deploy/wwwroot/
           ls -lR deploy/
+          
+          FILE=deploy/Ezyness.HttpApi.Host.dll
+          if [ -f "$FILE" ]; then
+            echo "Server build successful."
+          else 
+            echo "error on Server buid ."
+            exit 100
+          fi
+          FILE=deploy/wwwroot/index.html
+          if [ -f "$FILE" ]; then
+            echo "client build successful."
+          else 
+            echo "error on client buid ."
+            exit 100
+          fi
           echo  "***************************************************** End Build ****************************************************"
           echo '***************************************************** build docker image***************************************************** '
           docker build -t  ${{ secrets.HEROKU_APP_NAME }}  -f Dockerfile .
