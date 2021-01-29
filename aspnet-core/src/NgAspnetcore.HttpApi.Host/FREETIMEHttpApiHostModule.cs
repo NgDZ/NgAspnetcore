@@ -61,7 +61,7 @@ namespace NgAspnetcore
         {
 
             var configuration = context.Services.GetConfiguration();
-            configuration.SetHostEvirementSettings("FREETIME");
+            configuration.SetHostEvirementSettings("IDS_CLIENT");
             var hostingEnvirofrnment = context.Services.GetHostingEnvironment();
 
             ConfigureBundles();
@@ -147,12 +147,20 @@ namespace NgAspnetcore
                 .AddJwtBearer(options =>
                 {
                     var auth = configuration["AuthServer:Authority"];
-
-                    var port = Environment.GetEnvironmentVariable("PORT");
-                    if (!string.IsNullOrEmpty(port))
+                    string url = Environment.GetEnvironmentVariable("APP_URL");
+                    if (!string.IsNullOrWhiteSpace(url))
                     {
-                        auth = "http://localhost:" + port;
+                        auth = url;
                     }
+                    else
+                    {
+                        var port = Environment.GetEnvironmentVariable("PORT");
+                        if (!string.IsNullOrEmpty(port))
+                        {
+                            auth = "http://localhost:" + port;
+                        }
+                    }
+
                     options.Authority = auth;
                     options.RequireHttpsMetadata = false;
                     options.Audience = "IDS_CLIENT";
