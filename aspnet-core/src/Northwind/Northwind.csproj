@@ -8,14 +8,14 @@
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Volo.Abp.Core" Version="4.1.0" />
-    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="4.1.0" />
-    <PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="4.1.0" />
-    <PackageReference Include="Volo.Abp.Account.Application" Version="4.1.0" />
-    <PackageReference Include="Volo.Abp.Identity.Application" Version="4.1.0" />
-    <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="4.1.0" />
-    <PackageReference Include="Volo.Abp.TenantManagement.Application" Version="4.1.0" />
-    <PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="4.1.0" />
+    <PackageReference Include="Volo.Abp.Core" Version="4.2.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="4.2.0" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="4.2.0" />
+    <PackageReference Include="Volo.Abp.Account.Application" Version="4.2.0" />
+    <PackageReference Include="Volo.Abp.Identity.Application" Version="4.2.0" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="4.2.0" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Application" Version="4.2.0" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="4.2.0" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Breeze.AspNetCore.NetCore" Version="5.0.0" />
@@ -44,6 +44,5 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.1" />
-    <PackageReference Include="Microsoft.OData.ModelBuilder" Version="1.0.5" />
   </ItemGroup>
 </Project>

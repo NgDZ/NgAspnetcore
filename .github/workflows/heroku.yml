@@ -39,6 +39,9 @@ jobs:
           dotnet restore
           cd  src/NgAspnetcore.HttpApi.Host
           dotnet publish -c Release  
+          rm -f yarn.lock
+          yarn
+          npm run copy
           cd ../../../
           echo  "******************************************************  Buildin angular Application  ******************************************************"
           cd angular

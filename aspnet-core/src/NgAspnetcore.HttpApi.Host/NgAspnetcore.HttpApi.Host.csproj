@@ -20,26 +20,26 @@
     <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
     <PackageReference Include="Serilog.Sinks.Async" Version="1.4.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.*" />
-    <PackageReference Include="Volo.Abp.AspNetCore.MultiTenancy" Version="4.1.0" />
-    <PackageReference Include="Volo.Abp.Autofac" Version="4.1.0" />
-    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic" Version="4.1.0" />
-    <PackageReference Include="Volo.Abp.AspNetCore.Authentication.JwtBearer" Version="4.1.0" />
-    <PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="4.1.0" />
-    <PackageReference Include="Volo.Abp.Account.Web.IdentityServer" Version="4.1.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.MultiTenancy" Version="4.2.0" />
+    <PackageReference Include="Volo.Abp.Autofac" Version="4.2.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic" Version="4.2.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Authentication.JwtBearer" Version="4.2.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="4.2.0" />
+    <PackageReference Include="Volo.Abp.Account.Web.IdentityServer" Version="4.2.0" />
 
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="FREETIME.Application.Contracts" Version="4.1.101" />
-    <PackageReference Include="FREETIME.Domain.Shared" Version="4.1.101" />
-    <PackageReference Include="FREETIME.Domain" Version="4.1.101" />
-    <PackageReference Include="FREETIME.Application" Version="4.1.101" />
-    <PackageReference Include="FREETIME.HttpApi" Version="4.1.101" />
-    <PackageReference Include="FREETIME.EntityFrameworkCore" Version="4.1.101" />
-    <PackageReference Include="FREETIME.EntityFrameworkCore.DbMigrations" Version="4.1.101" />
-    <PackageReference Include="AbpDz.IdentityServer" Version="4.1.101"/>
-    <PackageReference Include="AbpDz.Notifications" Version="4.1.101"/>
-    <PackageReference Include="AbpDz.Breeze" Version="4.1.101" />
+    <PackageReference Include="FREETIME.Application.Contracts" Version="4.2.100" />
+    <PackageReference Include="FREETIME.Domain.Shared" Version="4.2.100" />
+    <PackageReference Include="FREETIME.Domain" Version="4.2.100" />
+    <PackageReference Include="FREETIME.Application" Version="4.2.100" />
+    <PackageReference Include="FREETIME.HttpApi" Version="4.2.100" />
+    <PackageReference Include="FREETIME.EntityFrameworkCore" Version="4.2.100" />
+    <PackageReference Include="FREETIME.EntityFrameworkCore.DbMigrations" Version="4.2.100" />
+    <PackageReference Include="AbpDz.IdentityServer" Version="4.2.100"/>
+    <PackageReference Include="AbpDz.Notifications" Version="4.2.100"/>
+    <PackageReference Include="AbpDz.Breeze" Version="4.2.100" />
   </ItemGroup>
 
   <ItemGroup>

@@ -154,7 +154,7 @@ namespace NgAspnetcore
                         auth = "http://localhost:" + port;
                     }
                     options.Authority = auth;
-                    options.RequireHttpsMetadata = Convert.ToBoolean(configuration["AuthServer:RequireHttpsMetadata"]);
+                    options.RequireHttpsMetadata = false;
                     options.Audience = "IDS_CLIENT";
                     options.BackchannelHttpHandler = new HttpClientHandler
                     {
@@ -170,9 +170,9 @@ namespace NgAspnetcore
         {
             Configure<AbpLocalizationOptions>(options =>
             {
-                options.Languages.Add(new LanguageInfo("ar", "ar", "???????"));
+                options.Languages.Add(new LanguageInfo("ar", "ar", "عربية"));
                 options.Languages.Add(new LanguageInfo("en", "en", "English"));
-                options.Languages.Add(new LanguageInfo("fr", "fr", "Fran�ais"));
+                options.Languages.Add(new LanguageInfo("fr", "fr", "Français"));
             });
         }
 
