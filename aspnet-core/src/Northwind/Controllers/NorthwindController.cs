@@ -14,7 +14,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Linq;
 namespace Northwind.Controllers
 {
-    // [Authorize]
+    [Authorize]
     [ApiController]
     [Route("/api/[controller]")]
     [ApiExplorerSettings(GroupName = "Northwind")]

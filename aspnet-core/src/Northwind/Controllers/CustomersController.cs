@@ -8,10 +8,12 @@ using System.Linq.Dynamic.Core;
 using System.Globalization;
 using System;
 using System.Text.RegularExpressions;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Northwind.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("/api/[controller]")]
     public class CustomersController : ControllerBase
     {

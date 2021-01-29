@@ -27,7 +27,7 @@ import {
 } from '@abpdz/ng.theme.shared';
 import { ThemeMaterialModule } from '@abpdz/ng.theme.material';
 import { HomeComponent } from './home.component';
-import { IdentityConfigModule } from '@abpdz/ng.identity/config';
+import { eIdentityPolicyNames, IdentityConfigModule } from '@abpdz/ng.identity/config';
 import { AccountConfigModule } from '@abpdz/ng.account/config';
 import { AbpDzDemoConfigModule } from '@abpdz/ng.demos/config';
 import { AbpDzAuditConfigModule } from '@abpdz/ng.audit/config';
@@ -72,7 +72,7 @@ import { AbpDzAuditConfigModule } from '@abpdz/ng.audit/config';
 
     IdentityConfigModule.forRoot(),
     AccountConfigModule.forRoot(),
-    
+
     AbpDzDemoConfigModule.forRoot(),
     AbpDzAuditConfigModule.forRoot(),
   ],
@@ -102,6 +102,7 @@ export function configureRoutes(routes: RoutesService) {
 
         iconClass: 'local_grocery_store',
         layout: eLayoutType.application,
+        requiredPolicy: eIdentityPolicyNames.Users,
         order: 10,
       },
       {
@@ -110,7 +111,7 @@ export function configureRoutes(routes: RoutesService) {
         iconClass: 'person_pin',
         parentName: eThemeSharedRouteNames.Administration,
         layout: eLayoutType.application,
-        // requiredPolicy: eIdentityPolicyNames.Users,
+        requiredPolicy: eIdentityPolicyNames.Users,
         order: 20,
       },
       ,
@@ -120,7 +121,7 @@ export function configureRoutes(routes: RoutesService) {
         iconClass: 'person_pin',
         parentName: eThemeSharedRouteNames.Administration,
         layout: eLayoutType.application,
-        // requiredPolicy: eIdentityPolicyNames.Users,
+        requiredPolicy: eIdentityPolicyNames.Users,
         order: 20,
       },
     ]);

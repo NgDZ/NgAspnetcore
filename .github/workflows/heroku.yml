@@ -57,7 +57,7 @@ jobs:
           cp -rf angular/dist/ngaspnetcore/*  deploy/wwwroot/
           ls -lR deploy/
           
-          FILE=deploy/Ezyness.HttpApi.Host.dll
+          FILE=deploy/NgAspnetcore.HttpApi.Host.dll
           if [ -f "$FILE" ]; then
             echo "Server build successful."
           else 
