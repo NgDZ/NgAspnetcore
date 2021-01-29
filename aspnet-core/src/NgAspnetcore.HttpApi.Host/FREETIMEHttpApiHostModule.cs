@@ -169,6 +169,12 @@ namespace NgAspnetcore
                         ServerCertificateCustomValidationCallback =
                             HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
                     };
+        
+                    options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                    {
+                        ValidateIssuer = false
+                    };
+
                 });
         }
 

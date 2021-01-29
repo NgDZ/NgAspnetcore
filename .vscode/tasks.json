@@ -30,7 +30,11 @@
       "command": "dotnet",
       "type": "process",
       "options": {
-        "cwd": "${workspaceFolder}/aspnet-core/src/NgAspnetcore.HttpApi.Host"
+        "cwd": "${workspaceFolder}/aspnet-core/src/NgAspnetcore.HttpApi.Host",
+        "env": {
+          "PORT": "4552",
+          "APP_URL":"http://localhost:4552"
+        }
       },
       "args": [
         "watch",
@@ -55,10 +59,7 @@
     },
     {
       "label": "run-app",
-      "dependsOn": [
-        "run-client",
-        "run-server"
-      ],
+      "dependsOn": ["run-client", "run-server"],
       "dependsOrder": "parallel"
     }
   ]
