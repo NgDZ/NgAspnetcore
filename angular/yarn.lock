@@ -198,24 +198,24 @@
     ora "5.3.0"
     rxjs "6.6.3"
 
-"@angular/animations@11.2.0-rc.0":
-  version "11.2.0-rc.0"
-  resolved "http://127.0.0.1:4444/@angular%2fanimations/-/animations-11.2.0-rc.0.tgz#f3edfc4ef5e83373e204fcb906fe6431cd639bbc"
-  integrity sha512-1vk+uHhQNIT2Rt1rg7P4CYJX+j7Mq2H8yltwCJodsPewuSQ0ZRSnisfahBO9IqW72IZk9xXi85M+RJUbA1L41A==
+"@angular/animations@11.2.0":
+  version "11.2.0"
+  resolved "http://127.0.0.1:4444/@angular%2fanimations/-/animations-11.2.0.tgz#383438758c61d98f43c5ea1078d8388eb8784387"
+  integrity sha512-orYrBPNAsF8VpvuOaXTtPltwK2nsje5R8sWJnRC2dh1RCRdyIqHwmRIU0Mi6qLMiEaLNrFPGEMyQ9gB+sC/vYg==
   dependencies:
     tslib "^2.0.0"
 
-"@angular/cdk-experimental@11.2.0-rc.0":
-  version "11.2.0-rc.0"
-  resolved "http://127.0.0.1:4444/@angular%2fcdk-experimental/-/cdk-experimental-11.2.0-rc.0.tgz#36fbe4872c90d54d79b96773015bf8ac4597da5f"
-  integrity sha512-HqSvWb2QcfN++2tGTjaaCYYiZMbobp+MgqZgZ+Mmf2A87W8zalwRkKK4XL7klqgKYlE0qkdWCOLXCMlLRq+XXg==
+"@angular/cdk-experimental@11.2.0":
+  version "11.2.0"
+  resolved "http://127.0.0.1:4444/@angular%2fcdk-experimental/-/cdk-experimental-11.2.0.tgz#8298f162766e5bc92ed76a7ae574906a2dc6f23a"
+  integrity sha512-Rywk7eycuERkDvm52l+6th9Yw4d1dRLvvli4rMJaVw9JPB4o7stBoYw00tp0/HZWzaF1VPBm1PtUQse2ydu2zQ==
   dependencies:
     tslib "^2.0.0"
 
-"@angular/cdk@11.2.0-rc.0":
-  version "11.2.0-rc.0"
-  resolved "http://127.0.0.1:4444/@angular%2fcdk/-/cdk-11.2.0-rc.0.tgz#2f0d4832598c3c8255253e40080c5de75e3ed7f5"
-  integrity sha512-PSSMQlIoRIH5COpqLwLKtfsJkVr3h5DpaTvER9SYOkluo4+lhvNLducsn7oaZwDJIR1K4/ZEECUmvoIvdfpR+A==
+"@angular/cdk@11.2.0":
+  version "11.2.0"
+  resolved "http://127.0.0.1:4444/@angular%2fcdk/-/cdk-11.2.0.tgz#4f0d8e9865d29ee1b2ab3ce7be9a7af0a87b0ef4"
+  integrity sha512-25k1giKAJ7DPzJBZfAVZmw/VfR4pZUaZnhgVAMwIdGPl5SaXJEW3e2znGlhzwkuQsiBgrSKfMgJmwKSyUbe2tg==
   dependencies:
     tslib "^2.0.0"
   optionalDependencies:
@@ -249,17 +249,17 @@
     universal-analytics "0.4.23"
     uuid "8.3.2"
 
-"@angular/common@11.2.0-rc.0":
-  version "11.2.0-rc.0"
-  resolved "http://127.0.0.1:4444/@angular%2fcommon/-/common-11.2.0-rc.0.tgz#42dcf0b6ff90ced16558b3a74350e5d4165d19dd"
-  integrity sha512-/H1IBgClFe8FEE4jtgES+yeH2ae8EGnA/MyHCBmeVlA13PU1W34WtpPCsLA6Z51ndD3WS75/edWj3B3vszhjLg==
+"@angular/common@11.2.0":
+  version "11.2.0"
+  resolved "http://127.0.0.1:4444/@angular%2fcommon/-/common-11.2.0.tgz#90d602c0e33bb95a4d0c4c597f08255d78ed580f"
+  integrity sha512-wsWI5F6Y2DNxne2D5uk8e9U/vn95UYZLMNBW+QXI9U/I9kDSXoa8yEvNcn1x0XfNXBMst5pi4iSF5M8mIck1eg==
   dependencies:
     tslib "^2.0.0"
 
-"@angular/compiler-cli@11.2.0-rc.0":
-  version "11.2.0-rc.0"
-  resolved "http://127.0.0.1:4444/@angular%2fcompiler-cli/-/compiler-cli-11.2.0-rc.0.tgz#487b4f213c091224fb77013f526f00d8d7e11c24"
-  integrity sha512-8NEoe6TuIjsotH8MGvnBeORi+p6hjxDt8l51KraxT5KPernYvy3S15oISyJnVZNoQSsUeljwUjZNoObj9vPosA==
+"@angular/compiler-cli@11.2.0":
+  version "11.2.0"
+  resolved "http://127.0.0.1:4444/@angular%2fcompiler-cli/-/compiler-cli-11.2.0.tgz#850bee57566c00b28a0842bce775b8c4597a4185"
+  integrity sha512-FJ8OHWBQftmncDGV43ASFeCu3cW1W2P5fvub9fiBFEeTIkB/HXrMOMCQg/1XSdfA5kwFzj2NedMp573X9kq6ng==
   dependencies:
     "@babel/core" "^7.8.6"
     "@babel/types" "^7.8.6"
@@ -277,10 +277,10 @@
     tslib "^2.0.0"
     yargs "^16.1.1"
 
-"@angular/compiler@11.2.0-rc.0":
-  version "11.2.0-rc.0"
-  resolved "http://127.0.0.1:4444/@angular%2fcompiler/-/compiler-11.2.0-rc.0.tgz#5cbd2f2774a4d1f1af124d0d21caad8b2fc9bc69"
-  integrity sha512-9caRn9Xn961YxKN5vcNWOcE2VZkg0K49N5uVaHpY7TaRDc9a0XhU7o5rCy07rsXInTpciQaO0bgubWVLbxlycA==
+"@angular/compiler@11.2.0":
+  version "11.2.0"
+  resolved "http://127.0.0.1:4444/@angular%2fcompiler/-/compiler-11.2.0.tgz#130bee57dd1daa1326d37bef4b63c02aa7309cc2"
+  integrity sha512-EW6LM/kUYhQkuFqGt03c/eRKZAYr0LLEdMOn//j1uIh+wSq9KLffBGpky6b63xdfWxsXi8OucXUOydTQBckNEQ==
   dependencies:
     tslib "^2.0.0"
 
@@ -289,10 +289,10 @@
   resolved "http://127.0.0.1:4444/@angular%2fcompiler/-/compiler-9.0.0.tgz#87e0bef4c369b6cadae07e3a4295778fc93799d5"
   integrity sha512-ctjwuntPfZZT2mNj2NDIVu51t9cvbhl/16epc5xEwyzyDt76pX9UgwvY+MbXrf/C/FWwdtmNtfP698BKI+9leQ==
 
-"@angular/core@11.2.0-rc.0":
-  version "11.2.0-rc.0"
-  resolved "http://127.0.0.1:4444/@angular%2fcore/-/core-11.2.0-rc.0.tgz#2659f0d36bda5879ff6725f396ccd2e09262e633"
-  integrity sha512-t+7MtTGANQ6psMLcM7ErYlcDMAzcKONQL4g06hBp92Vp5M2DkBalDTUfn+7q3qz54bSfCmJVMcZ8pu3BcF5VIQ==
+"@angular/core@11.2.0":
+  version "11.2.0"
+  resolved "http://127.0.0.1:4444/@angular%2fcore/-/core-11.2.0.tgz#309ae61d55b21fca0b644a6571109741d64b2467"
+  integrity sha512-jnbnJTW2GwfkRoXG8J4zs5FMcahMZwo6jrZGe9FiXjCYG9cLEuOXy4h99Z1s/o0vc/VXyWgym7SmeEgv+urf8g==
   dependencies:
     tslib "^2.0.0"
 
@@ -315,52 +315,52 @@
   dependencies:
     tslib "^2.0.0"
 
-"@angular/forms@11.2.0-rc.0":
-  version "11.2.0-rc.0"
-  resolved "http://127.0.0.1:4444/@angular%2fforms/-/forms-11.2.0-rc.0.tgz#9a33d80bd4c4cee13a0ace8a16d687deaf02cdd5"
-  integrity sha512-q+t790U7eMpzodFF1OOlesEFqsyS42g846AFBuuW5R683lPpWzh2GO3JfJmNfN1udSSrv9ijADIBelAaYLqsAw==
+"@angular/forms@11.2.0":
+  version "11.2.0"
+  resolved "http://127.0.0.1:4444/@angular%2fforms/-/forms-11.2.0.tgz#8ba7a98efdd464a4a6b901ba1f220162dd80c1ed"
+  integrity sha512-FgIG9ou27FbmyFv0n6pF95cQEz412/+iyY9OSlDnezD/7yU4fwk4NNPgP6Z/b1k7ClLYxP/YKC00WVhi1i8HdA==
   dependencies:
     tslib "^2.0.0"
 
-"@angular/material-experimental@11.2.0-rc.0":
-  version "11.2.0-rc.0"
-  resolved "http://127.0.0.1:4444/@angular%2fmaterial-experimental/-/material-experimental-11.2.0-rc.0.tgz#d2487ad16b695090c5bec40abea35acd6e21f6b3"
-  integrity sha512-E0pTP9LFGj0tBCrssgcmzBTi7JpUgnJp1eEtuoNZAu780kahhOuERRmxMRetd+raYFocnoEjGnwUJ3VEhx5FnQ==
+"@angular/material-experimental@11.2.0":
+  version "11.2.0"
+  resolved "http://127.0.0.1:4444/@angular%2fmaterial-experimental/-/material-experimental-11.2.0.tgz#d4a0efdda874a61c6587de5cff8c30eb172247bf"
+  integrity sha512-wJXrq7/Um3ksN/k0qBVihmcL/m3sIwjmoaYjHM1PpptIXaTp1MRYfqJ8iG1xO+pFK+3W3U7XglMcJ9nWPf6BrA==
   dependencies:
     tslib "^2.0.0"
 
-"@angular/material-moment-adapter@11.2.0-rc.0":
-  version "11.2.0-rc.0"
-  resolved "http://127.0.0.1:4444/@angular%2fmaterial-moment-adapter/-/material-moment-adapter-11.2.0-rc.0.tgz#c1efdb2cb765d69c6dc455253427df0c8bb9ab80"
-  integrity sha512-2ADTMrsPH+MPggTC+uk5G8nxGH9yVim6gGiW+qgnTCpT1HuttpxeXxZ0aWiRQqXEzZHzRmK6hoV6STaaR27Ohw==
+"@angular/material-moment-adapter@11.2.0":
+  version "11.2.0"
+  resolved "http://127.0.0.1:4444/@angular%2fmaterial-moment-adapter/-/material-moment-adapter-11.2.0.tgz#50b14afb24794a63263de164e6c45c2f14836a29"
+  integrity sha512-dm9/aH9Yct5yqQhjN7R+Zj2VWmb8dF9LlHWwUFmhT7nSM5W+D4pK0KFEfRfwNZyV9AJkZ3C2YmjspOcJLlOFZw==
   dependencies:
     tslib "^2.0.0"
 
-"@angular/material@11.2.0-rc.0":
-  version "11.2.0-rc.0"
-  resolved "http://127.0.0.1:4444/@angular%2fmaterial/-/material-11.2.0-rc.0.tgz#a8b0643a8f3b59ebdab2ed285d783d54acb83c5e"
-  integrity sha512-XeUBTsyQL4Uxqbe2fUKmPAGOXcri4yTf9oQAyzS+qeRt94o9t2rwXhe/UvCXRtYEqZ1YG8zUFPbv6Mjm9wrGqA==
+"@angular/material@11.2.0":
+  version "11.2.0"
+  resolved "http://127.0.0.1:4444/@angular%2fmaterial/-/material-11.2.0.tgz#a5843f2964366daebab9edf2b0a3d6dcad451f5d"
+  integrity sha512-duTQdHtzdZ3KWn90JcN+eI0oNwr7E7JGEOp7tZ9XOtqty0h158SJUCYSuDxhFOqyAgaY41enNPHdB2c4Xz0iBQ==
   dependencies:
     tslib "^2.0.0"
 
-"@angular/platform-browser-dynamic@11.2.0-rc.0":
-  version "11.2.0-rc.0"
-  resolved "http://127.0.0.1:4444/@angular%2fplatform-browser-dynamic/-/platform-browser-dynamic-11.2.0-rc.0.tgz#ca4e3511df866ff0a78150542c01252f07c605ee"
-  integrity sha512-2/lfohH37qFZwoShk/XKPsUdAygJ+HfcOedmNNuGk+hUgaLDpKfVIuNbPbFMZqSt4OjFVwICs6gSr39YIE7rog==
+"@angular/platform-browser-dynamic@11.2.0":
+  version "11.2.0"
+  resolved "http://127.0.0.1:4444/@angular%2fplatform-browser-dynamic/-/platform-browser-dynamic-11.2.0.tgz#647fe6d8dfa7651d38564240cbf75f97f11754b7"
+  integrity sha512-bBCtgtL87mvDT0K3HNBS19UC0BzIJUTGnYKJS9IugyfTEqlldB4juMmh/3FPjk30kxxJ8IB/ydaN2uVhBAxPVQ==
   dependencies:
     tslib "^2.0.0"
 
-"@angular/platform-browser@11.2.0-rc.0":
-  version "11.2.0-rc.0"
-  resolved "http://127.0.0.1:4444/@angular%2fplatform-browser/-/platform-browser-11.2.0-rc.0.tgz#1cc467b986fd005b5d3599510b3c801397a3fe3f"
-  integrity sha512-iYb+GdMD11kG+x7I1C6tddWiTiWTreRRIc6M18QeLHSh44PTcB4cKpz5s2CASx1JjTXxRUKkFY1aka3btXxDwA==
+"@angular/platform-browser@11.2.0":
+  version "11.2.0"
+  resolved "http://127.0.0.1:4444/@angular%2fplatform-browser/-/platform-browser-11.2.0.tgz#d1bbafd394ebfb600043060ec2d8543763041403"
+  integrity sha512-xd3O4svQ95BN/KpzQUFkSWfvwiCURuLJhLlDkxzLA58ElA0qodHOjQmQz/1vRFh/nXQQoWg8z9ixbmcRGzWTow==
   dependencies:
     tslib "^2.0.0"
 
-"@angular/router@11.2.0-rc.0":
-  version "11.2.0-rc.0"
-  resolved "http://127.0.0.1:4444/@angular%2frouter/-/router-11.2.0-rc.0.tgz#c3745dff49627d8eabf362a5a74480efab3522b6"
-  integrity sha512-7UqlbgfIeYBkdRk3IGegIzUEEmMvc3qhSgIpI3Dhsf4zxO2ANwVZs5q2+I2enN4q9rQ/l7W/UGcIglKp+F3y/A==
+"@angular/router@11.2.0":
+  version "11.2.0"
+  resolved "http://127.0.0.1:4444/@angular%2frouter/-/router-11.2.0.tgz#00dca75d6dce5a88259fea88866caa51ebf1d1a7"
+  integrity sha512-Gw08D6W4SGEIgm5zKdGs1yCW7FnwYjF8cycWczrpU8fmZh+WLbIjPAy/blI/nByCDU9BGyZ7cWGOiQJHEnzWmg==
   dependencies:
     tslib "^2.0.0"
 
@@ -1208,10 +1208,10 @@
     merge-source-map "^1.1.0"
     schema-utils "^2.7.0"
 
-"@microsoft/signalr@5.0.2":
-  version "5.0.2"
-  resolved "http://127.0.0.1:4444/@microsoft%2fsignalr/-/signalr-5.0.2.tgz#c7ae14f390b54854d317448d473ea3fd99599557"
-  integrity sha512-sIAObG0rj/XCIeKFpQvzIFd7Rnt7yZJn6MW4QfbvE1+XNK173XXYUVy+MQnh1Tw5N4wVQyDcUPZF3sV3K4EASQ==
+"@microsoft/signalr@5.0.3":
+  version "5.0.3"
+  resolved "http://127.0.0.1:4444/@microsoft%2fsignalr/-/signalr-5.0.3.tgz#562762d750333c2154951af5db2327365a655003"
+  integrity sha512-/+8DeefKxsz29+OgLBpMH6xs/akEzFrGTCsBhwQV67x0GR+uN03I74vn8X7FunXWO8BApamOjF2DLmLGU83SFw==
   dependencies:
     abort-controller "^3.0.0"
     eventsource "^1.0.7"
@@ -1219,59 +1219,59 @@
     node-fetch "^2.6.0"
     ws "^6.0.0"
 
-"@ngrx/component-store@11.0.0-rc.0":
-  version "11.0.0-rc.0"
-  resolved "http://127.0.0.1:4444/@ngrx%2fcomponent-store/-/component-store-11.0.0-rc.0.tgz#90207b1d1eb4307ec2af854a2b2394856abb1c03"
-  integrity sha512-GiOM6Uxgb82u8dikp0hCssOLpu6pUHBapWy9eoECyKC9Sdqh59FEc0OTjTN5SWcGzxJ5RtAYhF4N44P16XWEBA==
+"@ngrx/component-store@11.0.0":
+  version "11.0.0"
+  resolved "http://127.0.0.1:4444/@ngrx%2fcomponent-store/-/component-store-11.0.0.tgz#4ef2ea4fed0920cb8da19e19467fd4b421decfb8"
+  integrity sha512-dq8c7eleroBvN8JvLNr+PpLeC23QKl/V7Rc1rpkfESXUi7mq2NmCcU3gXvfqhDM8+Kuxwj9D0Ljd59Hfz3Z8LQ==
   dependencies:
     tslib "^2.0.0"
 
-"@ngrx/data@11.0.0-rc.0":
-  version "11.0.0-rc.0"
-  resolved "http://127.0.0.1:4444/@ngrx%2fdata/-/data-11.0.0-rc.0.tgz#36fc7f0328e5755667370a6ca7ad98a8c9176dc5"
-  integrity sha512-LTiXLuhWsao7lYkfNl9dfBjPhbFKqLE2XvzZhfAKLpOHKaSq7O5FkP1AGEnCUgXa2HG4q/VVgYVlP8hs8u1fZg==
+"@ngrx/data@11.0.0":
+  version "11.0.0"
+  resolved "http://127.0.0.1:4444/@ngrx%2fdata/-/data-11.0.0.tgz#d7f07b94bbab84d1a82779b64ecdc826c177a51a"
+  integrity sha512-dkjhcaFDw3h5cYCC2bjXNKhGC2WeELz2EMF5rj6nuAKwTA735hyr1KPqOa6FHUrS7sUaVIN3YKFJEXP4cjWe+Q==
   dependencies:
     tslib "^2.0.0"
 
-"@ngrx/effects@11.0.0-rc.0":
-  version "11.0.0-rc.0"
-  resolved "http://127.0.0.1:4444/@ngrx%2feffects/-/effects-11.0.0-rc.0.tgz#5b6edd930ac05d4b188265d50dd2a0ae6c3f5fbb"
-  integrity sha512-T9WXcq+XLdKom0iwzvrd/S0Ji+laoh5thY0vMEOg40gE+mrSYew+hgZphKN0lojwqs/aLNEOAezHOBXQPsFbSw==
+"@ngrx/effects@11.0.0":
+  version "11.0.0"
+  resolved "http://127.0.0.1:4444/@ngrx%2feffects/-/effects-11.0.0.tgz#22b4f8c32da2f51878e723c8332779e585f5d6e0"
+  integrity sha512-TYWSBQNAISVSkWBY3wGEPBGRthanXdAi6xch29qQUYJHhXuCJC26aIMKvqHsYQVcn33/f0uzcyO6/tNBBI55Rg==
   dependencies:
     tslib "^2.0.0"
 
-"@ngrx/entity@11.0.0-rc.0":
-  version "11.0.0-rc.0"
-  resolved "http://127.0.0.1:4444/@ngrx%2fentity/-/entity-11.0.0-rc.0.tgz#713a42944f258c7c11c69f1b548dbca3cd0ca721"
-  integrity sha512-T8y0Xl0us7H3zNH4THCYBW6PTTYBj7zqwO1gK0XSKXTN5OeWtqiWPgizWh/2sZVos+9+YvKPkU97SRorwa+RsQ==
+"@ngrx/entity@11.0.0":
+  version "11.0.0"
+  resolved "http://127.0.0.1:4444/@ngrx%2fentity/-/entity-11.0.0.tgz#b1ca17963d1466e4f76a8e2dbea1ef03c0f9801d"
+  integrity sha512-3SFMO6GvRLK8Ze8cwxue6F5a7xeR/1+xtKAtBTi6mHBe8o6y3wQ9FG34JAGoCwiTxP5388P74jUQU8j3ZdjXRQ==
   dependencies:
     tslib "^2.0.0"
 
-"@ngrx/router-store@11.0.0-rc.0":
-  version "11.0.0-rc.0"
-  resolved "http://127.0.0.1:4444/@ngrx%2frouter-store/-/router-store-11.0.0-rc.0.tgz#f90faab6836aa27ee35b9ea118cdf6ac2a6a06f5"
-  integrity sha512-YgpN6lqKzVq/FadrApWe34wLeHSm4pBNX/sbhtrm8Q7YIAZWbWQ/AGfI9OVpSnxb3stRa/7Mhz4VgDjL3C5KCA==
+"@ngrx/router-store@11.0.0":
+  version "11.0.0"
+  resolved "http://127.0.0.1:4444/@ngrx%2frouter-store/-/router-store-11.0.0.tgz#2c68eac0683d63109bd1f607a5e1500efe593427"
+  integrity sha512-FwsPnmchxFDwCAYKdLs+qACr3+bChE5c/hWsr7PbiB1gtg4+dhLTx2DVbjVucBNo9Zrb/58qxobwgE7UBuEbng==
   dependencies:
     tslib "^2.0.0"
 
-"@ngrx/schematics@11.0.0-rc.0":
-  version "11.0.0-rc.0"
-  resolved "http://127.0.0.1:4444/@ngrx%2fschematics/-/schematics-11.0.0-rc.0.tgz#fd71876e7fdb997b74f7e02f1958e2f8184bb3a8"
-  integrity sha512-oLdfRtHQj2labceBhcV4b4v9jKluxKpvo2vXtPgz0n71nmMiQvsLWeRSi3Mo38aRQsuIFY/lkA90eJks36IDEQ==
+"@ngrx/schematics@11.0.0":
+  version "11.0.0"
+  resolved "http://127.0.0.1:4444/@ngrx%2fschematics/-/schematics-11.0.0.tgz#6261ac31eee58c1e7893ba660e4877ff1f326a17"
+  integrity sha512-vDVl5U7Z4fy960MYGM10VEfWL7XPcY4o7OAhoRcm2XQXHfR/1Q0kplWw+T9NwqGxknczR8nCFOzKbF/27Q3Puw==
   dependencies:
     "@angular/core" "^11.0.2"
 
-"@ngrx/store-devtools@11.0.0-rc.0":
-  version "11.0.0-rc.0"
-  resolved "http://127.0.0.1:4444/@ngrx%2fstore-devtools/-/store-devtools-11.0.0-rc.0.tgz#1009af7c62643f2d7bdb75c3aaff6888541e4037"
-  integrity sha512-wz5CHWbMsfRzGBZPEg8zrdlB2V+K0KraEEPRWGJOyd79SNNRw8D/eBhq5w9ZQAkGA9AVhEN5B3baTa3Uq6Fm2g==
+"@ngrx/store-devtools@11.0.0":
+  version "11.0.0"
+  resolved "http://127.0.0.1:4444/@ngrx%2fstore-devtools/-/store-devtools-11.0.0.tgz#ab342b022d65181eecaaa7d9236f8ecfc29e9527"
+  integrity sha512-QwcYIvW0q8Obt3sOKkG+CJ4B4n/EvQc8U8teViUDVmWvo8HvMGa1PnhYEejHB9QyYOyNEwFCbsdDmsZawNiVVw==
   dependencies:
     tslib "^2.0.0"
 
-"@ngrx/store@11.0.0-rc.0":
-  version "11.0.0-rc.0"
-  resolved "http://127.0.0.1:4444/@ngrx%2fstore/-/store-11.0.0-rc.0.tgz#ec6a7c1f35ce7dd823ed0162edfea926af11fa16"
-  integrity sha512-0Z8jPotNUyHxMTTG6Goi4M001Q51kWUlYYyjh/9P4sMUrbh8ozBiDZa3NVAMXUwotRie9sYkAardWi7YkL2WXw==
+"@ngrx/store@11.0.0":
+  version "11.0.0"
+  resolved "http://127.0.0.1:4444/@ngrx%2fstore/-/store-11.0.0.tgz#5978d19b38c6416766f9961697a75d3d4b6a5849"
+  integrity sha512-LWuOb/QyIDW0v8QodPOPuzDx1IZRI0beDHVinvQMoP8dyQcDkDdbEypAkivfs4A1SHbWMpiKBGp9WsZ4l7ADfw==
   dependencies:
     tslib "^2.0.0"
 
@@ -9072,6 +9072,11 @@ typescript@4.1.3:
   version "4.1.3"
   resolved "http://127.0.0.1:4444/typescript/-/typescript-4.1.3.tgz#519d582bd94cba0cf8934c7d8e8467e473f53bb7"
   integrity sha512-B3ZIOf1IKeH2ixgHhj6la6xdwR9QrLC5d1VKeCSY4tvkqhF2eqd9O7txNlS0PO3GrBAFIdr3L1ndNwteUbZLYg==
+
+typescript@4.1.5:
+  version "4.1.5"
+  resolved "http://127.0.0.1:4444/typescript/-/typescript-4.1.5.tgz#123a3b214aaff3be32926f0d8f1f6e704eb89a72"
+  integrity sha512-6OSu9PTIzmn9TCDiovULTnET6BgXtDYL4Gg4szY+cGsc3JP1dQL8qvE8kShTRx1NIw4Q9IBHlwODjkjWEtMUyA==
 
 ua-parser-js@^0.7.23:
   version "0.7.23"
