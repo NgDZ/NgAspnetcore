@@ -39,7 +39,7 @@ jobs:
           dotnet restore
           cd  src/NgAspnetcore.HttpApi.Host
           #dotnet publish -c Release  
-          dotnet publish  -c Release -r linux-x64  -p:PublishSingleFile=true   -p:PublishReadyToRun=true
+          dotnet publish  -c Release -r linux-x64  -p:PublishReadyToRun=true
           rm -f yarn.lock
           yarn
           npm run copy
