@@ -38,7 +38,8 @@ jobs:
           cd  aspnet-core/
           dotnet restore
           cd  src/NgAspnetcore.HttpApi.Host
-          dotnet publish -c Release  
+          #dotnet publish -c Release  
+          dotnet publish  -c Release -r linux-x64  -p:PublishSingleFile=true  -p:PublishTrimmed=true -p:TrimMode=link -p:PublishReadyToRun=true
           rm -f yarn.lock
           yarn
           npm run copy
@@ -53,11 +54,11 @@ jobs:
           cd ..
           echo  "***************************************************** Copy assets to target directory  **************************************************"
           rm -rf angular/dist/ngaspnetcore/*.map
-          cp -rf aspnet-core/src/NgAspnetcore.HttpApi.Host/bin/Release/net5.0/publish/* deploy/
+          cp -rf aspnet-core/src/NgAspnetcore.HttpApi.Host/bin/Release/net5.0/linux-x64/publish/* deploy/
           cp -rf angular/dist/ngaspnetcore/*  deploy/wwwroot/
           ls -lR deploy/
           
-          FILE=deploy/NgAspnetcore.HttpApi.Host.dll
+          FILE=deploy/NgAspnetcore.HttpApi.Host
           if [ -f "$FILE" ]; then
             echo "Server build successful."
           else 
