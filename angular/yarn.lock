@@ -9,10 +9,10 @@
   dependencies:
     tslib "^2.0.0"
 
-"@abpdz/ng.audit@0.0.8008":
-  version "0.0.8008"
-  resolved "http://127.0.0.1:4444/@abpdz%2fng.audit/-/ng.audit-0.0.8008.tgz#cdcb9000e39377faf8fb8d76e448e2888cdb07d9"
-  integrity sha512-6WQW+7xNMGs/b2ARVYBFrRgMCPxcDZCgH+zNgWVDqVD0aVN6AF0glkTJLLsgJt7wHWVO8I10YrMkNnhxaOvHDw==
+"@abpdz/ng.audit@0.0.8009":
+  version "0.0.8009"
+  resolved "http://127.0.0.1:4444/@abpdz%2fng.audit/-/ng.audit-0.0.8009.tgz#d7acac9c39d3e2c7228847599a8bc9219663bb3e"
+  integrity sha512-VSOHzBb5f8E9myWl5a8NtN6Zh9DYjQfND1Vl/JTd3BDpEK8B0LLz+em/DyKPIY/+7vUg/qtc8q4r8BcXa1WfDg==
   dependencies:
     tslib "^2.0.0"
 

@@ -29,7 +29,7 @@
     "@angular/router": "11.2.0",
     "@abpdz/ng.core": "0.0.8008",
     "@abpdz/ng.account": "0.0.8008",
-    "@abpdz/ng.audit": "0.0.8008",
+    "@abpdz/ng.audit": "0.0.8009",
     "@abpdz/ng.identity": "0.0.8008",
     "@abpdz/ng.demos": "0.0.8008",
     "@abpdz/ng.theme.shared": "0.0.8008",
