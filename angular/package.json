@@ -46,6 +46,7 @@
     "@ngrx/store": "11.0.1",
     "@ngrx/store-devtools": "11.0.1",
     "@ngx-validate/core": "^0.0.13",
+    "@ng-select/ng-select": "^6.1.0",
     "breeze-client": "^2.0.7",
     "fuse.js": "^6.4.6",
     "lodash-es": "^4.17.21",

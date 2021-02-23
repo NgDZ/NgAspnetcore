@@ -1219,6 +1219,13 @@
     node-fetch "^2.6.0"
     ws "^6.0.0"
 
+"@ng-select/ng-select@^6.1.0":
+  version "6.1.0"
+  resolved "http://127.0.0.1:4444/@ng-select%2fng-select/-/ng-select-6.1.0.tgz#c0575d963a1871dcf72d38186598c7c71d26dd49"
+  integrity sha512-uro/zIjL+TRWzbrzNN9IjIusOeLfhCn9cIr5Bq3AsJyxyU7Gdj9kOD5wVrrQ0NVkaQ1BJMcWmUvmYGBXLI6cnA==
+  dependencies:
+    tslib "^2.0.0"
+
 "@ngrx/component-store@11.0.1":
   version "11.0.1"
   resolved "http://127.0.0.1:4444/@ngrx%2fcomponent-store/-/component-store-11.0.1.tgz#1479702fbff854d6d955f2540839067ddf51a637"
