@@ -20,3 +20,6 @@ Reporting the user audit logs and entity histories in details.
 
 # Northwind db (WIP)
 wip implemtation of applicaiton on top of northwind db 
+
+## DEMO VIDEO
+[![DEMO VIDEO](https://img.youtube.com/vi/kPEFqKevaDU/0.jpg)](https://www.youtube.com/watch?v=kPEFqKevaDU)
