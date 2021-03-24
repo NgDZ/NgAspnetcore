@@ -32,8 +32,8 @@
       "options": {
         "cwd": "${workspaceFolder}/aspnet-core/src/NgAspnetcore.HttpApi.Host",
         "env": {
-          "PORT": "4552",
-          "APP_URL":"http://localhost:4552"
+          "PORT": "5000",
+          "APP_URL":"http://localhost:5000"
         }
       },
       "args": [
