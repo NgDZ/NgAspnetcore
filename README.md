@@ -17,7 +17,7 @@ Northwind Application based on angular 11, angular material, ngrx , aspnet.core
 Reporting the user audit logs and entity histories in details.
 
 ## Real time client notfication 
-
+use signalr to send notification to client 
 # Northwind db (WIP)
 wip implemtation of applicaiton on top of northwind db 
 
