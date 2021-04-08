@@ -1,16 +1,26 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Volo.Abp.EntityFrameworkCore;
 
 #nullable disable
 
 namespace Northwind
 {
-    public partial class NorthwindDbContext : DbContext
+    public class NorthwindDbContextFactory : IDesignTimeDbContextFactory<NorthwindDbContext>
     {
-        public NorthwindDbContext()
+        public NorthwindDbContext CreateDbContext(string[] args)
         {
+            var optionsBuilder = new DbContextOptionsBuilder<NorthwindDbContext>();
+            optionsBuilder.UseSqlite("Data Source=blog.db");
+
+            return new NorthwindDbContext(optionsBuilder.Options);
         }
+
+    }
+    public partial class NorthwindDbContext : AbpDbContext<NorthwindDbContext>
+    {
 
         public NorthwindDbContext(DbContextOptions<NorthwindDbContext> options)
             : base(options)
