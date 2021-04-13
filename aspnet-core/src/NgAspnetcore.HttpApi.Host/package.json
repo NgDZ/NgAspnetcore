@@ -6,7 +6,7 @@
     "copy": "gulp"
   },
   "dependencies": {
-    "@abp/aspnetcore.mvc.ui.theme.basic": "~4.2.0"
+    "@abp/aspnetcore.mvc.ui.theme.basic": "~4.2.2"
   },
   "devDependencies": {
     "gulp": "4.0.2"
