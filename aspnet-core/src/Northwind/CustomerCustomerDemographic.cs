@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 #nullable disable
 
@@ -7,7 +8,8 @@ namespace Northwind
 {
     public partial class CustomerCustomerDemographic
     {
-        public long EntityId { get; set; }
+        [Column("EntityId")]
+        public long Id { get; set; }
         public long CustomerId { get; set; }
         public long CustomerTypeId { get; set; }
 

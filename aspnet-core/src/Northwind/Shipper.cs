@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 #nullable disable
 
@@ -12,7 +13,8 @@ namespace Northwind
             SalesOrders = new HashSet<SalesOrder>();
         }
 
-        public long EntityId { get; set; }
+        [Column("EntityId")]
+        public long Id { get; set; }
         public string CompanyName { get; set; }
         public string Phone { get; set; }
 

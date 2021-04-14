@@ -53,11 +53,11 @@ namespace Northwind
         {
             modelBuilder.Entity<Category>(entity =>
             {
-                entity.HasKey(e => e.EntityId);
+                entity.HasKey(e => e.Id);
 
                 entity.ToTable("Category");
 
-                entity.Property(e => e.EntityId)
+                entity.Property(e => e.Id)
                     .HasColumnType("INT AUTO_INCREMENT")
                     .ValueGeneratedNever()
                     .HasColumnName("entityId");
@@ -74,11 +74,11 @@ namespace Northwind
 
             modelBuilder.Entity<Customer>(entity =>
             {
-                entity.HasKey(e => e.EntityId);
+                entity.HasKey(e => e.Id);
 
                 entity.ToTable("Customer");
 
-                entity.Property(e => e.EntityId)
+                entity.Property(e => e.Id)
                     .HasColumnType("INT AUTO_INCREMENT")
                     .ValueGeneratedNever()
                     .HasColumnName("entityId");
@@ -135,12 +135,12 @@ namespace Northwind
 
             modelBuilder.Entity<CustomerCustomerDemographic>(entity =>
             {
-                entity.HasKey(e => e.EntityId);
+                entity.HasKey(e => e.Id);
 
                 entity.HasIndex(e => new { e.CustomerId, e.CustomerTypeId }, "IDX_CustomerId_CustomerTypeId")
                     .IsUnique();
 
-                entity.Property(e => e.EntityId)
+                entity.Property(e => e.Id)
                     .HasColumnType("INT AUTO_INCREMENT")
                     .ValueGeneratedNever()
                     .HasColumnName("entityId");
@@ -166,9 +166,9 @@ namespace Northwind
 
             modelBuilder.Entity<CustomerDemographic>(entity =>
             {
-                entity.HasKey(e => e.EntityId);
+                entity.HasKey(e => e.Id);
 
-                entity.Property(e => e.EntityId)
+                entity.Property(e => e.Id)
                     .HasColumnType("INT AUTO_INCREMENT")
                     .ValueGeneratedNever()
                     .HasColumnName("entityId");
@@ -178,11 +178,11 @@ namespace Northwind
 
             modelBuilder.Entity<Employee>(entity =>
             {
-                entity.HasKey(e => e.EntityId);
+                entity.HasKey(e => e.Id);
 
                 entity.ToTable("Employee");
 
-                entity.Property(e => e.EntityId)
+                entity.Property(e => e.Id)
                     .HasColumnType("INT AUTO_INCREMENT")
                     .ValueGeneratedNever()
                     .HasColumnName("entityId");
@@ -264,14 +264,14 @@ namespace Northwind
 
             modelBuilder.Entity<EmployeeTerritory>(entity =>
             {
-                entity.HasKey(e => e.EntityId);
+                entity.HasKey(e => e.Id);
 
                 entity.ToTable("EmployeeTerritory");
 
                 entity.HasIndex(e => new { e.EmployeeId, e.TerritoryCode }, "IDX_EmployeeId_TerritoryCode")
                     .IsUnique();
 
-                entity.Property(e => e.EntityId)
+                entity.Property(e => e.Id)
                     .HasColumnType("INT AUTO_INCREMENT")
                     .ValueGeneratedNever()
                     .HasColumnName("entityId");
@@ -299,14 +299,14 @@ namespace Northwind
 
             modelBuilder.Entity<OrderDetail>(entity =>
             {
-                entity.HasKey(e => e.EntityId);
+                entity.HasKey(e => e.Id);
 
                 entity.ToTable("OrderDetail");
 
                 entity.HasIndex(e => new { e.OrderId, e.ProductId }, "IDX_OrderId_ProductId")
                     .IsUnique();
 
-                entity.Property(e => e.EntityId)
+                entity.Property(e => e.Id)
                     .HasColumnType("INT AUTO_INCREMENT")
                     .ValueGeneratedNever()
                     .HasColumnName("entityId");
@@ -346,11 +346,11 @@ namespace Northwind
 
             modelBuilder.Entity<Product>(entity =>
             {
-                entity.HasKey(e => e.EntityId);
+                entity.HasKey(e => e.Id);
 
                 entity.ToTable("Product");
 
-                entity.Property(e => e.EntityId)
+                entity.Property(e => e.Id)
                     .HasColumnType("INT AUTO_INCREMENT")
                     .ValueGeneratedNever()
                     .HasColumnName("entityId");
@@ -404,11 +404,11 @@ namespace Northwind
 
             modelBuilder.Entity<Region>(entity =>
             {
-                entity.HasKey(e => e.EntityId);
+                entity.HasKey(e => e.Id);
 
                 entity.ToTable("Region");
 
-                entity.Property(e => e.EntityId)
+                entity.Property(e => e.Id)
                     .HasColumnType("INT AUTO_INCREMENT")
                     .ValueGeneratedNever()
                     .HasColumnName("entityId");
@@ -421,11 +421,11 @@ namespace Northwind
 
             modelBuilder.Entity<SalesOrder>(entity =>
             {
-                entity.HasKey(e => e.EntityId);
+                entity.HasKey(e => e.Id);
 
                 entity.ToTable("SalesOrder");
 
-                entity.Property(e => e.EntityId)
+                entity.Property(e => e.Id)
                     .HasColumnType("INT AUTO_INCREMENT")
                     .ValueGeneratedNever()
                     .HasColumnName("entityId");
@@ -495,11 +495,11 @@ namespace Northwind
 
             modelBuilder.Entity<Shipper>(entity =>
             {
-                entity.HasKey(e => e.EntityId);
+                entity.HasKey(e => e.Id);
 
                 entity.ToTable("Shipper");
 
-                entity.Property(e => e.EntityId)
+                entity.Property(e => e.Id)
                     .HasColumnType("INT AUTO_INCREMENT")
                     .ValueGeneratedNever()
                     .HasColumnName("entityId");
@@ -516,11 +516,11 @@ namespace Northwind
 
             modelBuilder.Entity<Supplier>(entity =>
             {
-                entity.HasKey(e => e.EntityId);
+                entity.HasKey(e => e.Id);
 
                 entity.ToTable("Supplier");
 
-                entity.Property(e => e.EntityId)
+                entity.Property(e => e.Id)
                     .HasColumnType("INT AUTO_INCREMENT")
                     .ValueGeneratedNever()
                     .HasColumnName("entityId");
@@ -573,7 +573,7 @@ namespace Northwind
 
             modelBuilder.Entity<Territory>(entity =>
             {
-                entity.HasKey(e => e.EntityId);
+                entity.HasKey(e => e.Id);
 
                 entity.ToTable("Territory");
 
@@ -583,7 +583,7 @@ namespace Northwind
                 entity.HasIndex(e => e.TerritoryCode, "IDX_TerrytoryCode")
                     .IsUnique();
 
-                entity.Property(e => e.EntityId)
+                entity.Property(e => e.Id)
                     .HasColumnType("INT AUTO_INCREMENT")
                     .ValueGeneratedNever()
                     .HasColumnName("entityId");

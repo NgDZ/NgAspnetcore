@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 #nullable disable
 
@@ -12,7 +13,8 @@ namespace Northwind
             EmployeeTerritories = new HashSet<EmployeeTerritory>();
         }
 
-        public long EntityId { get; set; }
+        [Column("EntityId")]
+        public long Id { get; set; }
         public string Lastname { get; set; }
         public string Firstname { get; set; }
         public string Title { get; set; }
