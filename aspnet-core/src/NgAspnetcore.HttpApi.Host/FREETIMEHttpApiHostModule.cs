@@ -169,7 +169,7 @@ namespace NgAspnetcore
                         ServerCertificateCustomValidationCallback =
                             HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
                     };
-        
+
                     options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
                     {
                         ValidateIssuer = false
@@ -213,7 +213,7 @@ namespace NgAspnetcore
         }
 
         public override void OnApplicationInitialization(ApplicationInitializationContext context)
-        {
+        { 
             var app = context.GetApplicationBuilder();
             var env = context.GetEnvironment();
 

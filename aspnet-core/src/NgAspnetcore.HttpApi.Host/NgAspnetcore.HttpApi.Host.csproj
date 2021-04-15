@@ -2,13 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
-    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
-    <IsPackable>false</IsPackable>
-    <SpaRoot>ClientApp\</SpaRoot>
-    <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
 
-    <!-- Set this to true if you enable server-side prerendering -->
+
     <BuildServerSideRenderer>false</BuildServerSideRenderer>
   </PropertyGroup>
 
@@ -30,16 +25,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="FREETIME.Application.Contracts" Version="4.2.101" />
-    <PackageReference Include="FREETIME.Domain.Shared" Version="4.2.101" />
-    <PackageReference Include="FREETIME.Domain" Version="4.2.101" />
-    <PackageReference Include="FREETIME.Application" Version="4.2.101" />
-    <PackageReference Include="FREETIME.HttpApi" Version="4.2.101" />
-    <PackageReference Include="FREETIME.EntityFrameworkCore" Version="4.2.101" />
-    <PackageReference Include="FREETIME.EntityFrameworkCore.DbMigrations" Version="4.2.101" />
-    <PackageReference Include="AbpDz.IdentityServer" Version="4.2.101"/>
-    <PackageReference Include="AbpDz.Notifications" Version="4.2.101"/>
-    <PackageReference Include="AbpDz.Breeze" Version="4.2.101" />
+    <PackageReference Include="FREETIME.Application.Contracts" Version="4.2.105" />
+    <PackageReference Include="FREETIME.Domain.Shared" Version="4.2.105" />
+    <PackageReference Include="FREETIME.Domain" Version="4.2.105" />
+    <PackageReference Include="FREETIME.Application" Version="4.2.105" />
+    <PackageReference Include="FREETIME.HttpApi" Version="4.2.105" />
+    <PackageReference Include="FREETIME.EntityFrameworkCore" Version="4.2.105" />
+    <PackageReference Include="FREETIME.EntityFrameworkCore.DbMigrations" Version="4.2.105" />
+    <PackageReference Include="AbpDz.IdentityServer" Version="4.2.105"/>
+    <PackageReference Include="AbpDz.Notifications" Version="4.2.105"/>
+    <PackageReference Include="AbpDz.Breeze" Version="4.2.105" />
   </ItemGroup>
 
   <ItemGroup>
@@ -66,5 +61,4 @@
   <ItemGroup>
     <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
   </ItemGroup>
-ٌ
 </Project>
