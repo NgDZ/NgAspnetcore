@@ -1,13 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using Volo.Abp.Application.Dtos;
+using Volo.Abp.Domain.Entities;
 
 #nullable disable
 
 namespace Northwind
 {
-    public partial class Employee
+    public partial class Employee : IEntity<long>, IEntityDto
     {
+        public object[] GetKeys()
+        {
+            return new object[] { Id };
+        }
+
         public Employee()
         {
             EmployeeTerritories = new HashSet<EmployeeTerritory>();
