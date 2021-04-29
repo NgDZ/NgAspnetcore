@@ -1,12 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 
+using Volo.Abp.Application.Dtos;
+using Volo.Abp.Domain.Entities;
 #nullable disable
 
 namespace Northwind
 {
-    public partial class ProductDetailsV
+    public partial class ProductDetailsV: IEntity<long>, IEntityDto
     {
+        public object[] GetKeys()
+        {
+            return new object[] { Id };
+        }
         public long? Id { get; set; }
         public string ProductName { get; set; }
         public long? SupplierId { get; set; }
