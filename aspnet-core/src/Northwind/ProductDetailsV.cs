@@ -7,7 +7,7 @@ using Volo.Abp.Domain.Entities;
 
 namespace Northwind
 {
-    public partial class ProductDetailsV: IEntity<long>, IEntityDto
+    public partial class ProductDetailsV: IEntity<long?>, IEntityDto
     {
         public object[] GetKeys()
         {
