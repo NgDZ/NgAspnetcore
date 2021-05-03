@@ -1,19 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using Volo.Abp.Application.Dtos;
+using Volo.Abp.Domain.Entities;
 
 #nullable disable
 
 namespace Northwind
 {
-    public partial class SalesOrder
+    public partial class SalesOrder : IEntity<long>, IEntityDto
     {
+
+        public object[] GetKeys()
+        {
+            return new object[] { Id };
+        }
         public SalesOrder()
         {
             OrderDetails = new HashSet<OrderDetail>();
         }
 
-        [Column("EntityId")]         public long Id { get; set; }
+        [Column("EntityId")] public long Id { get; set; }
         public long CustomerId { get; set; }
         public long? EmployeeId { get; set; }
         public byte[] OrderDate { get; set; }
