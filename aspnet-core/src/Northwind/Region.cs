@@ -9,6 +9,7 @@ using Volo.Abp.Domain.Entities;
 
 namespace Northwind
 {
+    
     public partial class Region: IEntity<long>, IEntityDto
     {
         public object[] GetKeys()
