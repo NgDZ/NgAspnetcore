@@ -2,75 +2,75 @@
 # yarn lockfile v1
 
 
-"@abpdz/ng.account@0.0.8011":
-  version "0.0.8011"
-  resolved "http://localhost:4444/@abpdz%2fng.account/-/ng.account-0.0.8011.tgz#6e3bb75592b1fe286723b454a212c2bc49571573"
-  integrity sha512-5GHMhWAFvYe0DpTgHGyMAJgflBfgvbl+jgOk0inlkDrIj6Bhh67HC72QRTwBOLfnoEG+wmVJWf9rVcq4TXOCMA==
+"@abpdz/ng.account@0.0.8015":
+  version "0.0.8015"
+  resolved "http://localhost:4444/@abpdz%2fng.account/-/ng.account-0.0.8015.tgz#84993699bb945adaa56140b3a84ee6d819ad99e1"
+  integrity sha512-19aFGZgBL4xPSW+cSkVJGJ7tceUZsVDbv6FSscN4TFeT8c5Aj9pXaXmnWvAAXrU8KvLqQH9Y85OoCqKuUnIE4Q==
   dependencies:
-    tslib "^2.0.0"
+    tslib "^2.1.0"
 
-"@abpdz/ng.audit@0.0.8013":
-  version "0.0.8013"
-  resolved "http://localhost:4444/@abpdz%2fng.audit/-/ng.audit-0.0.8013.tgz#923541c6f181f6cc42306528b3bcd2f7187b1ca1"
-  integrity sha512-Zl1hnr+jLHjaSYIC7xCHe/bXmdcW8ahDR7Wf2iuhKSF6rypYASq5zmQJeeFlU+L+txN3N5MbUOkNHevFsaJtJg==
+"@abpdz/ng.audit@0.0.8017":
+  version "0.0.8017"
+  resolved "http://localhost:4444/@abpdz%2fng.audit/-/ng.audit-0.0.8017.tgz#3dcd12b9368392d551c4e31edd781f1360ce9189"
+  integrity sha512-Zm3Vg6AlJlJSejwfvbVVIP6lFSqO2f6C5uNu8lcaiLVayJi1Krf2bs5UbZv436WHV0XpCbBERme+GXWwvBKsqA==
   dependencies:
-    tslib "^2.0.0"
+    tslib "^2.1.0"
 
-"@abpdz/ng.breeze@0.0.8011":
-  version "0.0.8011"
-  resolved "http://localhost:4444/@abpdz%2fng.breeze/-/ng.breeze-0.0.8011.tgz#40bebd03d88f522f48cc35ce56a44c8d764f5223"
-  integrity sha512-/46nE/ldgjzXBpf3uvkbo51rURk+ygYTTlIS2/Md3lns/v84xM87bWghUDMm0QbdUDzmchSUunuKEOHu1JNGXA==
+"@abpdz/ng.breeze@0.0.8015":
+  version "0.0.8015"
+  resolved "http://localhost:4444/@abpdz%2fng.breeze/-/ng.breeze-0.0.8015.tgz#383981c972af53927b3cc1655a8028a76c9940c4"
+  integrity sha512-RoGHWioCXUqTjSnJg6ocudGM0WILMFU8rAfDDQUB58rUgFZzhER8U1S2LO9TFLpVTgclRQ1byJGMe0/nfZyspg==
   dependencies:
-    tslib "^2.0.0"
+    tslib "^2.1.0"
 
-"@abpdz/ng.core@0.0.8011":
-  version "0.0.8011"
-  resolved "http://localhost:4444/@abpdz%2fng.core/-/ng.core-0.0.8011.tgz#ddbecec9cdde4c908f168941e900877736a3d326"
-  integrity sha512-X8b1wu+HToS1EJ5TeYa3lIJoRTHJZawFhv+jTD7AkvGdNxOOBz/FWZRnodhWUJQZLEPxExS+Q8aD3+uWYx3O8g==
+"@abpdz/ng.core@0.0.8015":
+  version "0.0.8015"
+  resolved "http://localhost:4444/@abpdz%2fng.core/-/ng.core-0.0.8015.tgz#cc2e12c8ec35a714ec77ad20ce931692e6480d97"
+  integrity sha512-vy34MVMGmtn9PHZoDl9Jt87toR3OPNpA25xCD6X5xWguMg85i8WFPhsHocP2TB4HmunflfS9JjXzrzP57mAUVg==
   dependencies:
-    tslib "^2.0.0"
+    tslib "^2.1.0"
 
-"@abpdz/ng.demos@0.0.8013":
-  version "0.0.8013"
-  resolved "http://localhost:4444/@abpdz%2fng.demos/-/ng.demos-0.0.8013.tgz#17b73c2125be12aea3ae36dfd0141f3390262b80"
-  integrity sha512-qp64MH7297P+A8g7GGhg4IfvjnOqwIR/zfVFga+i9jYGk5JXe4vDJnUjadh6k3CfKI71kditsMxks5oFKnSUOg==
+"@abpdz/ng.demos@0.0.8015":
+  version "0.0.8015"
+  resolved "http://localhost:4444/@abpdz%2fng.demos/-/ng.demos-0.0.8015.tgz#144ce0412a5d17247eaa7e7e060faecd637c6484"
+  integrity sha512-6tW9pGv6CjcN7Hb2r+7DYP72R9bScfex0Yzvf1aGUBeTvCTrDY8ewvlJeC80hbxu3nSCcNaV4aqmemHyYHBnRA==
   dependencies:
-    tslib "^2.0.0"
+    tslib "^2.1.0"
 
-"@abpdz/ng.identity@0.0.8013":
-  version "0.0.8013"
-  resolved "http://localhost:4444/@abpdz%2fng.identity/-/ng.identity-0.0.8013.tgz#1acbedb03569f108658d0243e3d77a390910d1c7"
-  integrity sha512-gr61b5pIckE/oamNWE2iU6EB1Wc9U0vOTQrtWZ6jFVuR8o3MWgi/oNnOJwcxFUX/N/C4UUJsJLGEiUU/JG7ApQ==
+"@abpdz/ng.identity@0.0.8015":
+  version "0.0.8015"
+  resolved "http://localhost:4444/@abpdz%2fng.identity/-/ng.identity-0.0.8015.tgz#24997912921ee108f1c4114622536f2bd5696a88"
+  integrity sha512-Z0vvxiVmsqs6g5VOzwoY7URQHqqH87utrYz7HmdcH00jQibYGS5Qhp1KhxSQmftO6dKSTt4Bl7C9HMfYyzo+RQ==
   dependencies:
-    tslib "^2.0.0"
+    tslib "^2.1.0"
 
-"@abpdz/ng.permission-management@0.0.8011":
-  version "0.0.8011"
-  resolved "http://localhost:4444/@abpdz%2fng.permission-management/-/ng.permission-management-0.0.8011.tgz#cb550aa1a4c18692d31431f3515caa84241c0140"
-  integrity sha512-qQe5g5r+D47bIcNDe59uQDbmMk2/S3jJe8jHuRIVLkZwGa+0Ie3aqjtQv3PscykEx/Uu9iVitriIPkHltPT8kw==
+"@abpdz/ng.permission-management@0.0.8015":
+  version "0.0.8015"
+  resolved "http://localhost:4444/@abpdz%2fng.permission-management/-/ng.permission-management-0.0.8015.tgz#ffddc8b3acde3e0fccc4e24788a9c368d2cde653"
+  integrity sha512-SBC9JoDgmGpO9BRsoDQEA7GgbadFN2xmJI/By9FjF24XQkEZvsi+adzlJykj3Dn1Se9/YRMKadQ78mon1mgA1w==
   dependencies:
-    tslib "^2.0.0"
+    tslib "^2.1.0"
 
-"@abpdz/ng.theme.basic@0.0.8011":
-  version "0.0.8011"
-  resolved "http://localhost:4444/@abpdz%2fng.theme.basic/-/ng.theme.basic-0.0.8011.tgz#9731b2d6307284be550913ecd0248aea7607c5dd"
-  integrity sha512-3zDjGaG9F215ki8ew+27VQDN39wh0gcGpXWlxF3W+Y9vBH5s7Z7OB+eSnfMPmdStlzo2TuVhFPZ+FG5DpVevNQ==
+"@abpdz/ng.theme.basic@0.0.8015":
+  version "0.0.8015"
+  resolved "http://localhost:4444/@abpdz%2fng.theme.basic/-/ng.theme.basic-0.0.8015.tgz#855ee40909de90d9084d1642d6751f4fbac61846"
+  integrity sha512-/dginqbhX2JlQwy3aJWmHipmFpY+E463RL9wAzgkIIHXD9PXRfGJal0zMZ1S/4iGAra4OwgWHn2NIVjF0uwNeQ==
   dependencies:
-    tslib "^2.0.0"
+    tslib "^2.1.0"
 
-"@abpdz/ng.theme.material@0.0.8011":
-  version "0.0.8011"
-  resolved "http://localhost:4444/@abpdz%2fng.theme.material/-/ng.theme.material-0.0.8011.tgz#9cc512ecab86f3734d664995fb16a892427958bb"
-  integrity sha512-80TBkVLr2me0kqmEiPEVXVXUI0YJDt0kYwt0ZsLGTEeVkXwsyMxtV8/A4mFoOqHvPlWncyVA55CuN2C7enj4Ow==
+"@abpdz/ng.theme.material@0.0.8015":
+  version "0.0.8015"
+  resolved "http://localhost:4444/@abpdz%2fng.theme.material/-/ng.theme.material-0.0.8015.tgz#3f76b8771967f314ae1d44deb3ddc7d43484191c"
+  integrity sha512-d++wAiyU+NheCxqGYE2RyTxFembcpZpZ0RcQSMdNaYB5Iq8Gzva1opsf7u8qBHEj0iZbKjKIFjbGCH/qbPnj6g==
   dependencies:
-    tslib "^2.0.0"
+    tslib "^2.1.0"
 
-"@abpdz/ng.theme.shared@0.0.8011":
-  version "0.0.8011"
-  resolved "http://localhost:4444/@abpdz%2fng.theme.shared/-/ng.theme.shared-0.0.8011.tgz#48228614556ba3ccc08885e39e7ed6a670497f02"
-  integrity sha512-/hXMlD7odlj7wUDa3iVFhlJ9xLF5OuKysWJNK+Cnov0V6baii4h7N2AHzw8AyrcJxm5M3JHsOYoiLpRHVvEbSw==
+"@abpdz/ng.theme.shared@0.0.8015":
+  version "0.0.8015"
+  resolved "http://localhost:4444/@abpdz%2fng.theme.shared/-/ng.theme.shared-0.0.8015.tgz#f4650be08f5e27ec59da2ab5e0abc7be749a72d2"
+  integrity sha512-ecQrQ0vctxxtTdr/g3HefWvxdK/S0wPmIZeTkE9TqPo7HfKrnehfwzyItfbrjEdT5Pp7rANmGJxBZltpFL0qYw==
   dependencies:
-    tslib "^2.0.0"
+    tslib "^2.1.0"
 
 "@angular-devkit/architect@0.1200.4":
   version "0.1200.4"
@@ -198,19 +198,19 @@
   dependencies:
     tslib "^2.1.0"
 
-"@angular/cdk-experimental@11.2.12":
-  version "11.2.12"
-  resolved "http://localhost:4444/@angular%2fcdk-experimental/-/cdk-experimental-11.2.12.tgz#1056323743b3f619bd3a0902cb9dd3b5d215e123"
-  integrity sha512-3tx4LRYpp3ftvIuLqoXk64jp+HqKehwxkCZ9tp/Dy5BH/qtMU+oCrnY5AxW0G8Rn2PyzisSVVJvCOheq+0FYSA==
+"@angular/cdk-experimental@12.0.4":
+  version "12.0.4"
+  resolved "http://localhost:4444/@angular%2fcdk-experimental/-/cdk-experimental-12.0.4.tgz#429647f964398f8ba8a874e939d66db73674acc5"
+  integrity sha512-fNf0KCKBkT38nK1ek9wYwuZ+Qp6QbnVDDlDHTehAS/3Aq2AYvY1sF1+YFu5W1t6csBs98xox45k7m9KJEiVYFw==
   dependencies:
-    tslib "^2.0.0"
+    tslib "^2.1.0"
 
-"@angular/cdk@11.2.12":
-  version "11.2.12"
-  resolved "http://localhost:4444/@angular%2fcdk/-/cdk-11.2.12.tgz#c1c9c8d4a5763745fe2d324fc253f221b9c2b1b3"
-  integrity sha512-LImCQQ7n5OnTGXBAx1BaHgBBbdXiEtsNcHk5RvVURya9sswRcXRoa48EG3RyuT8mtqWsUdOX9+v4nCINLG4hZA==
+"@angular/cdk@12.0.4":
+  version "12.0.4"
+  resolved "http://localhost:4444/@angular%2fcdk/-/cdk-12.0.4.tgz#074f17dc3f3f2ed054dace5ea2d6c89126e000df"
+  integrity sha512-NX/1kEc6ndyEHjGcMtMJYEjwmoURuwRSqKJLbGcHTUwXuuR+hfDP/vU1XDOeXNC80SV+0B4BpJnREkINILfYKw==
   dependencies:
-    tslib "^2.0.0"
+    tslib "^2.1.0"
   optionalDependencies:
     parse5 "^5.0.0"
 
@@ -291,12 +291,12 @@
   resolved "http://127.0.0.1:4444/@angular%2fcore/-/core-9.0.0.tgz#227dc53e1ac81824f998c6e76000b7efc522641e"
   integrity sha512-6Pxgsrf0qF9iFFqmIcWmjJGkkCaCm6V5QNnxMy2KloO3SDq6QuMVRbN9RtC8Urmo25LP+eZ6ZgYqFYpdD8Hd9w==
 
-"@angular/flex-layout@11.0.0-beta.33":
-  version "11.0.0-beta.33"
-  resolved "http://localhost:4444/@angular%2fflex-layout/-/flex-layout-11.0.0-beta.33.tgz#c2d08f90164701b66a62b8c4365b4e22c1e95789"
-  integrity sha512-unfhw3abZuKtdwQicRStHCYGbANPTHYg4WNRQk/RC5Mxq+4WOp4Q8HI7GqRHCGUYDCGUP7w1sU/oDt8f09nM8w==
+"@angular/flex-layout@12.0.0-beta.34":
+  version "12.0.0-beta.34"
+  resolved "http://localhost:4444/@angular%2fflex-layout/-/flex-layout-12.0.0-beta.34.tgz#24d83bf3f8e4eacb661b3b8f9f85b0102415ff30"
+  integrity sha512-nLwKovXpyG+/U3Lbmfwt+q4ARupxtbPmFTZD0Y8oItFAV6/Oh9l+QQsNQa2VhOHAOrVagyDwcEM+SePtB5EmrQ==
   dependencies:
-    tslib "^2.0.0"
+    tslib "^2.1.0"
 
 "@angular/forms@12.0.4":
   version "12.0.4"
@@ -305,26 +305,26 @@
   dependencies:
     tslib "^2.1.0"
 
-"@angular/material-experimental@11.2.12":
-  version "11.2.12"
-  resolved "http://localhost:4444/@angular%2fmaterial-experimental/-/material-experimental-11.2.12.tgz#056aad28be844ed2912e5b79f9c3db57b5304d76"
-  integrity sha512-C0bsG6MfeK2yx+xkifnZraq9Hxfq1JFxPYx8NVKVz1YZenRVBeX1oZCxEbyhnbK60nmFhEjEkWUzP2e32IFIzg==
+"@angular/material-experimental@12.0.4":
+  version "12.0.4"
+  resolved "http://localhost:4444/@angular%2fmaterial-experimental/-/material-experimental-12.0.4.tgz#b0586aeccc6df164132873ded8a1322ba2b5731e"
+  integrity sha512-3AfYtbfG75Wb0Bo5sAzlBgt/gdSighR5zYE++xY2qV0MGXjSbftJ8IhxAG8ZgWknVu7STMVbAMQKo4I4DkA3Ww==
   dependencies:
-    tslib "^2.0.0"
+    tslib "^2.1.0"
 
-"@angular/material-moment-adapter@11.2.12":
-  version "11.2.12"
-  resolved "http://localhost:4444/@angular%2fmaterial-moment-adapter/-/material-moment-adapter-11.2.12.tgz#8044d1a21c916382714062e665fa19fb3375f1b7"
-  integrity sha512-dV3rYkB1OkLECTJZH+xyLWEnu7MEwIWn93P1xd/xA0a0loW9HvHhGaLOWodtS2MdFau6QCnwGTeoVecH7Z4zpw==
+"@angular/material-moment-adapter@12.0.4":
+  version "12.0.4"
+  resolved "http://localhost:4444/@angular%2fmaterial-moment-adapter/-/material-moment-adapter-12.0.4.tgz#2b866124d6eee211a5f7a71e7c9bf20bbbb89028"
+  integrity sha512-gouOXKHxI8HQTKKxAgB9MVQMeHQWFReULFvY83C3aRJhoeiI8bDiWw0eQZP0WpHCBvAx/DlCBHBQYf+I5Q3z0w==
   dependencies:
-    tslib "^2.0.0"
+    tslib "^2.1.0"
 
-"@angular/material@11.2.12":
-  version "11.2.12"
-  resolved "http://localhost:4444/@angular%2fmaterial/-/material-11.2.12.tgz#625778113075bddb92f13ab03a8a513178f2b5a8"
-  integrity sha512-n3HDKoM552jLcmxtpTYzMUzV6V9vUBKyNs7SNdUfjuK00VJlTWMu03g/QWOj2Y9KftOuDUa8+N2XodwAr+jtCw==
+"@angular/material@12.0.4":
+  version "12.0.4"
+  resolved "http://localhost:4444/@angular%2fmaterial/-/material-12.0.4.tgz#0cd88328f846d7ba6485abc7f1888aef174d7e4c"
+  integrity sha512-pvfYEeUCLR7EmA6R/kkXz5jfl+RHwh3AS9X9kWARWIOzA7p0hG9ApoFT5KCofTBNp0nukau1QoGR4WGla6wWvQ==
   dependencies:
-    tslib "^2.0.0"
+    tslib "^2.1.0"
 
 "@angular/platform-browser-dynamic@12.0.4":
   version "12.0.4"
@@ -1507,10 +1507,10 @@
     merge-source-map "^1.1.0"
     schema-utils "^2.7.0"
 
-"@microsoft/signalr@5.0.6":
-  version "5.0.6"
-  resolved "http://localhost:4444/@microsoft%2fsignalr/-/signalr-5.0.6.tgz#b21887e594981bac1f789276e5f2d00a2d14a332"
-  integrity sha512-ExwKc9L/Dia7gachfekMYNqalH1qAnluNmh1mhTNGqIp0s3SH9DJMi5FSVcmgx8R1K6Sn86Z67lYGBfOlvifLg==
+"@microsoft/signalr@5.0.7":
+  version "5.0.7"
+  resolved "http://localhost:4444/@microsoft%2fsignalr/-/signalr-5.0.7.tgz#e63c04809a408b712322e346e2fded251214ad57"
+  integrity sha512-DqNssGZ8ML8IL4sB4GS+zaX8s2BNnv4acQujs/i/WxojpGQJOZ7OyONfnYbNePRYItXgbHmm7b6SVPikqQcLCg==
   dependencies:
     abort-controller "^3.0.0"
     eventsource "^1.0.7"
@@ -1518,64 +1518,64 @@
     node-fetch "^2.6.0"
     ws "^6.0.0"
 
-"@ng-select/ng-select@^6.1.0":
-  version "6.1.0"
-  resolved "http://localhost:4444/@ng-select%2fng-select/-/ng-select-6.1.0.tgz#c0575d963a1871dcf72d38186598c7c71d26dd49"
-  integrity sha512-uro/zIjL+TRWzbrzNN9IjIusOeLfhCn9cIr5Bq3AsJyxyU7Gdj9kOD5wVrrQ0NVkaQ1BJMcWmUvmYGBXLI6cnA==
+"@ng-select/ng-select@^7.0.0":
+  version "7.0.0"
+  resolved "http://localhost:4444/@ng-select%2fng-select/-/ng-select-7.0.0.tgz#f4c62f1803216ac98a9175362317302c09d90f5b"
+  integrity sha512-YKQcohssQzLZgItCsEb0vbJR6xGRTIVq4FRp+5M7fkaX7wWM+o2o1R4LxsiWhz0CKajslkoR0VDytyiumf8QiQ==
   dependencies:
     tslib "^2.0.0"
 
-"@ngrx/component-store@11.1.1":
-  version "11.1.1"
-  resolved "http://localhost:4444/@ngrx%2fcomponent-store/-/component-store-11.1.1.tgz#9036ada220ff287a872ad74769a0ead70e82924d"
-  integrity sha512-NUVguqhrkopRyh81873MA1R3ZcGV+MTPdVhyTZmMj7EdBNx4EC+swgssuAIO0Bc7A4WFHLWd6inohahfLLdOeg==
+"@ngrx/component-store@12.1.0":
+  version "12.1.0"
+  resolved "http://localhost:4444/@ngrx%2fcomponent-store/-/component-store-12.1.0.tgz#cc5514b3fd006b5c5e82e8011bda63a8bfc68987"
+  integrity sha512-KhFaEqW1Jgj2Aw/SVFbjGH1JTcdnH0OUbi3+xwKYZRHtidKoey9vswH111jV/YiROM68SJCMigWdSbsRi5cp3Q==
   dependencies:
     tslib "^2.0.0"
 
-"@ngrx/data@11.1.1":
-  version "11.1.1"
-  resolved "http://localhost:4444/@ngrx%2fdata/-/data-11.1.1.tgz#b767dbdb153ef8a4d5bd915a46cc799968b37e3d"
-  integrity sha512-qOTqwDUFONORN59qIUrdGZc+lveL730s3/jXb70Np7eI3mtK94g2OnrQKmcnG8yPBEd/lLtUDJL8J0UuttGRXw==
+"@ngrx/data@12.1.0":
+  version "12.1.0"
+  resolved "http://localhost:4444/@ngrx%2fdata/-/data-12.1.0.tgz#bd4927ceb238d1a81cff45509d1470d7471e3f9a"
+  integrity sha512-TxrmdzuMXe9wqFtvoNVSD1n2E62wJ4+GsJ7+x1wOm25LZQl5/UsUO9g2DVaFlzc+pNixKFZon/sLDqE4YSAg7g==
   dependencies:
     tslib "^2.0.0"
 
-"@ngrx/effects@11.1.1":
-  version "11.1.1"
-  resolved "http://localhost:4444/@ngrx%2feffects/-/effects-11.1.1.tgz#82abd97df8c1cdf1d9bd0bf720289591230d260c"
-  integrity sha512-KLfGSjlmlPUMlMEQkdD6tnJCs/dLSBJC6hZhCnobpDrBR9YMpoDDjM1t0Veg+Z50dL6AGO/T4dllRjd3BJuWiw==
+"@ngrx/effects@12.1.0":
+  version "12.1.0"
+  resolved "http://localhost:4444/@ngrx%2feffects/-/effects-12.1.0.tgz#316e60950a5e2c8ca2ecb3119397281affe3a286"
+  integrity sha512-DcVovaJB9hZ8qo5UNjRS0KqLaMX8YreuR3EtRPUysB0aePBuoWQiN8HUic8DgmI2cN3KcZxOsRKj/1VaVArLJw==
   dependencies:
     tslib "^2.0.0"
 
-"@ngrx/entity@11.1.1":
-  version "11.1.1"
-  resolved "http://localhost:4444/@ngrx%2fentity/-/entity-11.1.1.tgz#7b464f538f475d76851495c2146d1d1b7254fb96"
-  integrity sha512-GuGwVq3bsL9nwU3FN1trKJKEV58nX/1k+4VMzpsLiYN/Dp5kS1opGCJAqP1SsNL6yqxtXqxJfovsoTM3vTpshw==
+"@ngrx/entity@12.1.0":
+  version "12.1.0"
+  resolved "http://localhost:4444/@ngrx%2fentity/-/entity-12.1.0.tgz#01c76487ab6043aea21d9d787ead238107ff45e8"
+  integrity sha512-2EsWBMUyXsdXqFsB3kwtr+i2aSwbXKjdao7fLh9337Zzfx/LF7FDcqS+CU0aN0dJzTluJV+HbH7W7e88dS1c3Q==
   dependencies:
     tslib "^2.0.0"
 
-"@ngrx/router-store@11.1.1":
-  version "11.1.1"
-  resolved "http://localhost:4444/@ngrx%2frouter-store/-/router-store-11.1.1.tgz#a4ce866b3247ceb7903f81b4af6a960d869729cf"
-  integrity sha512-KE3O43wCf0VGFFIilusgSc4G5+CA++5wYL9xvdc8/BVr6sXXmOklrhyRVU/reQqy7HdYzbIofLKox5mXE/smdA==
+"@ngrx/router-store@12.1.0":
+  version "12.1.0"
+  resolved "http://localhost:4444/@ngrx%2frouter-store/-/router-store-12.1.0.tgz#926707e39dd8007d277af187e34b45e906c94a7c"
+  integrity sha512-VjuDJDU2w2TlJUp82snjvgIPEHZO4q4BfOLLVEzWEME1q71VNSxx6eArW6Wk1PGWRqQ48YAI11pXC9PUi8ZI8A==
   dependencies:
     tslib "^2.0.0"
 
-"@ngrx/schematics@11.1.1":
-  version "11.1.1"
-  resolved "http://localhost:4444/@ngrx%2fschematics/-/schematics-11.1.1.tgz#6ed9a60e4d6cad1d6d2825bf07c57bc272b13c07"
-  integrity sha512-xUtfASTmY5KMHpphM1o/HkwMzQ2joZWBWlee+vjGl+lCfMArt0s+hiCudfjT11lgMiv5ghNNL6KnbN/Nk7lE1Q==
+"@ngrx/schematics@12.1.0":
+  version "12.1.0"
+  resolved "http://localhost:4444/@ngrx%2fschematics/-/schematics-12.1.0.tgz#6478fc376840a9f9c4d44a40d513e8aa3463779c"
+  integrity sha512-cUL+pzy5jtFUq81B+kETJmca9/KqWatMxNXofdML2dyGGpk/yfs6bV8L/NQWyUxsyc01J+WswocWmFjNde0FYQ==
 
-"@ngrx/store-devtools@11.1.1":
-  version "11.1.1"
-  resolved "http://localhost:4444/@ngrx%2fstore-devtools/-/store-devtools-11.1.1.tgz#bdefc5c03dcac6fc21fcc9e33a4a3a3464f3e2d6"
-  integrity sha512-YvTMy8HUMUiiyrzKn4KhrQzkAg2yBfLgd1PHR0yPjyzj7RCaYZHwhq6sP0+AiFMBi1Lat8Wczy7SwwLTa6aZ3w==
+"@ngrx/store-devtools@12.1.0":
+  version "12.1.0"
+  resolved "http://localhost:4444/@ngrx%2fstore-devtools/-/store-devtools-12.1.0.tgz#b547edb6ff9fd3ade4fd303088dbed627484b41d"
+  integrity sha512-O+GfUsYPUrlbGHHcCH0WNkfnWD2TLQmXm2xhR1CkMTr+7YkdOKUZ1a0RwPM4VWuCu5QNVHS8bRS5V3IviiP9tQ==
   dependencies:
     tslib "^2.0.0"
 
-"@ngrx/store@11.1.1":
-  version "11.1.1"
-  resolved "http://localhost:4444/@ngrx%2fstore/-/store-11.1.1.tgz#e971d767ae5caa8984daad23cda38c6fd94dc888"
-  integrity sha512-tkeKoyYo631hLJ1I8+bm9EWoi7E0A3i4IMjvf956Vpu5IdMnP6d0HW3lKU/ruhFD5YOXAHcUgEIWyfxxILABag==
+"@ngrx/store@12.1.0":
+  version "12.1.0"
+  resolved "http://localhost:4444/@ngrx%2fstore/-/store-12.1.0.tgz#5e3516f0e6333c7ef49a560df786d4aa87b44a22"
+  integrity sha512-HrNs7bs/MNkLxFnvGx7uPIvEP3RWqGMewVaFjqUxq6sDefn6D6TQ/Sv/8KsNNxuG7r7pKGw+U/tClunJhmRfpw==
   dependencies:
     tslib "^2.0.0"
 
@@ -1686,6 +1686,26 @@
   resolved "http://localhost:4444/@trysound%2fsax/-/sax-0.1.1.tgz#3348564048e7a2d7398c935d466c0414ebb6a669"
   integrity sha512-Z6DoceYb/1xSg5+e+ZlPZ9v0N16ZvZ+wYMraFue4HYrE4ttONKtsvruIRf6t9TBR0YvSOfi1hUU0fJfBLCDYow==
 
+"@tsconfig/node10@^1.0.7":
+  version "1.0.8"
+  resolved "http://localhost:4444/@tsconfig%2fnode10/-/node10-1.0.8.tgz#c1e4e80d6f964fbecb3359c43bd48b40f7cadad9"
+  integrity sha512-6XFfSQmMgq0CFLY1MslA/CPUfhIL919M1rMsa5lP2P097N2Wd1sSX0tx1u4olM16fLNhtHZpRhedZJphNJqmZg==
+
+"@tsconfig/node12@^1.0.7":
+  version "1.0.8"
+  resolved "http://localhost:4444/@tsconfig%2fnode12/-/node12-1.0.8.tgz#a883d62f049a64fea1e56a6bbe66828d11c6241b"
+  integrity sha512-LM6XwBhjZRls1qJGpiM/It09SntEwe9M0riXRfQ9s6XlJQG0JPGl92ET18LtGeYh/GuOtafIXqwZeqLOd0FNFQ==
+
+"@tsconfig/node14@^1.0.0":
+  version "1.0.1"
+  resolved "http://localhost:4444/@tsconfig%2fnode14/-/node14-1.0.1.tgz#95f2d167ffb9b8d2068b0b235302fafd4df711f2"
+  integrity sha512-509r2+yARFfHHE7T6Puu2jjkoycftovhXRqW328PDXTVGKihlb1P8Z9mMZH04ebyajfRY7dedfGynlrFHJUQCg==
+
+"@tsconfig/node16@^1.0.1":
+  version "1.0.1"
+  resolved "http://localhost:4444/@tsconfig%2fnode16/-/node16-1.0.1.tgz#a6ca6a9a0ff366af433f42f5f0e124794ff6b8f1"
+  integrity sha512-FTgBI767POY/lKNDNbIzgAX6miIDBs6NTCbdlDb8TrWovHsSvaVIZDlTqym29C6UqhzwcJx4CYr+AlrMywA0cA==
+
 "@types/component-emitter@^1.2.10":
   version "1.2.10"
   resolved "http://127.0.0.1:4444/@types%2fcomponent-emitter/-/component-emitter-1.2.10.tgz#ef5b1589b9f16544642e473db5ea5639107ef3ea"
@@ -1735,7 +1755,7 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
-"@types/jasmine@~3.7.2":
+"@types/jasmine@~3.7.7":
   version "3.7.7"
   resolved "http://localhost:4444/@types%2fjasmine/-/jasmine-3.7.7.tgz#56718af036be3c9f86eca560a22e39440b2b0784"
   integrity sha512-yZzGe1d1T0y+imXDZ79F030nn8qbmiwpWKCZKvKN0KbTzwXAVYShUxkIxu1ba+vhIdabTGVGCfbtZC0oOam8TQ==
@@ -1765,7 +1785,7 @@
   resolved "http://127.0.0.1:4444/@types%2fnode/-/node-14.14.22.tgz#0d29f382472c4ccf3bd96ff0ce47daf5b7b84b18"
   integrity sha512-g+f/qj/cNcqKkc3tFqlXOYjrmZA+jNBiDzbP3kH+B+otKFqAdPgVTGP1IeKRdMml/aE69as5S4FqtxAbl+LaMw==
 
-"@types/node@^15.0.2":
+"@types/node@^15.12.2":
   version "15.12.2"
   resolved "http://localhost:4444/@types%2fnode/-/node-15.12.2.tgz#1f2b42c4be7156ff4a6f914b2fb03d05fa84e38d"
   integrity sha512-zjQ69G564OCIWIOHSXyQEEDpdpGl+G348RAKY0XXy9Z5kU9Vzv1GMNnkar/ZJ8dzXB3COzD9Mo9NtRZ4xfgUww==
@@ -2519,7 +2539,7 @@ braces@^3.0.1, braces@^3.0.2, braces@~3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
-breeze-client@^2.1.1:
+breeze-client@^2.1.2:
   version "2.1.2"
   resolved "http://localhost:4444/breeze-client/-/breeze-client-2.1.2.tgz#eaa9e71b4fb2447535f4aa4341e9ea0cad54033d"
   integrity sha512-jPvGDQ4qv6id3al7HrWFF238Nh5hcBoLioMoKeve47SMJ0wizSUWNogHolfR97j+z5IHkrmmy+cnREiX3CitvA==
@@ -5458,7 +5478,7 @@ karma-source-map-support@1.4.0:
   dependencies:
     source-map-support "^0.5.5"
 
-karma@~6.3.2:
+karma@~6.3.4:
   version "6.3.4"
   resolved "http://localhost:4444/karma/-/karma-6.3.4.tgz#359899d3aab3d6b918ea0f57046fd2a6b68565e6"
   integrity sha512-hbhRogUYIulfkBTZT7xoPrCYhRBnBoqbbL4fszWD0ReFGUxU+LYBr3dwKdAluaDQ/ynT9/7C+Lf7pPNW4gSx4Q==
@@ -6084,12 +6104,12 @@ neo-async@^2.6.2:
   resolved "http://127.0.0.1:4444/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-ngx-toastr@^13.2.1:
-  version "13.2.1"
-  resolved "http://localhost:4444/ngx-toastr/-/ngx-toastr-13.2.1.tgz#531bc7da6a524a861e0409bd2749878b3b3f8a3f"
-  integrity sha512-UAzp7/xWK9IXA2LsOmhpaaIGCqscvJokoQpBNpAMrjEkDeSlFf8PWQAuQY795KW0mJb3qF9UG/s23nsXfMYKmg==
+ngx-toastr@^14.0.0:
+  version "14.0.0"
+  resolved "http://localhost:4444/ngx-toastr/-/ngx-toastr-14.0.0.tgz#20e4737ef330b892a453768cd98b980558aeb286"
+  integrity sha512-dnDzSY73pF6FvNyxdh6ftfvXvUg6SU7MAT3orPUCzA77t3ZcFslro06zk4NCA2g67RF7dBwM0OJ/y0SN6fdGYw==
   dependencies:
-    tslib "^2.0.0"
+    tslib "^2.1.0"
 
 nice-try@^1.0.4:
   version "1.0.5"
@@ -7829,6 +7849,13 @@ rxjs@6.6.7, rxjs@^6.6.6:
   dependencies:
     tslib "^1.9.0"
 
+rxjs@7.1.0:
+  version "7.1.0"
+  resolved "http://localhost:4444/rxjs/-/rxjs-7.1.0.tgz#94202d27b19305ef7b1a4f330277b2065df7039e"
+  integrity sha512-gCFO5iHIbRPwznl6hAYuwNFld8W4S2shtSJIqG27ReWXo9IWrCyEICxUA+6vJHwSR/OakoenC4QsDxq50tzYmw==
+  dependencies:
+    tslib "~2.1.0"
+
 rxjs@^6.5.3:
   version "6.6.3"
   resolved "http://localhost:4444/rxjs/-/rxjs-6.6.3.tgz#8ca84635c4daa900c0d3967a6ee7ac60271ee552"
@@ -8549,7 +8576,7 @@ symbol-observable@4.0.0:
   resolved "http://localhost:4444/symbol-observable/-/symbol-observable-4.0.0.tgz#5b425f192279e87f2f9b937ac8540d1984b39205"
   integrity sha512-b19dMThMV4HVFynSAM1++gBHAbk2Tc/osgLIBZMKsyqh34jb2e8Os7T6ZW/Bt3pJFdBTd2JwAnAAEQV7rSNvcQ==
 
-tailwindcss@^2.1.2:
+tailwindcss@^2.1.4:
   version "2.1.4"
   resolved "http://localhost:4444/tailwindcss/-/tailwindcss-2.1.4.tgz#ee8a1b8ccc140db61960b6738f968a8a1c4cd1f8"
   integrity sha512-fh1KImDLg6se/Suaelju/5oFbqq1b0ntagmGLu0aG9LlnNPGHgO1n/4E57CbKcCtyz/VYnvVXUiWmfyfBBZQ6g==
@@ -8740,11 +8767,15 @@ tree-kill@1.2.2:
   resolved "http://127.0.0.1:4444/tree-kill/-/tree-kill-1.2.2.tgz#4ca09a9092c88b73a7cdc5e8a01b507b0790a0cc"
   integrity sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==
 
-ts-node@~9.1.1:
-  version "9.1.1"
-  resolved "http://localhost:4444/ts-node/-/ts-node-9.1.1.tgz#51a9a450a3e959401bda5f004a72d54b936d376d"
-  integrity sha512-hPlt7ZACERQGf03M253ytLY3dHbGNGrAq9qIHWUY9XHYl1z7wYngSr3OQ5xmui8o2AaxsONxIzjafLUiWBo1Fg==
+ts-node@~10.0.0:
+  version "10.0.0"
+  resolved "http://localhost:4444/ts-node/-/ts-node-10.0.0.tgz#05f10b9a716b0b624129ad44f0ea05dac84ba3be"
+  integrity sha512-ROWeOIUvfFbPZkoDis0L/55Fk+6gFQNZwwKPLinacRl6tsxstTF1DbAcLKkovwnpKMVvOMHP1TIbnwXwtLg1gg==
   dependencies:
+    "@tsconfig/node10" "^1.0.7"
+    "@tsconfig/node12" "^1.0.7"
+    "@tsconfig/node14" "^1.0.0"
+    "@tsconfig/node16" "^1.0.1"
     arg "^4.1.0"
     create-require "^1.1.0"
     diff "^4.0.1"
@@ -8767,10 +8798,15 @@ tslib@^2.0.0:
   resolved "http://127.0.0.1:4444/tslib/-/tslib-2.0.3.tgz#8e0741ac45fc0c226e58a17bfc3e64b9bc6ca61c"
   integrity sha512-uZtkfKblCEQtZKBF6EBXVZeQNl82yqtDQdv+eck8u7tdPxjLu2/lp5/uPW+um2tpuxINHWy3GhiccY7QgEaVHQ==
 
-tslib@^2.1.0, tslib@^2.2.0:
+tslib@^2.1.0, tslib@^2.3.0:
   version "2.3.0"
   resolved "http://localhost:4444/tslib/-/tslib-2.3.0.tgz#803b8cdab3e12ba581a4ca41c8839bbb0dacb09e"
   integrity sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==
+
+tslib@~2.1.0:
+  version "2.1.0"
+  resolved "http://localhost:4444/tslib/-/tslib-2.1.0.tgz#da60860f1c2ecaa5703ab7d39bc05b6bf988b97a"
+  integrity sha512-hcVC3wYEziELGGmEEXue7D75zbwIIVUMWAVbHItGPx0ziyXxrOMQx4rQEVEV45Ut/1IotuEvwqPopzIOkDMf0A==
 
 tslint@~6.1.3:
   version "6.1.3"
@@ -8832,6 +8868,11 @@ typescript@4.2.4:
   version "4.2.4"
   resolved "http://localhost:4444/typescript/-/typescript-4.2.4.tgz#8610b59747de028fda898a8aef0e103f156d0961"
   integrity sha512-V+evlYHZnQkaz8TRBuxTA92yZBPotr5H+WhQ7bD3hZUndx5tGOa1fuCgeSjxAzM1RiN5IzvadIXTVefuuwZCRg==
+
+typescript@4.3.2:
+  version "4.3.2"
+  resolved "http://localhost:4444/typescript/-/typescript-4.3.2.tgz#399ab18aac45802d6f2498de5054fcbbe716a805"
+  integrity sha512-zZ4hShnmnoVnAHpVHWpTcxdv7dWP60S2FsydQLV8V5PbS3FifjWFFRiHSWpDJahly88PRyV5teTSLoq4eG7mKw==
 
 ua-parser-js@^0.7.28:
   version "0.7.28"

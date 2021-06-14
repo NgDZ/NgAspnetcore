@@ -27,7 +27,10 @@ import {
 } from '@abpdz/ng.theme.shared';
 import { ThemeMaterialModule } from '@abpdz/ng.theme.material';
 import { HomeComponent } from './home.component';
-import { eIdentityPolicyNames, IdentityConfigModule } from '@abpdz/ng.identity/config';
+import {
+  eIdentityPolicyNames,
+  IdentityConfigModule,
+} from '@abpdz/ng.identity/config';
 import { AccountConfigModule } from '@abpdz/ng.account/config';
 import { AbpDzDemoConfigModule } from '@abpdz/ng.demos/config';
 import { AbpDzAuditConfigModule } from '@abpdz/ng.audit/config';
