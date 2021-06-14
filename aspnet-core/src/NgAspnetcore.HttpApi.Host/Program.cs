@@ -27,8 +27,8 @@ namespace NgAspnetcore
                 .Enrich.FromLogContext()
                 .WriteTo.Async(c => c.File("Logs/logs.log"))
 #if DEBUG
-                .WriteTo.Async(c => c.Console())
 #endif
+                .WriteTo.Async(c => c.Console())
                 .CreateLogger();
 
             try
