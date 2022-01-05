@@ -23,16 +23,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="FREETIME.Application.Contracts" Version="4.3.100" />
-    <PackageReference Include="FREETIME.Domain.Shared" Version="4.3.100" />
-    <PackageReference Include="FREETIME.Domain" Version="4.3.100" />
-    <PackageReference Include="FREETIME.Application" Version="4.3.100" />
-    <PackageReference Include="FREETIME.HttpApi" Version="4.3.100" />
-    <PackageReference Include="FREETIME.EntityFrameworkCore" Version="4.3.100" />
-    <PackageReference Include="FREETIME.EntityFrameworkCore.DbMigrations" Version="4.3.100" />
-    <PackageReference Include="AbpDz.IdentityServer" Version="4.3.100"/>
-    <PackageReference Include="AbpDz.Notifications" Version="4.3.100"/>
-    <PackageReference Include="AbpDz.Breeze" Version="4.3.100" />
+    <PackageReference Include="FREETIME.Application.Contracts" Version="5.0.101" />
+    <PackageReference Include="FREETIME.Domain.Shared" Version="5.0.101" />
+    <PackageReference Include="FREETIME.Domain" Version="5.0.101" />
+    <PackageReference Include="FREETIME.Application" Version="5.0.101" />
+    <PackageReference Include="FREETIME.HttpApi" Version="5.0.101" />
+    <PackageReference Include="FREETIME.EntityFrameworkCore" Version="5.0.101" />
+    <PackageReference Include="FREETIME.EntityFrameworkCore.DbMigrations" Version="5.0.101" />
+    <PackageReference Include="AbpDz.IdentityServer" Version="5.0.101"/>
+    <PackageReference Include="AbpDz.Notifications" Version="5.0.101"/>
+    <PackageReference Include="AbpDz.Breeze" Version="5.0.101" />
   </ItemGroup>
 
   <ItemGroup>
@@ -57,6 +57,6 @@
     <None Remove="Logs\**" />
   </ItemGroup>
   <ItemGroup>
-    <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+    <None Update="app-abpdz.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
   </ItemGroup>
 </Project>
