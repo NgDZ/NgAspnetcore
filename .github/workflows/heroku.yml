@@ -14,8 +14,9 @@ jobs:
         uses: docker/setup-buildx-action@v1
         
       - name: Setup .NET Core SDK
-        uses: actions/setup-dotnet@v1.7.2
-        
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.0.x'
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.4
       
@@ -54,7 +55,7 @@ jobs:
           cd ..
           echo  "***************************************************** Copy assets to target directory  **************************************************"
           rm -rf angular/dist/ngaspnetcore/*.map
-          cp -rf aspnet-core/src/NgAspnetcore.HttpApi.Host/bin/Release/net5.0/linux-x64/publish/* deploy/
+          cp -rf aspnet-core/src/NgAspnetcore.HttpApi.Host/bin/Release/net6.0/linux-x64/publish/* deploy/
           cp -rf angular/dist/ngaspnetcore/*  deploy/wwwroot/
           ls -lR deploy/
           

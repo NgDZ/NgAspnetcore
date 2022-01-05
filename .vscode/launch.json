@@ -6,7 +6,7 @@
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build-DbMigrator",
-      "program": "${workspaceFolder}/aspnet-core/src/NgAspnetcore.DbMigrator/bin/Debug/net5.0/NgAspnetcore.DbMigrator.dll",
+      "program": "${workspaceFolder}/aspnet-core/src/NgAspnetcore.DbMigrator/bin/Debug/net6.0/NgAspnetcore.DbMigrator.dll",
       "args": [],
       "cwd": "${workspaceFolder}/aspnet-core/src/NgAspnetcore.DbMigrator",
       "stopAtEntry": false,
@@ -20,7 +20,7 @@
       "preLaunchTask": "app-build",
 
       // If you have changed target frameworks, make sure to update the program path.
-      "program": "${workspaceFolder}/aspnet-core/src/NgAspnetcore.HttpApi.Host/bin/Debug/net5.0/NgAspnetcore.HttpApi.Host.dll",
+      "program": "${workspaceFolder}/aspnet-core/src/NgAspnetcore.HttpApi.Host/bin/Debug/net6.0/NgAspnetcore.HttpApi.Host.dll",
       "args": [],
       "cwd": "${workspaceFolder}/aspnet-core/src/NgAspnetcore.HttpApi.Host",
       "stopAtEntry": false,
